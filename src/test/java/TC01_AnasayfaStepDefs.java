@@ -12,7 +12,7 @@ public class TC01_AnasayfaStepDefs {
     }
     @When("kullanici anasayfanin acildigini dogrular")
     public void kullaniciAnasayfaninAcildiginiDogrular() {
-      Driver.getDriver().getTitle().contains()
+      Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("hepsiburada"));
     }
 
     @Then("kullanici sayfayi kapatir")
