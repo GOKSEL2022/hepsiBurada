@@ -12,7 +12,7 @@ Feature: sayfaya_kayit_olusturulur
     And   kullanici ePosta veya telefon alanina gecerli bir telefon numarasi girer
     And   kullanici giris_yapKayit butona tiklar
     When  kullanici son birkac adim kaldi uyarisini goruntuler
-    Then  kullanici sayfayi kapatir
+   # Then  kullanici sayfayi kapatir
 
 
 
