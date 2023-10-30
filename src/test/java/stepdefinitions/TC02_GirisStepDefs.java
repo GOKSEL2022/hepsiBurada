@@ -17,28 +17,27 @@ public class TC02_GirisStepDefs {
     public void kullaniciGiris_yapHomeAlaninaGelir() throws InterruptedException {
         actions.moveToElement(homePage.giris_yapHome).perform();
     }
-    @And("kullanici giris yap linkini secer")
-    public void kullaniciGirisYapLinkiniSecer() {
-        actions.moveToElement(homePage.girisYapLinkGiris_yapHome).
-                doubleClick(homePage.girisYapLinkGiris_yapHome).build().perform();
-
-
+    @And("kullanici uye ol linkini secer")
+    public void kullaniciUyeOlLinkiniSecer() {
+        ReusableMethods.clickByJS(homePage.uyeOlLinkGiris_yapHome);
     }
 
     @And("kullanici ePosta veya telefon alanina gecerli bir email adresi girer")
     public void kullaniciEPostaVeyaTelefonAlaninaGecerliBirEmailAdresiGirer() {
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys("karacan-55@hotmail.com");
     }
 
     @And("kullanici devam et butonuna tiklar")
     public void kullaniciDevamEtButonunaTiklar() {
+        ReusableMethods.clickByJS(girisPage.devamEtButonGiris);
     }
-
     @And("kullanici dogrulama maili gonderildi uyarisini goruntuler")
     public void kullaniciDogrulamaMailiGonderildiUyarisiniGoruntuler() {
+        assert girisPage.dogrulamaMailiGonderildiAlertGiris.isDisplayed();
     }
 
-    @And("kullanici giris_yapKayit butona tiklar")
-    public void kullaniciGiris_yapKayitButonaTiklar() {
+    @And("kullanici uye_olKayit butona tiklar")
+    public void kullaniciUye_olKayitButonaTiklar() {
     }
 
     @And("kullanici ePosta veya telefon alanini temizler")
@@ -52,4 +51,8 @@ public class TC02_GirisStepDefs {
     @When("kullanici son birkac adim kaldi uyarisini goruntuler")
     public void kullaniciSonBirkacAdimKaldiUyarisiniGoruntuler() {
     }
+
+
+
+
 }

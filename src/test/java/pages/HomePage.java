@@ -15,4 +15,11 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/uyelik/giris?ReturnUrl=https%3A%2F%2Fwww.hepsiburada.com%2F']")
     public WebElement girisYapLinkGiris_yapHome;
+
+    @FindBy(xpath = "//a[@id='register']")
+    public WebElement uyeOlLinkGiris_yapHome;
+
+
+
+
 }
