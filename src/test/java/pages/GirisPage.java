@@ -20,4 +20,12 @@ public class GirisPage {
 
     @FindBy(xpath = "//*[.='Son birkaç adım kaldı…']")
     public WebElement telNoGirisAlertSonBirkacAdimKaldiGiris;
+
+    @FindBy(xpath = "//*[@id='btnSignUpSubmit']")
+    public WebElement devamEtButonGiris;
+
+    @FindBy(xpath = "(//*[.='Doğrulama maili gönderildi'])[1]")
+    public WebElement dogrulamaMailiGonderildiAlertGiris;
+
+
 }
