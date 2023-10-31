@@ -9,9 +9,12 @@ Feature: sayfaya_kayit_olusturulur
     And   kullanici devam et butonuna tiklar
     And   kullanici dogrulama maili gonderildi uyarisini goruntuler
     And   kullanici uye_olKayit butona tiklar
-    And   kullanici ePosta veya telefon alanini temizler
-    And   kullanici ePosta veya telefon alanina gecerli bir telefon numarasi girer
+    And   kullanici url ye gider
+    And   kullanici giris_yapHome alanina gelir
+    And   kullanici uye ol linkini secer
     And   kullanici uye_olKayit butona tiklar
+    And   kullanici ePosta veya telefon alanina gecerli bir telefon numarasi girer
+    And   kullanici devam et butonuna tiklar
     When  kullanici son birkac adim kaldi uyarisini goruntuler
    # Then  kullanici sayfayi kapatir
 
