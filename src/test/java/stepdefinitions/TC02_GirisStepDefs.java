@@ -16,6 +16,7 @@ public class TC02_GirisStepDefs {
     Actions actions=new Actions(Driver.getDriver());
     int number = Faker.instance().number().numberBetween(1000, 9999);
     String mail="@gmail.com";
+    int zero=0;
     int phoneNo1 = Faker.instance().number().numberBetween(10, 99);
     int phoneNo2 = Faker.instance().number().numberBetween(541, 549);
 
@@ -49,10 +50,11 @@ public class TC02_GirisStepDefs {
     }
     @And("kullanici ePosta veya telefon alanina gecerli bir telefon numarasi girer")
     public void kullaniciEPostaVeyaTelefonAlaninaGecerliBirTelefonNumarasiGirer() {
-        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(0+""+phoneNo2+""+phoneNo2+""+number);
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(""+zero+""+phoneNo2+""+phoneNo2+""+phoneNo1+""+phoneNo1);
     }
     @When("kullanici son birkac adim kaldi uyarisini goruntuler")
     public void kullaniciSonBirkacAdimKaldiUyarisiniGoruntuler() {
+        assert girisPage.beklenmeyenBirHataOlustuAlertGiris.isDisplayed();
     }
 
 }

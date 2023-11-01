@@ -33,5 +33,8 @@ public class GirisPage {
     @FindBy(xpath = "//*[.='Son birkaç adım kaldı…']")
     public WebElement sonBirkacAdimKaldiAlertGiris;
 
+    @FindBy(xpath = "//*[text()='Beklenmeyen bir hata oluştu.']")
+    public WebElement beklenmeyenBirHataOlustuAlertGiris;
+
 
 }
