@@ -2,7 +2,6 @@ package runner;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
-
 @RunWith(Cucumber.class)
 @CucumberOptions (
         plugin = {
@@ -14,14 +13,10 @@ import org.junit.runner.RunWith;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
-
         features="src/test/resources/features",
         glue= {"stepdefinitions", "hooks"},
         tags="@giris_yap"  ,
-
         dryRun= false
 )
-
-
 public class Runner {
 }
