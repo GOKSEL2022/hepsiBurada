@@ -57,4 +57,35 @@ public class TC02_GirisStepDefs {
         assert girisPage.beklenmeyenBirHataOlustuAlertGiris.isDisplayed();
     }
 
+    @And("kullanici google ile giris yap alanina tiklar")
+    public void kullaniciGoogleIleGirisYapAlaninaTiklar() {
+    }
+
+    @And("kullanici google ile oturum acin yazisini goruntuler")
+    public void kullaniciGoogleIleOturumAcinYazisiniGoruntuler() {
+    }
+
+    @And("kullanici bir onceki sayfaya doner")
+    public void kullaniciBirOncekiSayfayaDoner() {
+    }
+
+    @And("kullanici apple ile giris yap alanina tiklar")
+    public void kullaniciAppleIleGirisYapAlaninaTiklar() {
+    }
+
+    @And("kullanici apple kimligi yazisini goruntuler")
+    public void kullaniciAppleKimligiYazisiniGoruntuler() {
+    }
+
+    @And("kullanici facebook ile giris yap alanina tiklar")
+    public void kullaniciFacebookIleGirisYapAlaninaTiklar() {
+    }
+
+    @And("kullanici facebooka giris yap yazisini goruntuler")
+    public void kullaniciFacebookaGirisYapYazisiniGoruntuler() {
+    }
+
+    @When("kullanici uye_olKayit butonu goruntuler")
+    public void kullaniciUye_olKayitButonuGoruntuler() {
+    }
 }
