@@ -5,14 +5,16 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import pages.GirisPage;
-import pages.HomePage;
+import pages.*;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class TC02_GirisStepDefs {
     HomePage homePage=new HomePage();
     GirisPage girisPage=new GirisPage();
+    AccountPage accountPage=new AccountPage();
+    AppleidPage appleidPage=new AppleidPage();
+    FacebookPage facebookPage=new FacebookPage();
     Actions actions=new Actions(Driver.getDriver());
     int number = Faker.instance().number().numberBetween(1000, 9999);
     String mail="@gmail.com";
@@ -59,33 +61,45 @@ public class TC02_GirisStepDefs {
 
     @And("kullanici google ile giris yap alanina tiklar")
     public void kullaniciGoogleIleGirisYapAlaninaTiklar() {
+        ReusableMethods.scrollIntoViewJS(girisPage.googleIleGirisYapButonGiris);
+        ReusableMethods.clickWithTimeOut(girisPage.googleIleGirisYapButonGiris,2);
     }
 
     @And("kullanici google ile oturum acin yazisini goruntuler")
     public void kullaniciGoogleIleOturumAcinYazisiniGoruntuler() {
+        assert accountPage.googleIleOturumAcinTextAccount.isDisplayed();
     }
 
     @And("kullanici bir onceki sayfaya doner")
     public void kullaniciBirOncekiSayfayaDoner() {
+        Driver.getDriver().navigate().back();
     }
-
     @And("kullanici apple ile giris yap alanina tiklar")
     public void kullaniciAppleIleGirisYapAlaninaTiklar() {
+        ReusableMethods.scrollIntoViewJS(girisPage.appleIleGirisYapButonGiris);
+        ReusableMethods.clickWithTimeOut(girisPage.appleIleGirisYapButonGiris,2);
+
     }
 
     @And("kullanici apple kimligi yazisini goruntuler")
     public void kullaniciAppleKimligiYazisiniGoruntuler() {
+        assert appleidPage.appleKimligiTextAppleid.isDisplayed();
     }
 
     @And("kullanici facebook ile giris yap alanina tiklar")
     public void kullaniciFacebookIleGirisYapAlaninaTiklar() {
+        ReusableMethods.scrollIntoViewJS(girisPage.facebookIleGirisYapButonGiris);
+        ReusableMethods.clickWithTimeOut(girisPage.facebookIleGirisYapButonGiris,2);
     }
 
     @And("kullanici facebooka giris yap yazisini goruntuler")
     public void kullaniciFacebookaGirisYapYazisiniGoruntuler() {
+        assert facebookPage.facebookYeniHesapOlusturTitleFacebook.isDisplayed();
     }
 
     @When("kullanici uye_olKayit butonu goruntuler")
-    public void kullaniciUye_olKayitButonuGoruntuler() {
+    public void kullaniciUye_olKayitButonuGoruntuler() throws InterruptedException {
+        Thread.sleep(2000);
+        assert girisPage.uyeOlKayitButonGiris.isDisplayed();
     }
 }
