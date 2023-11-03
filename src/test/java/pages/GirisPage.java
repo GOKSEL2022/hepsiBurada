@@ -18,6 +18,7 @@ public class GirisPage {
     @FindBy(xpath = "//input[@name='username']")
     public WebElement epostaAdresiVeyaTelNoTextBoxGiris;
 
+
     @FindBy(xpath = "//*[.='Son birkaç adım kaldı…']")
     public WebElement telNoGirisAlertSonBirkacAdimKaldiGiris;
 
@@ -30,11 +31,28 @@ public class GirisPage {
     @FindBy(xpath = "(//*[.='Üye ol'])[1]")
     public WebElement uyeOlKayitButonGiris;
 
+
     @FindBy(xpath = "//*[.='Son birkaç adım kaldı…']")
     public WebElement sonBirkacAdimKaldiAlertGiris;
 
     @FindBy(xpath = "//*[text()='Beklenmeyen bir hata oluştu.']")
     public WebElement beklenmeyenBirHataOlustuAlertGiris;
+
+
+    @FindBy(xpath = "//*[@id='btnGoogle']")
+    public WebElement googleIleGirisYapButonGiris;
+
+
+    @FindBy(xpath = "//*[@id='btnApple']")
+    public WebElement appleIleGirisYapButonGiris;
+
+
+    @FindBy(xpath = "//*[@id='btnFacebook']")
+    public WebElement facebookIleGirisYapButonGiris;
+
+
+
+
 
 
 }

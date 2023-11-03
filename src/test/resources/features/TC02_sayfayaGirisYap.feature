@@ -18,7 +18,8 @@ Feature: sayfaya_kayit_olusturulur
       When  kullanici son birkac adim kaldi uyarisini goruntuler
     #  Then  kullanici sayfayi kapatir
 
-  Scenario: google_apple_facebbok_ile_giris
+  @sosyal_medya_girisi
+  Scenario: sosyal_medya(google_apple_facebbok) ile_giris
     And  kullanici google ile giris yap alanina tiklar
     And  kullanici google ile oturum acin yazisini goruntuler
     And  kullanici bir onceki sayfaya doner
