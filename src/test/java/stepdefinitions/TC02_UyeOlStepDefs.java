@@ -4,12 +4,11 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import pages.*;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class TC02_GirisStepDefs {
+public class TC02_UyeOlStepDefs {
     HomePage homePage=new HomePage();
     GirisPage girisPage=new GirisPage();
     AccountPage accountPage=new AccountPage();
@@ -18,7 +17,6 @@ public class TC02_GirisStepDefs {
     Actions actions=new Actions(Driver.getDriver());
     int number = Faker.instance().number().numberBetween(1000, 9999);
     String mail="@gmail.com";
-    int zero=0;
     int phoneNo1 = Faker.instance().number().numberBetween(10, 99);
     int phoneNo2 = Faker.instance().number().numberBetween(541, 549);
 
@@ -52,7 +50,7 @@ public class TC02_GirisStepDefs {
     }
     @And("kullanici ePosta veya telefon alanina gecerli bir telefon numarasi girer")
     public void kullaniciEPostaVeyaTelefonAlaninaGecerliBirTelefonNumarasiGirer() {
-        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(""+zero+""+phoneNo2+""+phoneNo2+""+phoneNo1+""+phoneNo1);
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(""+phoneNo2+""+phoneNo2+""+phoneNo1+""+phoneNo1);
     }
     @When("kullanici son birkac adim kaldi uyarisini goruntuler")
     public void kullaniciSonBirkacAdimKaldiUyarisiniGoruntuler() {
