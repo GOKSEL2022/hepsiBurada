@@ -50,6 +50,9 @@ public class GirisPage {
     @FindBy(xpath = "//*[@id='btnFacebook']")
     public WebElement facebookIleGirisYapButonGiris;
 
+    @FindBy(xpath = "//*[@data-test-id='back-button']")
+    public WebElement geriYonTusuSonBirkacAdimKaldiSayfasi;
+
 
 
 
