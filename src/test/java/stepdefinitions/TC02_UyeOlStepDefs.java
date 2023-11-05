@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
 import pages.*;
@@ -17,8 +18,7 @@ public class TC02_UyeOlStepDefs {
     Actions actions=new Actions(Driver.getDriver());
     int number = Faker.instance().number().numberBetween(1000, 9999);
     String mail="@gmail.com";
-    int phoneNo1 = Faker.instance().number().numberBetween(10, 99);
-    int phoneNo2 = Faker.instance().number().numberBetween(541, 549);
+    int phoneNo1 = Faker.instance().number().numberBetween(530, 549);
 
     @And("kullanici giris_yapHome alanina gelir")
     public void kullaniciGiris_yapHomeAlaninaGelir() throws InterruptedException {
@@ -50,7 +50,7 @@ public class TC02_UyeOlStepDefs {
     }
     @And("kullanici ePosta veya telefon alanina gecerli bir telefon numarasi girer")
     public void kullaniciEPostaVeyaTelefonAlaninaGecerliBirTelefonNumarasiGirer() {
-        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(""+phoneNo2+""+phoneNo2+""+phoneNo1+""+phoneNo1);
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(""+phoneNo1+""+phoneNo1+""+number);
     }
     @When("kullanici son birkac adim kaldi uyarisini goruntuler")
     public void kullaniciSonBirkacAdimKaldiUyarisiniGoruntuler() {
@@ -89,15 +89,42 @@ public class TC02_UyeOlStepDefs {
         ReusableMethods.scrollIntoViewJS(girisPage.facebookIleGirisYapButonGiris);
         ReusableMethods.clickWithTimeOut(girisPage.facebookIleGirisYapButonGiris,2);
     }
-
     @And("kullanici facebooka giris yap yazisini goruntuler")
     public void kullaniciFacebookaGirisYapYazisiniGoruntuler() {
         assert facebookPage.facebookYeniHesapOlusturTitleFacebook.isDisplayed();
     }
-
     @When("kullanici uye_olKayit butonu goruntuler")
     public void kullaniciUye_olKayitButonuGoruntuler() throws InterruptedException {
         Thread.sleep(2000);
         assert girisPage.uyeOlKayitButonGiris.isDisplayed();
     }
+    @Given("kullanici ePosta veya telefon alanina turk telekom{string} girer")
+    public void kullaniciEPostaVeyaTelefonAlaninaTurkTelekomGirer(String string) {
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(string);
+    }
+    @Given("kullanici ePosta veya telefon alanina turkcell_vodafone numarasi girer")
+    public void kullaniciEPostaVeyaTelefonAlaninaTurkcell_vodafoneNumarasiGirer() {
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(""+phoneNo1+""+phoneNo1+""+number);
+    }
+    @Given("kullanici ePosta veya telefon alanina bosluk karakteri girer ve enter a basar")
+    public void kullaniciEPostaVeyaTelefonAlaninaBoslukKarakteriGirerVeEnterABasar() {
+    }
+
+    @When("kullanici eposta adresinizi veya telefon numaranizi girmelisiniz uyarisini gorur")
+    public void kullaniciEpostaAdresiniziVeyaTelefonNumaraniziGirmelisinizUyarisiniGorur() {
+    }
+
+    @And("kullanici ePosta veya telefon alanina sembol girer")
+    public void kullaniciEPostaVeyaTelefonAlaninaSembolGirer() {
+    }
+
+    @And("kullanici gecerli bir cep telefonu girmelisiniz uyarisini gorur")
+    public void kullaniciGecerliBirCepTelefonuGirmelisinizUyarisiniGorur() {
+    }
+
+    @And("kullanici ePosta veya telefon alanina son hanesi harf iceren bir telefon no girer")
+    public void kullaniciEPostaVeyaTelefonAlaninaSonHanesiHarfIcerenBirTelefonNoGirer() {
+    }
+
+
 }

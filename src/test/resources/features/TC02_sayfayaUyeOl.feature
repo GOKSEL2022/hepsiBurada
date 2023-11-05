@@ -41,10 +41,37 @@ Feature: sayfaya_kayit_olusturulur
     When  kullanici gecerli bir cep telefonu girmelisiniz uyarisini gorur
     Then  kullanici sayfayi kapatir
 
-
-    #BUG:kullanici ePosta veya telefon alanina son hanesi + (arti) SEMBOLÜ iceren bir telefon no girdiginde (546507525+ gibi)
+        #BUG:kullanici ePosta veya telefon alanina son hanesi + (arti) SEMBOLÜ iceren bir telefon no girdiginde (546507525+ gibi)
         # hata mesaji gorunmez ve devam et butonuna basildiginda son birkaç adim kaldi uyarisi
         # goruntulenerek ilgili numaraya dogrulama kodu gonderildigi gorulur
+  @telefon_numarasi
+  Scenario Outline: telefon_alani_gecerli_turk_telekom_numara_girisi
+    Given kullanici ePosta veya telefon alanina turk telekom"<telefon numarasi>" girer
+    When  kullanici devam et butonuna tiklar
+    And   kullanici son birkac adim kaldi uyarisini goruntuler
+    When  kullanici bir onceki sayfaya doner
+    Then  kullanici sayfayi kapatir
+    Examples:
+      | telefon numarasi |
+      | 5015015151       |
+      | 5055015151       |
+      | 5065015151       |
+      | 5075015151       |
+      | 5515015151       |
+      | 5525015151       |
+      | 5535015151       |
+      | 5545015151       |
+      | 5555015151       |
+      | 5595015151       |
+      | 5615015151       |
+
+    Scenario: telefon_alani_gecerli_turkcell_vodafone_numara_girisi
+      Given kullanici ePosta veya telefon alanina turkcell_vodafone numarasi girer
+      When  kullanici devam et butonuna tiklar
+      And   kullanici son birkac adim kaldi uyarisini goruntuler
+      When  kullanici bir onceki sayfaya doner
+      Then  kullanici sayfayi kapatir
+
 
 
 
