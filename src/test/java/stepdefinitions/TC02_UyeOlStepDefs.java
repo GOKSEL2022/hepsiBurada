@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.*;
 import utilities.Driver;
@@ -108,6 +109,7 @@ public class TC02_UyeOlStepDefs {
     }
     @Given("kullanici ePosta veya telefon alanina bosluk karakteri girer ve enter a basar")
     public void kullaniciEPostaVeyaTelefonAlaninaBoslukKarakteriGirerVeEnterABasar() {
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.ENTER);
     }
 
     @When("kullanici eposta adresinizi veya telefon numaranizi girmelisiniz uyarisini gorur")
