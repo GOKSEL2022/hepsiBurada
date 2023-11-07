@@ -53,6 +53,15 @@ public class GirisPage {
     @FindBy(xpath = "//*[@data-test-id='back-button']")
     public WebElement geriYonTusuSonBirkacAdimKaldiSayfasi;
 
+    @FindBy(xpath = "//*[text()='E-posta adresinizi veya telefon numaranızı girmelisiniz.']")
+    public WebElement epostaAdresiniziVeyaTelefonNoGirmelisinizAlertGiris;
+
+    @FindBy(xpath = "//*[text()='Geçerli bir cep telefonu girmelisiniz']")
+    public WebElement gecerliBirCepTelefonuGirmelisinizAlertGiris;
+
+    @FindBy(xpath = "//*[text()='Geçerli bir e-posta adresi girmelisiniz.']")
+    public WebElement gecerliBirEpostaAdresiGirmelisinizAlertGiris;
+
 
 
 
