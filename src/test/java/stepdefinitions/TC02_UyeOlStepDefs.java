@@ -123,19 +123,21 @@ public class TC02_UyeOlStepDefs {
         girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys("////");
     }
 
-    @And("kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur")
-    public void kullaniciGecerliBirEpostaAdresiGirmelisinizUyarisiniGorur() throws InterruptedException {
+    @When("kullanici gecerli bir cep telefonu girmelisiniz uyarisini gorur")
+    public void kullanici_gecerli_bir_cep_telefonu_girmelisiniz_uyarisini_gorur() throws InterruptedException {
         Thread.sleep(1000);
-        assert girisPage.gecerliBirEpostaAdresiGirmelisinizAlertGiris.isDisplayed();
+        assert girisPage.gecerliBirCepTelefonuGirmelisinizAlertGiris.isDisplayed();
     }
-
     @And("kullanici ePosta veya telefon alanina son hanesi harf iceren bir telefon no girer")
     public void kullaniciEPostaVeyaTelefonAlaninaSonHanesiHarfIcerenBirTelefonNoGirer() throws InterruptedException {
-        girisPage.girisYapButonUyeOlYaniGiris.click();
-        girisPage.uyeOlKayitButonGiris.click();
-        girisPage.devamEtButonGiris.click();
+        ReusableMethods.clickByJS(girisPage.girisYapButonUyeOlYaniGiris);
+        ReusableMethods.clickByJS(girisPage.uyeOlKayitButonGiris);
         Thread.sleep(1000);
-        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys("546507525a");
-    }
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys("546507525a",Keys.ENTER);
 
+    }
+    @When("kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur")
+    public void kullaniciGecerliBirEpostaAdresiGirmelisinizUyarisiniGorur() {
+        assert girisPage.gecerliBirEpostaAdresiGirmelisinizAlertGiris.isDisplayed();
+    }
 }
