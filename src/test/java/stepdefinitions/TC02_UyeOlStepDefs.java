@@ -130,9 +130,7 @@ public class TC02_UyeOlStepDefs {
     }
     @And("kullanici ePosta veya telefon alanina son hanesi harf iceren bir telefon no girer")
     public void kullaniciEPostaVeyaTelefonAlaninaSonHanesiHarfIcerenBirTelefonNoGirer() throws InterruptedException {
-        ReusableMethods.clickByJS(girisPage.girisYapButonUyeOlYaniGiris);
-        ReusableMethods.clickByJS(girisPage.uyeOlKayitButonGiris);
-        Thread.sleep(1000);
+        Driver.getDriver().navigate().refresh();
         girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys("546507525a",Keys.ENTER);
 
     }

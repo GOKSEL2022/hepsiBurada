@@ -44,7 +44,7 @@ Feature: sayfaya_kayit_olusturulur
 
         #BUG:kullanici ePosta veya telefon alanina son hanesi + (arti) SEMBOLÜ iceren bir telefon no girdiginde (546507525+ gibi)
         # hata mesaji gorunmez ve devam et butonuna basildiginda son birkaç adim kaldi uyarisi
-        # goruntulenerek ilgili numaraya dogrulama kodu gonderildigi gorulur
+        # goruntulenerek ilgili numaraya dogrulama kodu gonderildigi gorulur.
   @telefon_numarasi
   Scenario Outline: telefon_alani_gecerli_turk_telekom_numara_girisi
     Given kullanici ePosta veya telefon alanina turk telekom"<telefon numarasi>" girer
