@@ -1,6 +1,6 @@
 @giris_yap
 Feature: sayfaya_kayit_olusturulur
-  Background:
+  Background:feature_file icin ortak adimlar
     Given kullanici url ye gider
     When  kullanici anasayfanin acildigini dogrular
     And   kullanici giris_yapHome alanina gelir
@@ -72,6 +72,33 @@ Feature: sayfaya_kayit_olusturulur
       And   kullanici son birkac adim kaldi uyarisini goruntuler
       When  kullanici bir onceki sayfaya doner
       Then  kullanici sayfayi kapatir
+
+      @gecersiz_eposta
+    Scenario: eposta_alani_gecersiz_giris
+      Given kullanici ePosta veya telefon alanina bosluk karakteri girer ve enter a basar
+      When  kullanici eposta adresinizi veya telefon numaranizi girmelisiniz uyarisini gorur
+      And   kullanici sayfayi yeniler
+      And   kullanici ePosta veya telefon alanina "@gmail.com" girer
+      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
+      And   kullanici sayfayi yeniler
+      And   kullanici ePosta veya telefon alanina "admingmail.com" girer
+      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
+      And   kullanici sayfayi yeniler
+      And   kullanici ePosta veya telefon alanina "admin@gmailcom" girer
+      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
+      And   kullanici sayfayi yeniler
+      And   kullanici ePosta veya telefon alanina "++@gmail.com" girer
+      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
+      And   kullanici sayfayi yeniler
+      And   kullanici ePosta veya telefon alanina "admingmail.comabcdef" girer
+      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
+      And   kullanici sayfayi yeniler
+      And   kullanici ePosta veya telefon alanina "admingmail.com1" girer
+      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
+      And   kullanici sayfayi yeniler
+      And   kullanici ePosta veya telefon alanina "admingmail.com//" girer
+      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
+      And   kullanici sayfayi kapatir
 
 
 
