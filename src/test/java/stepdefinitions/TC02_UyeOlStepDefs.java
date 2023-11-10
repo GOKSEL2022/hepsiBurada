@@ -138,4 +138,12 @@ public class TC02_UyeOlStepDefs {
     public void kullaniciGecerliBirEpostaAdresiGirmelisinizUyarisiniGorur() {
         assert girisPage.gecerliBirEpostaAdresiGirmelisinizAlertGiris.isDisplayed();
     }
+
+    @And("kullanici sayfayi yeniler")
+    public void kullaniciSayfayiYeniler() {
+    }
+
+    @And("kullanici ePosta veya telefon alanina {string} girer")
+    public void kullaniciEPostaVeyaTelefonAlaninaGirer(String string) {
+    }
 }
