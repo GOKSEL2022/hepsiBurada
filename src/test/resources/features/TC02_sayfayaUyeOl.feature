@@ -79,24 +79,31 @@ Feature: sayfaya_kayit_olusturulur
       When  kullanici eposta adresinizi veya telefon numaranizi girmelisiniz uyarisini gorur
       And   kullanici sayfayi yeniler
       And   kullanici ePosta veya telefon alanina "@gmail.com" girer
+      And   kullanici devam et butonuna tiklar
       And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
       And   kullanici sayfayi yeniler
       And   kullanici ePosta veya telefon alanina "admingmail.com" girer
+      And   kullanici devam et butonuna tiklar
       And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
       And   kullanici sayfayi yeniler
       And   kullanici ePosta veya telefon alanina "admin@gmailcom" girer
+      And   kullanici devam et butonuna tiklar
       And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
       And   kullanici sayfayi yeniler
       And   kullanici ePosta veya telefon alanina "++@gmail.com" girer
+      And   kullanici devam et butonuna tiklar
       And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
       And   kullanici sayfayi yeniler
       And   kullanici ePosta veya telefon alanina "admingmail.comabcdef" girer
+      And   kullanici devam et butonuna tiklar
       And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
       And   kullanici sayfayi yeniler
       And   kullanici ePosta veya telefon alanina "admingmail.com1" girer
+      And   kullanici devam et butonuna tiklar
       And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
       And   kullanici sayfayi yeniler
       And   kullanici ePosta veya telefon alanina "admingmail.com//" girer
+      And   kullanici devam et butonuna tiklar
       And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
       And   kullanici sayfayi kapatir
 
