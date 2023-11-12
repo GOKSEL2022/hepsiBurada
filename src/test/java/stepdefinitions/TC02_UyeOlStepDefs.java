@@ -141,9 +141,11 @@ public class TC02_UyeOlStepDefs {
 
     @And("kullanici sayfayi yeniler")
     public void kullaniciSayfayiYeniler() {
+        Driver.getDriver().navigate().refresh();
     }
 
     @And("kullanici ePosta veya telefon alanina {string} girer")
     public void kullaniciEPostaVeyaTelefonAlaninaGirer(String string) {
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(string);
     }
 }
