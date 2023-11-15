@@ -50,7 +50,7 @@ Feature: sayfaya_kayit_olusturulur
     Given kullanici ePosta veya telefon alanina turk telekom"<telefon numarasi>" girer
     When  kullanici devam et butonuna tiklar
     And   kullanici son birkac adim kaldi uyarisini goruntuler
-    When  kullanici bir onceki sayfaya doner
+    When  kullanici sayfayi yeniler
     Then  kullanici sayfayi kapatir
     Examples:
       | telefon numarasi |
@@ -70,7 +70,7 @@ Feature: sayfaya_kayit_olusturulur
       Given kullanici ePosta veya telefon alanina turkcell_vodafone numarasi girer
       When  kullanici devam et butonuna tiklar
       And   kullanici son birkac adim kaldi uyarisini goruntuler
-      When  kullanici bir onceki sayfaya doner
+      When  kullanici sayfayi yeniler
       Then  kullanici sayfayi kapatir
 
       @gecersiz_eposta
@@ -107,17 +107,27 @@ Feature: sayfaya_kayit_olusturulur
       And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
       And   kullanici sayfayi kapatir
 
+        @gecerli_email
     Scenario Outline: eposta_alani_gecerli_giris
       Given kullanici ePosta veya telefon alanina "<gecerli bir email adresi>" girer
+      When  kullanici devam et butonuna tiklar
       When  kullanici dogrulama maili gonderildi uyarisini goruntuler
+      And   kullanici iki saniye bekler
       And   kullanici sayfayi yeniler
       Then  kullanici sayfayi kapatir
+
       Examples:
         | gecerli bir email adresi |
-        | abcdefghijk@gmail.com    |
         | abc489@gmail.com         |
         | abc_123@gmail.com        |
+        | abc-123@gmail.com        |
+        | abc.123@gmail.com        |
 
+      Scenario: eposta_alani_alfabetik_harf_girisi
+        Given kullanici ePosta veya telefon alanina alfabetik harfler girer ve enter a basar
+        When  kullanici dogrulama maili gonderildi uyarisini goruntuler
+        And   kullanici sayfayi yeniler
+        Then  kullanici sayfayi kapatir
 
 
 
