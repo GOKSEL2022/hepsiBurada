@@ -107,6 +107,17 @@ Feature: sayfaya_kayit_olusturulur
       And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
       And   kullanici sayfayi kapatir
 
+    Scenario Outline: eposta_alani_gecerli_giris
+      Given kullanici ePosta veya telefon alanina "<gecerli bir email adresi>" girer
+      When  kullanici dogrulama maili gonderildi uyarisini goruntuler
+      And   kullanici sayfayi yeniler
+      Then  kullanici sayfayi kapatir
+      Examples:
+        | gecerli bir email adresi |
+        | abcdefghijk@gmail.com    |
+        | abc489@gmail.com         |
+        | abc_123@gmail.com        |
+
 
 
 

@@ -20,6 +20,8 @@ public class TC02_UyeOlStepDefs {
     int number = Faker.instance().number().numberBetween(1000, 9999);
     String mail="@gmail.com";
     int phoneNo1 = Faker.instance().number().numberBetween(530, 549);
+    String karakter = Faker.instance().lorem().characters(10,15);
+
 
     @And("kullanici giris_yapHome alanina gelir")
     public void kullaniciGiris_yapHomeAlaninaGelir() throws InterruptedException {
