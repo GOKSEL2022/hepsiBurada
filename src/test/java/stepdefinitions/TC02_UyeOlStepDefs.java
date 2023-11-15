@@ -65,12 +65,10 @@ public class TC02_UyeOlStepDefs {
         ReusableMethods.scrollIntoViewJS(girisPage.googleIleGirisYapButonGiris);
         ReusableMethods.clickWithTimeOut(girisPage.googleIleGirisYapButonGiris,2);
     }
-
     @And("kullanici google ile oturum acin yazisini goruntuler")
     public void kullaniciGoogleIleOturumAcinYazisiniGoruntuler() {
         assert accountPage.googleIleOturumAcinTextAccount.isDisplayed();
     }
-
     @And("kullanici bir onceki sayfaya doner")
     public void kullaniciBirOncekiSayfayaDoner() {
         Driver.getDriver().navigate().back();
@@ -81,7 +79,6 @@ public class TC02_UyeOlStepDefs {
         ReusableMethods.clickWithTimeOut(girisPage.appleIleGirisYapButonGiris,2);
 
     }
-
     @And("kullanici apple kimligi yazisini goruntuler")
     public void kullaniciAppleKimligiYazisiniGoruntuler() {
         assert appleidPage.appleKimligiTextAppleid.isDisplayed();
@@ -119,12 +116,10 @@ public class TC02_UyeOlStepDefs {
         Thread.sleep(1000);
         assert girisPage.epostaAdresiniziVeyaTelefonNoGirmelisinizAlertGiris.isDisplayed();
     }
-
     @And("kullanici ePosta veya telefon alanina sembol girer")
     public void kullaniciEPostaVeyaTelefonAlaninaSembolGirer() {
         girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys("////");
     }
-
     @When("kullanici gecerli bir cep telefonu girmelisiniz uyarisini gorur")
     public void kullanici_gecerli_bir_cep_telefonu_girmelisiniz_uyarisini_gorur() throws InterruptedException {
         Thread.sleep(1000);
@@ -134,13 +129,11 @@ public class TC02_UyeOlStepDefs {
     public void kullaniciEPostaVeyaTelefonAlaninaSonHanesiHarfIcerenBirTelefonNoGirer() throws InterruptedException {
         Driver.getDriver().navigate().refresh();
         girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys("546507525a",Keys.ENTER);
-
     }
     @When("kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur")
     public void kullaniciGecerliBirEpostaAdresiGirmelisinizUyarisiniGorur() {
         assert girisPage.gecerliBirEpostaAdresiGirmelisinizAlertGiris.isDisplayed();
     }
-
     @And("kullanici sayfayi yeniler")
     public void kullaniciSayfayiYeniler() {
         Driver.getDriver().navigate().refresh();
@@ -149,5 +142,13 @@ public class TC02_UyeOlStepDefs {
     @And("kullanici ePosta veya telefon alanina {string} girer")
     public void kullaniciEPostaVeyaTelefonAlaninaGirer(String string) {
         girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(string);
+    }
+    @Given("kullanici ePosta veya telefon alanina alfabetik harfler girer ve enter a basar")
+    public void kullaniciEPostaVeyaTelefonAlaninaAlfabetikHarflerGirerVeEnterABasar() {
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(karakter+mail,Keys.ENTER);
+    }
+    @And("kullanici iki saniye bekler")
+    public void kullaniciIkiSaniyeBekler() throws InterruptedException {
+        Thread.sleep(2000);
     }
 }
