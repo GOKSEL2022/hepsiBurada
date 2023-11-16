@@ -73,41 +73,36 @@ Feature: sayfaya_kayit_olusturulur
       When  kullanici sayfayi yeniler
       Then  kullanici sayfayi kapatir
 
-      @gecersiz_eposta
-    Scenario: eposta_alani_gecersiz_giris
-      Given kullanici ePosta veya telefon alanina bosluk karakteri girer ve enter a basar
-      When  kullanici eposta adresinizi veya telefon numaranizi girmelisiniz uyarisini gorur
-      And   kullanici sayfayi yeniler
-      And   kullanici ePosta veya telefon alanina "@gmail.com" girer
-      And   kullanici devam et butonuna tiklar
-      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
-      And   kullanici sayfayi yeniler
-      And   kullanici ePosta veya telefon alanina "admingmail.com" girer
-      And   kullanici devam et butonuna tiklar
-      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
-      And   kullanici sayfayi yeniler
-      And   kullanici ePosta veya telefon alanina "admin@gmailcom" girer
-      And   kullanici devam et butonuna tiklar
-      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
-      And   kullanici sayfayi yeniler
-      And   kullanici ePosta veya telefon alanina "++@gmail.com" girer
-      And   kullanici devam et butonuna tiklar
-      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
-      And   kullanici sayfayi yeniler
-      And   kullanici ePosta veya telefon alanina "admingmail.comabcdef" girer
-      And   kullanici devam et butonuna tiklar
-      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
-      And   kullanici sayfayi yeniler
-      And   kullanici ePosta veya telefon alanina "admingmail.com1" girer
-      And   kullanici devam et butonuna tiklar
-      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
-      And   kullanici sayfayi yeniler
-      And   kullanici ePosta veya telefon alanina "admingmail.com//" girer
+    Scenario Outline:  eposta_alani_gecersiz_giris
+      And   kullanici ePosta veya telefon alanina "<invalid email>" girer
       And   kullanici devam et butonuna tiklar
       And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
       And   kullanici sayfayi kapatir
+        Examples:
+          | invalid email        |
+          | admingmail.com       |
+          | admin@gmailcom       |
+          | @gmail.com           |
+          | ++@gmail.com         |
+          | admingmail.comabcdef |
+          | admingmail.com1      |
+          | admingmail.com//     |
+          | @gmail.com           |
+          | abcdefgh             |
+          | 123456               |
+          | ahmet@qwer.zxcv      |
 
-        @gecerli_email
+  @gecersiz_eposta
+  Scenario: eposta_alani_gecersiz_giris
+    Given kullanici ePosta veya telefon alanina bosluk karakteri girer ve enter a basar
+    When  kullanici eposta adresinizi veya telefon numaranizi girmelisiniz uyarisini gorur
+    And   kullanici sayfayi yeniler
+    And   kullanici ePosta veya telefon alanina tiklar
+    And   kullanici devam et butonuna tiklar
+    And   kullanici eposta adresinizi veya telefon numaranizi girmelisiniz uyarisini gorur
+    And   kullanici sayfayi kapatir
+
+  @gecerli_email
     Scenario Outline: eposta_alani_gecerli_giris
       Given kullanici ePosta veya telefon alanina "<gecerli bir email adresi>" girer
       When  kullanici devam et butonuna tiklar
@@ -123,10 +118,9 @@ Feature: sayfaya_kayit_olusturulur
         | abc-123@gmail.com        |
         | abc.123@gmail.com        |
 
-      Scenario: eposta_alani_alfabetik_harf_girisi
+    Scenario: eposta_alani_alfabetik_harf_girisi
         Given kullanici ePosta veya telefon alanina alfabetik harfler girer ve enter a basar
         When  kullanici dogrulama maili gonderildi uyarisini goruntuler
-        And   kullanici sayfayi yeniler
         Then  kullanici sayfayi kapatir
 
 

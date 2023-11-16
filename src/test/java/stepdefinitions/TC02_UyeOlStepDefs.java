@@ -151,4 +151,9 @@ public class TC02_UyeOlStepDefs {
     public void kullaniciIkiSaniyeBekler() throws InterruptedException {
         Thread.sleep(2000);
     }
+
+    @And("kullanici ePosta veya telefon alanina tiklar")
+    public void kullaniciEPostaVeyaTelefonAlaninaTiklar() {
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.click();
+    }
 }
