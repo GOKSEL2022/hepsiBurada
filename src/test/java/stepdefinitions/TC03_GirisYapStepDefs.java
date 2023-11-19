@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
 import pages.GirisPage;
 import pages.HomePage;
@@ -20,5 +21,21 @@ public class TC03_GirisYapStepDefs {
     @Given("kullanici girisYapButonOnaylamaGiris e tiklar")
     public void kullaniciGirisYapButonOnaylamaGirisETiklar() {
         ReusableMethods.clickByJS(girisPage.girisYapButonOnaylamaGiris);
+    }
+
+    @When("kullanici ePosta veya telefon alanina kayitli email girer")
+    public void kullaniciEPostaVeyaTelefonAlaninaKayitliEmailGirer() {
+    }
+
+    @And("kullanici giris Yap butona tiklar")
+    public void kullaniciGirisYapButonaTiklar() {
+    }
+
+    @And("kullanici sifre alanina kayitli sifresini girer")
+    public void kullaniciSifreAlaninaKayitliSifresiniGirer() {
+    }
+
+    @When("kullanici kayitli hesap ile sayfaya giris yaptigini dogrular")
+    public void kullaniciKayitliHesapIleSayfayaGirisYaptiginiDogrular() {
     }
 }
