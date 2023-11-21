@@ -19,6 +19,9 @@ public class HomePage {
     @FindBy(xpath = "//a[@id='register']")
     public WebElement uyeOlLinkGiris_yapHome;
 
+    @FindBy(xpath = "//a[@title='Hesabım']")
+    public WebElement hesabimGokselCelikHome;
+
 
 
 

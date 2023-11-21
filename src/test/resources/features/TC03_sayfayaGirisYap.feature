@@ -10,11 +10,12 @@ Feature: kullanici_sayfaya_giris_yapar
     When  kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
     Then  kullanici sayfayi kapatir
 
-    Scenario:
+    @kayitli_mail_girisi
+    Scenario:sayfaya_kayitli_mail_ile_giris
       Given kullanici girisYapButonOnaylamaGiris e tiklar
       When  kullanici ePosta veya telefon alanina kayitli email girer
       And   kullanici giris Yap butona tiklar
       And   kullanici sifre alanina kayitli sifresini girer
-      And   kullanici giris Yap butona tiklar
+      And   kullanici giris Yap_HosGeldiniz butona tiklar
       When  kullanici kayitli hesap ile sayfaya giris yaptigini dogrular
       Then  kullanici sayfayi kapatir
