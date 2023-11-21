@@ -123,6 +123,12 @@ Feature: sayfaya_kayit_olusturulur
         When  kullanici dogrulama maili gonderildi uyarisini goruntuler
         Then  kullanici sayfayi kapatir
 
+    Scenario: kayitli_mail_ile_uyelik_testi
+      Given kullanici ePosta veya telefon alanina kayitli email girer
+      When  kullanici devam et butonuna tiklar
+      And   kullanici buEpostaAdresineAitHesapOldugunuFarkEttik uyarisini gorur
+      Then  kullanici sayfayi kapatir
+
 
 
 
