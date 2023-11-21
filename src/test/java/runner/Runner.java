@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features="src/test/resources/features",
         glue= {"stepdefinitions", "hooks"},
-        tags="@gecersiz_eposta"  ,
+        tags="@kayitli_mail_girisi"  ,
         dryRun= false
 )
 public class Runner {

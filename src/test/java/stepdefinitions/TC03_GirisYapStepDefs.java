@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
 import pages.GirisPage;
 import pages.HomePage;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -25,17 +26,26 @@ public class TC03_GirisYapStepDefs {
 
     @When("kullanici ePosta veya telefon alanina kayitli email girer")
     public void kullaniciEPostaVeyaTelefonAlaninaKayitliEmailGirer() {
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(ConfigReader.getProperty("kayitliEmail"));
     }
 
     @And("kullanici giris Yap butona tiklar")
     public void kullaniciGirisYapButonaTiklar() {
+        ReusableMethods.clickByJS(girisPage.girisYapButonOnaylamaGiris);
     }
 
     @And("kullanici sifre alanina kayitli sifresini girer")
     public void kullaniciSifreAlaninaKayitliSifresiniGirer() {
+        girisPage.sifreAlaniTextBoxGirisYapGiris.sendKeys(ConfigReader.getProperty("kayitliSifre"));
     }
-
+    @And("kullanici giris Yap_HosGeldiniz butona tiklar")
+    public void kullaniciGirisYap_HosGeldinizButonaTiklar() {
+        ReusableMethods.clickByJS(girisPage.girisYapButonGirisYapGiris);
+    }
     @When("kullanici kayitli hesap ile sayfaya giris yaptigini dogrular")
     public void kullaniciKayitliHesapIleSayfayaGirisYaptiginiDogrular() {
+        assert homePage.hesabimGokselCelikHome.isDisplayed();
     }
+
+
 }
