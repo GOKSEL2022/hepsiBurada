@@ -68,6 +68,9 @@ public class GirisPage {
     @FindBy(xpath = "//*[@id='btnEmailSelect']")
     public WebElement girisYapButonGirisYapGiris;
 
+    @FindBy(xpath = "(//*[.='Bu e-posta adresine ait bir hesabınız olduğunu fark ettik.'])[1]")
+    public WebElement buEpostaAdresineAitHesapOldugunuFarkEttikTextGiris;
+
 
 
 

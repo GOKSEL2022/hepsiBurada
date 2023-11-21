@@ -156,4 +156,9 @@ public class TC02_UyeOlStepDefs {
     public void kullaniciEPostaVeyaTelefonAlaninaTiklar() {
         girisPage.epostaAdresiVeyaTelNoTextBoxGiris.click();
     }
+
+    @And("kullanici buEpostaAdresineAitHesapOldugunuFarkEttik uyarisini gorur")
+    public void kullaniciBuEpostaAdresineAitHesapOldugunuFarkEttikUyarisiniGorur() {
+        assert girisPage.buEpostaAdresineAitHesapOldugunuFarkEttikTextGiris.isDisplayed();
+    }
 }
