@@ -3,6 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.GirisPage;
 import pages.HomePage;
@@ -18,34 +19,21 @@ public class TC03_GirisYapStepDefs {
     public void kullaniciGirisYapLinkGiris_yapHomeLinkiniTiklar() {
         ReusableMethods.clickByJS(homePage.girisYapLinkGiris_yapHome);
     }
-
     @Given("kullanici girisYapButonOnaylamaGiris e tiklar")
     public void kullaniciGirisYapButonOnaylamaGirisETiklar() {
         ReusableMethods.clickByJS(girisPage.girisYapButonOnaylamaGiris);
     }
-
-    @When("kullanici ePosta veya telefon alanina kayitli email girer")
-    public void kullaniciEPostaVeyaTelefonAlaninaKayitliEmailGirer() {
-        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(ConfigReader.getProperty("kayitliEmail"));
+    @When("kullanici ePosta veya telefon alanina kayitli email girer ve enter a tiklar")
+    public void kullaniciEPostaVeyaTelefonAlaninaKayitliEmailGirerVeEnterATiklar() {
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(ConfigReader.getProperty("kayitliEmail"), Keys.ENTER);
     }
-
-    @And("kullanici giris Yap butona tiklar")
-    public void kullaniciGirisYapButonaTiklar() {
-        ReusableMethods.clickByJS(girisPage.girisYapButonOnaylamaGiris);
-    }
-
-    @And("kullanici sifre alanina kayitli sifresini girer")
-    public void kullaniciSifreAlaninaKayitliSifresiniGirer() {
-        girisPage.sifreAlaniTextBoxGirisYapGiris.sendKeys(ConfigReader.getProperty("kayitliSifre"));
-    }
-    @And("kullanici giris Yap_HosGeldiniz butona tiklar")
-    public void kullaniciGirisYap_HosGeldinizButonaTiklar() {
-        ReusableMethods.clickByJS(girisPage.girisYapButonGirisYapGiris);
+    @And("kullanici sifre alanina kayitli sifresini girer ve enter a tiklar")
+    public void kullaniciSifreAlaninaKayitliSifresiniGirerVeEnterATiklar() {
+        girisPage.sifreAlaniTextBoxGirisYapGiris.sendKeys(ConfigReader.getProperty("kayitliSifre"),Keys.ENTER);
     }
     @When("kullanici kayitli hesap ile sayfaya giris yaptigini dogrular")
     public void kullaniciKayitliHesapIleSayfayaGirisYaptiginiDogrular() {
         assert homePage.hesabimGokselCelikHome.isDisplayed();
     }
-
 
 }
