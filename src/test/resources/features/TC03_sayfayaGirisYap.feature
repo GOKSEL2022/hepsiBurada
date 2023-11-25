@@ -17,3 +17,18 @@ Feature: kullanici_sayfaya_giris_yapar
     Given kullanici girisYapButonOnaylamaGiris e tiklar
     When  kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
     Then  kullanici sayfayi kapatir
+
+   Scenario Outline: invalid_giris_testi_senaryolari
+      Given kullanici girisYapButonOnaylamaGiris e tiklar
+      When  kullanici ePosta veya telefon alanina invalid email "<email>" girer
+      And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
+      Then  kullanici sayfayi kapatir
+     Examples:
+       | email                   |
+       | yekparebiran@gmail.com+ |
+       | yekparebiran@+gmail.com |
+       | yekparebiran@gmailcom   |
+       | yekparebirangmail.com   |
+       | yekparebiran@gmail.     |
+       | yekparebiran@gmail      |
+

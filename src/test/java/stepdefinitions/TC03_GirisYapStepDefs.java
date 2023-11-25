@@ -36,4 +36,8 @@ public class TC03_GirisYapStepDefs {
         assert homePage.hesabimGokselCelikHome.isDisplayed();
     }
 
+    @When("kullanici ePosta veya telefon alanina invalid email {string} girer")
+    public void kullaniciEPostaVeyaTelefonAlaninaInvalidEmailGirer(String string) {
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(string);
+    }
 }
