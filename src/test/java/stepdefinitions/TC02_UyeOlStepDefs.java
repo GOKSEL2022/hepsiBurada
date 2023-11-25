@@ -7,6 +7,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.*;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -160,5 +161,10 @@ public class TC02_UyeOlStepDefs {
     @And("kullanici buEpostaAdresineAitHesapOldugunuFarkEttik uyarisini gorur")
     public void kullaniciBuEpostaAdresineAitHesapOldugunuFarkEttikUyarisiniGorur() {
         assert girisPage.buEpostaAdresineAitHesapOldugunuFarkEttikTextGiris.isDisplayed();
+    }
+
+    @Given("kullanici ePosta veya telefon alanina kayitli email girer")
+    public void kullaniciEPostaVeyaTelefonAlaninaKayitliEmailGirer() {
+        girisPage.epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(ConfigReader.getProperty("kayitliEmail"), Keys.ENTER);
     }
 }
