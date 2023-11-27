@@ -18,11 +18,12 @@ Feature: kullanici_sayfaya_giris_yapar
     When  kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
     Then  kullanici sayfayi kapatir
 
+    @invalid_email
    Scenario Outline: invalid_giris_testi_senaryolari
       Given kullanici girisYapButonOnaylamaGiris e tiklar
       When  kullanici ePosta veya telefon alanina invalid email "<email>" girer
       And   kullanici gecerli bir eposta adresi girmelisiniz uyarisini gorur
-      Then  kullanici sayfayi kapatir
+      Then  kullanici sayfayi yeniler
      Examples:
        | email                   |
        | yekparebiran@gmail.com+ |
