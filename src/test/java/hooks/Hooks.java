@@ -25,7 +25,7 @@ Burda onemli olan raporlama isleminin ekran goruntusuyle birlikde Hooks yardimiy
             final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
 //                       ekran goruntusu    file tipi                  ekran goruntusunun adi
             scenario.attach(failedScreenshot, "image/png", "failed_scenario_"+scenario.getName());
-            //Driver.closeDriver();
+            Driver.closeDriver();
         }
     }
 
