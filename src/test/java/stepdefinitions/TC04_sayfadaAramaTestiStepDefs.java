@@ -38,9 +38,4 @@ public class TC04_sayfadaAramaTestiStepDefs {
     public void kullaniciAramaAlaninaBirAdetSembolGirer() {
         actions.sendKeys(homePage.searchBoxHome).sendKeys(""+sembol).perform();
     }
-
-    @And("kullanici bir saniye bekler")
-    public void kullaniciBirSaniyeBekler() throws InterruptedException {
-        Thread.sleep(1000);
-    }
 }
