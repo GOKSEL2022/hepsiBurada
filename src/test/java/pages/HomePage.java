@@ -25,7 +25,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='searchBoxOld-M1esqHPyWSuRUjMCALPK']")
     public WebElement searchBoxHome;
 
-    @FindBy(xpath = "//*[@id='SearchBoxOld_a3ac64c2-4f9e-481f-1045-9bc3cb7968eb']")
+    @FindBy(xpath = "//*[@class='searchBoxOld-P2GCKq3V7DvEXIgWsSCP']")
     public WebElement aramayaBaslamakIcinEnAz2KarakterYazmalisinizTextHome;
 
 
