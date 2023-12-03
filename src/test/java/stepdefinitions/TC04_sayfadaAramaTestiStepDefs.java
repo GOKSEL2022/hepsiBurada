@@ -1,11 +1,13 @@
 package stepdefinitions;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import utilities.Driver;
 public class TC04_sayfadaAramaTestiStepDefs {
     HomePage homePage=new HomePage();
+
     Actions actions=new Actions(Driver.getDriver());
     char harf='a';   byte rakam=1;  char sembol='*';
     @And("kullanici arama alanina tiklar")
@@ -16,6 +18,7 @@ public class TC04_sayfadaAramaTestiStepDefs {
     @And("kullanici arama alanina en az iki karakter girmesi gerektigini gorur")
     public void kullaniciAramaAlaninaEnAzIkiKarakterGirmesiGerektiginiGorur() {
         assert homePage.aramayaBaslamakIcinEnAz2KarakterYazmalisinizTextHome.getText().contains("en az 2 karakter");
+        Driver.getDriver().navigate().refresh();
     }
     @And("kullanici arama alanina bir adet harf  girer")
     public void kullaniciAramaAlaninaBirAdetHarfGirer() {
@@ -37,8 +40,12 @@ public class TC04_sayfadaAramaTestiStepDefs {
     public void kullaniciAramaAlaninaIkiAdetBoslukGirer() {
         actions.sendKeys(homePage.searchBoxHome).sendKeys(Keys.SPACE,Keys.SPACE).perform();
     }
-    @And("kullanici arama alanina uc bocluk girer")
-    public void kullaniciAramaAlaninaUcBoclukGirer() {
+    @And("kullanici arama alanina uc bosluk girer")
+    public void kullaniciAramaAlaninaUcBoslukGirer() {
         actions.sendKeys(homePage.searchBoxHome).sendKeys(Keys.SPACE,Keys.SPACE,Keys.SPACE).perform();
+    }
+    @And("kullanici arama alanina gecerli deger {string} girer")
+    public void kullaniciAramaAlaninaGecerliDegerGirer(String string) {
+        actions.sendKeys(homePage.searchBoxHome).sendKeys(string,Keys.ENTER).perform();
     }
 }
