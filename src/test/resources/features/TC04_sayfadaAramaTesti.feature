@@ -39,6 +39,16 @@ Feature:Arama_alani
           | aaa                  |
           | 111                  |
 
+        Scenario Outline: arama_alani_sinir_deger_testi_3
+          And   kullanici arama alanina gecerli sembol "<iki veya uc karakterli sembol>" girer
+          When  kullanici arama ile ilgili sonuc bulunamamistir yazisini goruntuler
+          Then  kullanici sayfayi kapatir
+          Examples:
+            | iki veya uc karakterli sembol |
+            | **                            |
+            | ***                           |
+
+
         
 
 
