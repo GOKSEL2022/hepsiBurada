@@ -3,11 +3,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import pages.AraPage;
 import pages.HomePage;
 import utilities.Driver;
 public class TC04_sayfadaAramaTestiStepDefs {
     HomePage homePage=new HomePage();
-
+    AraPage araPage=new AraPage();
     Actions actions=new Actions(Driver.getDriver());
     char harf='a';   byte rakam=1;  char sembol='*';
     @And("kullanici arama alanina tiklar")
@@ -48,4 +49,5 @@ public class TC04_sayfadaAramaTestiStepDefs {
     public void kullaniciAramaAlaninaGecerliDegerGirer(String string) {
         actions.sendKeys(homePage.searchBoxHome).sendKeys(string,Keys.ENTER).perform();
     }
+
 }
