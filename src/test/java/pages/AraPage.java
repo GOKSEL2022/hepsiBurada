@@ -12,4 +12,6 @@ public class AraPage {
     @FindBy(xpath = "//div[text()='Kategori']")
     public WebElement kategoriTextAra;
 
+    @FindBy(xpath = "//*[text()=' ile ilgili sonuç bulunamamıştır']")
+    public WebElement sembolIleIlgiliSonucBulunamamistirTextAra;
 }
