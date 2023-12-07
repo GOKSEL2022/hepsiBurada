@@ -1,5 +1,6 @@
 package stepdefinitions;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -60,5 +61,53 @@ public class TC04_sayfadaAramaTestiStepDefs {
     @When("kullanici arama ile ilgili sonuc bulunamamistir yazisini goruntuler")
     public void kullaniciAramaIleIlgiliSonucBulunamamistirYazisiniGoruntuler() {
         assert araPage.sembolIleIlgiliSonucBulunamamistirTextAra.isDisplayed();
+    }
+
+    @Given("kullanici arama alaninda {string} aratir")
+    public void kullaniciAramaAlanindaAratir(String arg0) {
+    }
+
+    @When("kullanici acilan sayfada iphone {int} ile ilgili sonuc bulundugunu dogrular")
+    public void kullaniciAcilanSayfadaIphoneIleIlgiliSonucBulundugunuDogrular(int arg0) {
+    }
+
+    @And("kullanici sayfadaki ilk urunun uzerine gelir")
+    public void kullaniciSayfadakiIlkUrununUzerineGelir() {
+    }
+
+    @And("kullanici urunun altinda GByte bilgisini goruntuler")
+    public void kullaniciUrununAltindaGByteBilgisiniGoruntuler() {
+    }
+
+    @And("kullanici urunun altinda fiyat bilgisini goruntuler")
+    public void kullaniciUrununAltindaFiyatBilgisiniGoruntuler() {
+    }
+
+    @And("kullanici sayfadaki ilk urune tiklar")
+    public void kullaniciSayfadakiIlkUruneTiklar() {
+    }
+
+    @And("kullanici sepete eklenecek urun sayisinin artirilıp azaltilabilecegini dogrular")
+    public void kullaniciSepeteEklenecekUrunSayisininArtirilıpAzaltilabileceginiDogrular() {
+    }
+
+    @And("kullanici satin alacagi urunun altinda ozelliklerini gorur")
+    public void kullaniciSatinAlacagiUrununAltindaOzellikleriniGorur() {
+    }
+
+    @And("kullanici sepete ekle butonuna tiklar")
+    public void kullaniciSepeteEkleButonunaTiklar() {
+    }
+
+    @And("kullanici urunun sepete eklendigi uyarisini gorur")
+    public void kullaniciUrununSepeteEklendigiUyarisiniGorur() {
+    }
+
+    @And("kullanici sepete git butonuna tiklar")
+    public void kullaniciSepeteGitButonunaTiklar() {
+    }
+
+    @When("kullanici sepete ekledigi urunun sepetinde oldugunu dogrular")
+    public void kullaniciSepeteEkledigiUrununSepetindeOldugunuDogrular() {
     }
 }
