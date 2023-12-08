@@ -64,13 +64,13 @@ public class TC04_sayfadaAramaTestiStepDefs {
     }
 
     @Given("kullanici arama alaninda {string} aratir")
-    public void kullaniciAramaAlanindaAratir(String arg0) {
+    public void kullaniciAramaAlanindaAratir(String string) {
+        actions.sendKeys(homePage.searchBoxHome).sendKeys(string,Keys.ENTER).perform();
     }
-
-    @When("kullanici acilan sayfada iphone {int} ile ilgili sonuc bulundugunu dogrular")
-    public void kullaniciAcilanSayfadaIphoneIleIlgiliSonucBulundugunuDogrular(int arg0) {
+    @When("kullanici acilan sayfada {string} ile ilgili sonuc bulundugunu dogrular")
+    public void kullaniciAcilanSayfadaIleIlgiliSonucBulundugunuDogrular(String string) {
+        assert araPage.iphone11IleIlgiliUrunBuldukTextAra.getText().contains("iphone 11");
     }
-
     @And("kullanici sayfadaki ilk urunun uzerine gelir")
     public void kullaniciSayfadakiIlkUrununUzerineGelir() {
     }
@@ -110,4 +110,6 @@ public class TC04_sayfadaAramaTestiStepDefs {
     @When("kullanici sepete ekledigi urunun sepetinde oldugunu dogrular")
     public void kullaniciSepeteEkledigiUrununSepetindeOldugunuDogrular() {
     }
+
+
 }
