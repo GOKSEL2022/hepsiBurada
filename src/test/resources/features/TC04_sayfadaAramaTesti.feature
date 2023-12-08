@@ -50,7 +50,7 @@ Feature:Arama_alani
 
         Scenario: kayitsiz_kullanici_olarak_urun_satin_alma_testi
           Given kullanici arama alaninda "iphone 11" aratir
-          When  kullanici acilan sayfada iphone 11 ile ilgili sonuc bulundugunu dogrular
+          When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular
           And   kullanici sayfadaki ilk urunun uzerine gelir
           And   kullanici urunun altinda GByte bilgisini goruntuler
           And   kullanici urunun altinda fiyat bilgisini goruntuler
@@ -61,7 +61,7 @@ Feature:Arama_alani
           And   kullanici urunun sepete eklendigi uyarisini gorur
           And   kullanici sepete git butonuna tiklar
           When  kullanici sepete ekledigi urunun sepetinde oldugunu dogrular
-          Then  kullanici sayfayi kapatir
+         # Then  kullanici sayfayi kapatir
 
 
 
