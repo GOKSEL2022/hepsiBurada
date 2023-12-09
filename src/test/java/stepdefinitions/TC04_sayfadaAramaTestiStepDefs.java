@@ -7,6 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 import pages.AraPage;
 import pages.HomePage;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
 public class TC04_sayfadaAramaTestiStepDefs {
     HomePage homePage=new HomePage();
     AraPage araPage=new AraPage();
@@ -73,18 +75,23 @@ public class TC04_sayfadaAramaTestiStepDefs {
     }
     @And("kullanici sayfadaki ilk urunun uzerine gelir")
     public void kullaniciSayfadakiIlkUrununUzerineGelir() {
+        actions.moveToElement(araPage.iphone11IlkUrunAra).perform();
     }
 
     @And("kullanici urunun altinda GByte bilgisini goruntuler")
     public void kullaniciUrununAltindaGByteBilgisiniGoruntuler() {
+        ReusableMethods.scrollIntoViewJS(araPage.iphone11IlkUrunGbBilgisiAra);
+        assert araPage.iphone11IlkUrunGbBilgisiAra.isDisplayed();
     }
 
     @And("kullanici urunun altinda fiyat bilgisini goruntuler")
     public void kullaniciUrununAltindaFiyatBilgisiniGoruntuler() {
+        assert araPage.iphone11IlkUrunFiyatBilgisiAra.isDisplayed();
     }
 
     @And("kullanici sayfadaki ilk urune tiklar")
     public void kullaniciSayfadakiIlkUruneTiklar() {
+       ReusableMethods.clickByJS(araPage.iphone11IlkUrunAra);
     }
 
     @And("kullanici sepete eklenecek urun sayisinin artirilıp azaltilabilecegini dogrular")
