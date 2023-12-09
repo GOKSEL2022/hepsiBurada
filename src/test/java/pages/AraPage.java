@@ -17,4 +17,13 @@ public class AraPage {
 
     @FindBy(xpath = "(//*[text()='iphone 11'])[2]")
     public WebElement iphone11IleIlgiliUrunBuldukTextAra;
+
+    @FindBy(xpath = "(//*[@data-test-id='carousel-grid-item'])[1]")
+    public WebElement iphone11IlkUrunAra;
+
+    @FindBy(xpath = "//*[.='iPhone 11 128 GB']")
+    public WebElement iphone11IlkUrunGbBilgisiAra;
+
+    @FindBy(xpath = "(//*[@data-test-id='price-current-price'])[1]")
+    public WebElement iphone11IlkUrunFiyatBilgisiAra;
 }
