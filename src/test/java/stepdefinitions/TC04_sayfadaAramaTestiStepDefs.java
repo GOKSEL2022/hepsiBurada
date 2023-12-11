@@ -96,6 +96,7 @@ public class TC04_sayfadaAramaTestiStepDefs {
 
     @And("kullanici sepete eklenecek urun sayisinin artirilıp azaltilabilecegini dogrular")
     public void kullaniciSepeteEklenecekUrunSayisininArtirilıpAzaltilabileceginiDogrular() {
+        araPage.iphone11IlkUrunAra.click();
     }
 
     @And("kullanici satin alacagi urunun altinda ozelliklerini gorur")
