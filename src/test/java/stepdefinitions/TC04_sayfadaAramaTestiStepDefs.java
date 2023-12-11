@@ -6,12 +6,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.AraPage;
 import pages.HomePage;
+import pages.UrunPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class TC04_sayfadaAramaTestiStepDefs {
     HomePage homePage=new HomePage();
     AraPage araPage=new AraPage();
+    UrunPage urunPage=new UrunPage();
     Actions actions=new Actions(Driver.getDriver());
     char harf='a';   byte rakam=1;  char sembol='*';
     @And("kullanici arama alanina tiklar")
@@ -95,8 +97,18 @@ public class TC04_sayfadaAramaTestiStepDefs {
     }
 
     @And("kullanici sepete eklenecek urun sayisinin artirilıp azaltilabilecegini dogrular")
-    public void kullaniciSepeteEklenecekUrunSayisininArtirilıpAzaltilabileceginiDogrular() {
-        araPage.iphone11IlkUrunAra.click();
+    public void kullaniciSepeteEklenecekUrunSayisininArtirilıpAzaltilabileceginiDogrular() throws InterruptedException {
+       Driver.getDriver().navigate().refresh();
+       ReusableMethods.scrollIntoViewJS(urunPage.sepeteEkleButonUrun);
+        for (int i=1;i<4;i++){
+            ReusableMethods.clickByJS(urunPage.arttirIsaretiUrun);
+        }
+        Thread.sleep(1000);
+
+        for (int k=1;k<4;k++){
+            ReusableMethods.clickByJS(urunPage.azaltIsaretiUrun);
+        }
+
     }
 
     @And("kullanici satin alacagi urunun altinda ozelliklerini gorur")
