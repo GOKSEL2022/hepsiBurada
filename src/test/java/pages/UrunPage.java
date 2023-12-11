@@ -16,8 +16,17 @@ public class UrunPage {
     @FindBy(xpath = "//*[@title='Azalt']")
     public WebElement azaltIsaretiUrun;
 
-    @FindBy(xpath = "//*[@id='addToCart']")
+    @FindBy(xpath = "//span[@class='addToCartButton']")
     public WebElement sepeteEkleButonUrun;
+
+    @FindBy(xpath = "(//*[.='Beğen'])[1]")
+    public WebElement linkBegenUrun;
+
+    @FindBy(xpath = "//div[@class='col lg-4 visible']")
+    public WebElement urunOzellikleriUrun;
+
+    @FindBy(xpath = "//*[@id='onetrust-accept-btn-handler']")
+    public WebElement cerezleriKabulEtAlertUrun;
 
 
 }

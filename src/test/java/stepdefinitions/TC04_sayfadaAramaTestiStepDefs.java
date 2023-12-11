@@ -96,21 +96,19 @@ public class TC04_sayfadaAramaTestiStepDefs {
        ReusableMethods.clickByJS(araPage.iphone11IlkUrunAra);
     }
 
-    @And("kullanici sepete eklenecek urun sayisinin artirilıp azaltilabilecegini dogrular")
-    public void kullaniciSepeteEklenecekUrunSayisininArtirilıpAzaltilabileceginiDogrular() throws InterruptedException {
-       Driver.getDriver().navigate().refresh();
-       ReusableMethods.scrollIntoViewJS(urunPage.sepeteEkleButonUrun);
-        for (int i=1;i<4;i++){
+    @And("kullanici sepete eklenecek urun sayisinin artirilip azaltilabilecegini dogrular")
+    public void kullaniciSepeteEklenecekUrunSayisininArtirilipAzaltilabileceginiDogrular() throws InterruptedException {
+        ReusableMethods.switchToWindow(1);
+        Thread.sleep(1000);
+        ReusableMethods.scrollIntoViewJS(urunPage.sepeteEkleButonUrun);
+        for (int i=0;i<3;i++){
             ReusableMethods.clickByJS(urunPage.arttirIsaretiUrun);
         }
         Thread.sleep(1000);
-
-        for (int k=1;k<4;k++){
+        for (int i=0;i<3;i++){
             ReusableMethods.clickByJS(urunPage.azaltIsaretiUrun);
         }
-
-    }
-
+        }
     @And("kullanici satin alacagi urunun altinda ozelliklerini gorur")
     public void kullaniciSatinAlacagiUrununAltindaOzellikleriniGorur() {
     }
