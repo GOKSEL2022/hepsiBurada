@@ -5,6 +5,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.AraPage;
+import pages.CheckoutPage;
 import pages.HomePage;
 import pages.UrunPage;
 import utilities.Driver;
@@ -14,6 +15,7 @@ public class TC04_sayfadaAramaTestiStepDefs {
     HomePage homePage=new HomePage();
     AraPage araPage=new AraPage();
     UrunPage urunPage=new UrunPage();
+    CheckoutPage checkoutPage=new CheckoutPage();
     Actions actions=new Actions(Driver.getDriver());
     char harf='a';   byte rakam=1;  char sembol='*';
     @And("kullanici arama alanina tiklar")
@@ -95,7 +97,6 @@ public class TC04_sayfadaAramaTestiStepDefs {
     public void kullaniciSayfadakiIlkUruneTiklar() {
        ReusableMethods.clickByJS(araPage.iphone11IlkUrunAra);
     }
-
     @And("kullanici sepete eklenecek urun sayisinin artirilip azaltilabilecegini dogrular")
     public void kullaniciSepeteEklenecekUrunSayisininArtirilipAzaltilabileceginiDogrular() throws InterruptedException {
         ReusableMethods.switchToWindow(1);
@@ -111,23 +112,24 @@ public class TC04_sayfadaAramaTestiStepDefs {
         }
     @And("kullanici satin alacagi urunun altinda ozelliklerini gorur")
     public void kullaniciSatinAlacagiUrununAltindaOzellikleriniGorur() {
+        assert urunPage.urunOzellikleriUrun.isDisplayed();
     }
-
     @And("kullanici sepete ekle butonuna tiklar")
     public void kullaniciSepeteEkleButonunaTiklar() {
+        ReusableMethods.clickByJS(urunPage.sepeteEkleButonUrun);
     }
 
     @And("kullanici urunun sepete eklendigi uyarisini gorur")
-    public void kullaniciUrununSepeteEklendigiUyarisiniGorur() {
+    public void kullaniciUrununSepeteEklendigiUyarisiniGorur() throws InterruptedException {
+        Thread.sleep(4000);
+        assert urunPage.urunSepetinizdeAlertUrun.isDisplayed();
     }
-
     @And("kullanici sepete git butonuna tiklar")
     public void kullaniciSepeteGitButonunaTiklar() {
+        ReusableMethods.clickByJS(urunPage.sepeteGitUrun);
     }
-
     @When("kullanici sepete ekledigi urunun sepetinde oldugunu dogrular")
     public void kullaniciSepeteEkledigiUrununSepetindeOldugunuDogrular() {
+        assert checkoutPage.sepeteEklenenUrunCheckout.isDisplayed();
     }
-
-
 }
