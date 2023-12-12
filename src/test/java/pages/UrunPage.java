@@ -16,7 +16,7 @@ public class UrunPage {
     @FindBy(xpath = "//*[@title='Azalt']")
     public WebElement azaltIsaretiUrun;
 
-    @FindBy(xpath = "//span[@class='addToCartButton']")
+    @FindBy(xpath = "//*[@class='button big with-icon']")
     public WebElement sepeteEkleButonUrun;
 
     @FindBy(xpath = "(//*[.='Beğen'])[1]")
@@ -27,6 +27,12 @@ public class UrunPage {
 
     @FindBy(xpath = "//*[@id='onetrust-accept-btn-handler']")
     public WebElement cerezleriKabulEtAlertUrun;
+
+    @FindBy(xpath = "//*[text()=' Ürün sepetinizde']")
+    public WebElement urunSepetinizdeAlertUrun;
+
+    @FindBy(xpath = "//*[.='Sepete git']")
+    public WebElement sepeteGitUrun;
 
 
 }
