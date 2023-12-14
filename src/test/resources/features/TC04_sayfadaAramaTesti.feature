@@ -77,6 +77,16 @@ Feature:Arama_alani
     When  kullanici urunun sepetten kaldirildigini belirten alerti gorur
     Then  kullanici sayfayi kapatir
 
+  Scenario:urunle_ilgili_saticiya_soru_sorabilmeli_cuma_icin
+    Given kullanici arama alaninda "iphone 11" aratir
+    When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular
+    And   kullanici sayfadaki ilk urune tiklar
+    And   kullanici saticiya sor linkine tiklar
+    And   kullanici daha once sorulan sorulari ve cevaplari goruntuler
+    And   kullanici soru ve cevaplarda ara alaninda "garanti" aratir
+    When  kullanici goruntulenen sonuclarin garanti ile ilgili oldugunu dogrular
+    Then  kullanici sayfayi kapatir
+
 
 
 
