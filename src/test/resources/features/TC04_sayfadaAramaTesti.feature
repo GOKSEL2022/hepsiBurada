@@ -65,6 +65,19 @@ Feature:Arama_alani
           Then  kullanici sayfayi kapatir
 
 
+   Scenario: sepete_eklenen_urunun_sepetten_silinme_testi_persembe_icin
+    Given kullanici arama alaninda "iphone 11" aratir
+    When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular
+    And   kullanici sayfadaki ilk urune tiklar
+    And   kullanici sepete ekle butonuna tiklar
+    And   kullanici urunun sepete eklendigi uyarisini gorur
+    And   kullanici sepete git butonuna tiklar
+    And   kullanici sepete ekledigi urunun sepetinde oldugunu dogrular
+    And   kullanici ekledigi urunu sepetten siler
+    When  kullanici urunun sepetten kaldirildigini belirten alerti gorur
+    Then  kullanici sayfayi kapatir
+
+
 
 
 
