@@ -87,6 +87,18 @@ Feature:Arama_alani
     When  kullanici goruntulenen sonuclarin garanti ile ilgili oldugunu dogrular
     Then  kullanici sayfayi kapatir
 
+  Scenario: urunle_ilgili_filtreleme_testi_cumartesi_icin
+    Given kullanici arama alaninda "iphone 11" aratir
+    When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular
+    And   kullanici sayfadaki ilk urune tiklar
+    And   kullanici kategori basligini goruntuler
+    And   kullanici cep telefonu aksesuarlarini isaretler
+    And   kullanici seceneklerden akilli saatlere tiklar
+    And   kullanici sayfada ilk urun olarak akilli saati goruntuler
+    And   kullanici urunun uzerindesaticilardan seyu teknolojiyi secer
+    When  kullanici ekranda filtrelenen urunlerin syu teknolojiye ait oldugunu dogrular
+
+
 
 
 
