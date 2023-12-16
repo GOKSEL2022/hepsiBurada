@@ -97,6 +97,7 @@ Feature:Arama_alani
     And   kullanici sayfada ilk urun olarak akilli saati goruntuler
     And   kullanici urunun uzerindesaticilardan seyu teknolojiyi secer
     When  kullanici ekranda filtrelenen urunlerin syu teknolojiye ait oldugunu dogrular
+    Then  kullanici sayfayi kapatir
 
 
 
