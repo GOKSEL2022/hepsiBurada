@@ -132,4 +132,12 @@ public class TC04_sayfadaAramaTestiStepDefs {
     public void kullaniciSepeteEkledigiUrununSepetindeOldugunuDogrular() {
         assert checkoutPage.sepeteEklenenUrunCheckout.isDisplayed();
     }
+
+    @And("kullanici ekledigi urunu sepetten siler")
+    public void kullaniciEkledigiUrunuSepettenSiler() {
+    }
+
+    @When("kullanici urunun sepetten kaldirildigini belirten alerti gorur")
+    public void kullaniciUrununSepettenKaldirildiginiBelirtenAlertiGorur() {
+    }
 }
