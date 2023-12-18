@@ -64,8 +64,8 @@ Feature:Arama_alani
           When  kullanici sepete ekledigi urunun sepetinde oldugunu dogrular
           Then  kullanici sayfayi kapatir
 
-
-   Scenario: sepete_eklenen_urunun_sepetten_silinme_testi_persembe_icin
+     @urunu_sepetten_silme
+   Scenario: sepete_eklenen_urunun_sepetten_silinme_testi
     Given kullanici arama alaninda "iphone 11" aratir
     When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular
     And   kullanici sayfadaki ilk urune tiklar
@@ -77,7 +77,7 @@ Feature:Arama_alani
     When  kullanici urunun sepetten kaldirildigini belirten alerti gorur
     Then  kullanici sayfayi kapatir
 
-  Scenario:urunle_ilgili_saticiya_soru_sorabilmeli_cuma_icin
+  Scenario:urunle_ilgili_saticiya_soru_sorabilmeli
     Given kullanici arama alaninda "iphone 11" aratir
     When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular
     And   kullanici sayfadaki ilk urune tiklar
@@ -87,7 +87,7 @@ Feature:Arama_alani
     When  kullanici goruntulenen sonuclarin garanti ile ilgili oldugunu dogrular
     Then  kullanici sayfayi kapatir
 
-  Scenario: urunle_ilgili_filtreleme_testi_cumartesi_icin
+  Scenario: urunle_ilgili_filtreleme_testi
     Given kullanici arama alaninda "iphone 11" aratir
     When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular
     And   kullanici sayfadaki ilk urune tiklar

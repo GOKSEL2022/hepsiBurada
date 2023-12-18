@@ -115,13 +115,17 @@ public class TC04_sayfadaAramaTestiStepDefs {
         assert urunPage.urunOzellikleriUrun.isDisplayed();
     }
     @And("kullanici sepete ekle butonuna tiklar")
-    public void kullaniciSepeteEkleButonunaTiklar() {
+    public void kullaniciSepeteEkleButonunaTiklar() throws InterruptedException {
+        ReusableMethods.switchToWindow(1);
+        Thread.sleep(1000);
+        ReusableMethods.scrollIntoViewJS(urunPage.sepeteEkleButonUrun);
         ReusableMethods.clickByJS(urunPage.sepeteEkleButonUrun);
+        Thread.sleep(6000);
     }
 
     @And("kullanici urunun sepete eklendigi uyarisini gorur")
     public void kullaniciUrununSepeteEklendigiUyarisiniGorur() throws InterruptedException {
-        Thread.sleep(4000);
+        Thread.sleep(3000);
         assert urunPage.urunSepetinizdeAlertUrun.isDisplayed();
     }
     @And("kullanici sepete git butonuna tiklar")
@@ -132,12 +136,12 @@ public class TC04_sayfadaAramaTestiStepDefs {
     public void kullaniciSepeteEkledigiUrununSepetindeOldugunuDogrular() {
         assert checkoutPage.sepeteEklenenUrunCheckout.isDisplayed();
     }
-
     @And("kullanici ekledigi urunu sepetten siler")
     public void kullaniciEkledigiUrunuSepettenSiler() {
+        ReusableMethods.clickByJS(checkoutPage.deleteButonIphone11Checkout);
     }
-
     @When("kullanici urunun sepetten kaldirildigini belirten alerti gorur")
     public void kullaniciUrununSepettenKaldirildiginiBelirtenAlertiGorur() {
+        assert checkoutPage.urunSepetinizdenKaldirildiAlertCheckout.isDisplayed();
     }
 }

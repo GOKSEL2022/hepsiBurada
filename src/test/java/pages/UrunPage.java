@@ -28,7 +28,7 @@ public class UrunPage {
     @FindBy(xpath = "//*[@id='onetrust-accept-btn-handler']")
     public WebElement cerezleriKabulEtAlertUrun;
 
-    @FindBy(xpath = "//*[text()=' Ürün sepetinizde']")
+    @FindBy(xpath = "//span[@class='checkoutui-ProductOnBasketHeader-nOvp_U8bHbLzgKbSUFaz']")
     public WebElement urunSepetinizdeAlertUrun;
 
     @FindBy(xpath = "//*[.='Sepete git']")
