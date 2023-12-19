@@ -144,4 +144,20 @@ public class TC04_sayfadaAramaTestiStepDefs {
     public void kullaniciUrununSepettenKaldirildiginiBelirtenAlertiGorur() {
         assert checkoutPage.urunSepetinizdenKaldirildiAlertCheckout.isDisplayed();
     }
+
+    @And("kullanici saticiya sor linkine tiklar")
+    public void kullaniciSaticiyaSorLinkineTiklar() {
+    }
+
+    @And("kullanici daha once sorulan sorulari ve cevaplari goruntuler")
+    public void kullaniciDahaOnceSorulanSorulariVeCevaplariGoruntuler() {
+    }
+
+    @And("kullanici soru ve cevaplarda ara alaninda {string} aratir")
+    public void kullaniciSoruVeCevaplardaAraAlanindaAratir(String arg0) {
+    }
+
+    @When("kullanici goruntulenen sonuclarin garanti ile ilgili oldugunu dogrular")
+    public void kullaniciGoruntulenenSonuclarinGarantiIleIlgiliOldugunuDogrular() {
+    }
 }
