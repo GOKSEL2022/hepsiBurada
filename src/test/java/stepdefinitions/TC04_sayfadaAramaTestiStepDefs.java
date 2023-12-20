@@ -160,4 +160,24 @@ public class TC04_sayfadaAramaTestiStepDefs {
     @When("kullanici goruntulenen sonuclarin garanti ile ilgili oldugunu dogrular")
     public void kullaniciGoruntulenenSonuclarinGarantiIleIlgiliOldugunuDogrular() {
     }
+
+    @And("kullanici cep telefonu aksesuarlarini isaretler")
+    public void kullaniciCepTelefonuAksesuarlariniIsaretler() {
+    }
+
+    @And("kullanici seceneklerden akilli saatlere tiklar")
+    public void kullaniciSeceneklerdenAkilliSaatlereTiklar() {
+    }
+
+    @And("kullanici sayfada ilk urun olarak akilli saati goruntuler")
+    public void kullaniciSayfadaIlkUrunOlarakAkilliSaatiGoruntuler() {
+    }
+
+    @And("kullanici urunun uzerindesaticilardan seyu teknolojiyi secer")
+    public void kullaniciUrununUzerindesaticilardanSeyuTeknolojiyiSecer() {
+    }
+
+    @When("kullanici ekranda filtrelenen urunlerin syu teknolojiye ait oldugunu dogrular")
+    public void kullaniciEkrandaFiltrelenenUrunlerinSyuTeknolojiyeAitOldugunuDogrular() {
+    }
 }
