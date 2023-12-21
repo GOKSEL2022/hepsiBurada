@@ -99,6 +99,9 @@ Feature:Arama_alani
     When  kullanici ekranda filtrelenen urunlerin syu teknolojiye ait oldugunu dogrular
     Then  kullanici sayfayi kapatir
 
+  Scenario:  alan_testi
+    Given kullanici url ye gider
+
 
 
 
