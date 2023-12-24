@@ -147,6 +147,8 @@ public class TC04_sayfadaAramaTestiStepDefs {
 
     @And("kullanici saticiya sor linkine tiklar")
     public void kullaniciSaticiyaSorLinkineTiklar() {
+        ReusableMethods.switchToWindow(1);
+        ReusableMethods.clickWithTimeOut(urunPage.saticiyaSorLinkUrun,2);
     }
 
     @And("kullanici daha once sorulan sorulari ve cevaplari goruntuler")
