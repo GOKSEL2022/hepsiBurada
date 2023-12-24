@@ -34,5 +34,8 @@ public class UrunPage {
     @FindBy(xpath = "//*[.='Sepete git']")
     public WebElement sepeteGitUrun;
 
+    @FindBy(xpath = "(//*[@type='button'])[2]")
+    public WebElement saticiyaSorLinkUrun;
+
 
 }
