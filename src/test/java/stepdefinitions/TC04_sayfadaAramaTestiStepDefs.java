@@ -146,9 +146,11 @@ public class TC04_sayfadaAramaTestiStepDefs {
     }
 
     @And("kullanici saticiya sor linkine tiklar")
-    public void kullaniciSaticiyaSorLinkineTiklar() {
+    public void kullaniciSaticiyaSorLinkineTiklar() throws InterruptedException {
         ReusableMethods.switchToWindow(1);
-        ReusableMethods.clickWithTimeOut(urunPage.saticiyaSorLinkUrun,2);
+        ReusableMethods.scrollIntoViewJS(urunPage.saticiyaSorLinkUrun);
+        Thread.sleep(1000);
+        ReusableMethods.clickByJS(urunPage.saticiyaSorLinkUrun);
     }
 
     @And("kullanici daha once sorulan sorulari ve cevaplari goruntuler")
