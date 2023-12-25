@@ -77,6 +77,7 @@ Feature:Arama_alani
     When  kullanici urunun sepetten kaldirildigini belirten alerti gorur
     Then  kullanici sayfayi kapatir
 
+       @saticiya_sor
   Scenario:urunle_ilgili_saticiya_soru_sorabilmeli
     Given kullanici arama alaninda "iphone 11" aratir
     When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular
