@@ -91,7 +91,7 @@ Feature:Arama_alani
   Scenario: urunle_ilgili_filtreleme_testi
     Given kullanici arama alaninda "iphone 11" aratir
     When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular
-    And   kullanici sayfadaki ilk urune tiklar
+    #And   kullanici sayfadaki ilk urune tiklar
     And   kullanici kategori basligini goruntuler
     And   kullanici cep telefonu aksesuarlarini isaretler
     And   kullanici seceneklerden akilli saatlere tiklar
