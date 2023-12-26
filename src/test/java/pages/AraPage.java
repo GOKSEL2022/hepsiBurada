@@ -26,4 +26,19 @@ public class AraPage {
 
     @FindBy(xpath = "(//*[@data-test-id='price-current-price'])[1]")
     public WebElement iphone11IlkUrunFiyatBilgisiAra;
+
+    @FindBy(xpath = "(//*[.='Kategori'])[1]")
+    public WebElement kategoriTitleTextAra;
+
+    @FindBy(xpath = "(//*[@class='treeCategoryContent-XPVj5InCxOWIJtyTC35Z'])[1]")
+    public WebElement cepTelefonuAksesuarleriKategoriTitleAra;
+
+    @FindBy(xpath = "(//*[@class='treeCategoryContent-XPVj5InCxOWIJtyTC35Z'])[1]")
+    public WebElement akilliSaatlerCepTelefonuAksesuarleriKategoriAra;
+
+    @FindBy(xpath = "(//*[@value='seyutech'])[1]")
+    public WebElement seyuTechAkilliSaatlerCepTelefonuAksesuarleriKategoriAra;
+
+    @FindBy(xpath = "//*[@class='productListContent-frGrtf5XrVXRwJ05HUfU productListContent-rEYj2_8SETJUeqNhyzSm']")
+    public WebElement seyuTechUrunlerAilliSaatlerAra;
 }
