@@ -28,6 +28,8 @@ public class HomePage {
     @FindBy(xpath = "//div[@id='react-autowhatever-1']")
     public WebElement aramayaBaslamakIcinEnAz2KarakterYazmalisinizTextHome;
 
+    @FindBy(xpath = "(//*[@class='sf-MenuItems-UHHCg2qrE5_YBqDV_7AC'])[1]")
+    public WebElement elektronikLinkiHome;
 
 
 
