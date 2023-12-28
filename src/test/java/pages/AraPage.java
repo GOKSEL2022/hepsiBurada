@@ -30,7 +30,7 @@ public class AraPage {
     @FindBy(xpath = "(//*[.='Kategori'])[1]")
     public WebElement kategoriTitleTextAra;
 
-    @FindBy(xpath = "(//*[@class='treeCategoryContent-XPVj5InCxOWIJtyTC35Z'])[1]")
+    @FindBy(xpath = "(//*[.='Cep Telefonu Aksesuarları'])[1]")
     public WebElement cepTelefonuAksesuarleriKategoriTitleAra;
 
     @FindBy(xpath = "(//*[@class='treeCategoryContent-XPVj5InCxOWIJtyTC35Z'])[1]")
@@ -41,4 +41,7 @@ public class AraPage {
 
     @FindBy(xpath = "//*[@class='productListContent-frGrtf5XrVXRwJ05HUfU productListContent-rEYj2_8SETJUeqNhyzSm']")
     public WebElement seyuTechUrunlerAilliSaatlerAra;
+
+    @FindBy(xpath = "(//*[@data-test-id='product-card-name'])[1]")
+    public WebElement sayfadakiIlkUrunAkilliSattlerAra;
 }

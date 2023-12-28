@@ -31,6 +31,9 @@ public class HomePage {
     @FindBy(xpath = "(//*[@class='sf-MenuItems-UHHCg2qrE5_YBqDV_7AC'])[1]")
     public WebElement elektronikLinkiHome;
 
+    @FindBy(xpath = "(//a[@href='https://www.hepsiburada.com/bilgisayarlar-c-2147483646'])[2]")
+    public WebElement bilgisayarTabletSecenegiElektronikLinkHome;
+
 
 
 }
