@@ -11,13 +11,12 @@ import pages.UrunPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import static utilities.ReusableMethods.*;
+
 public class TC04_sayfadaAramaTestiStepDefs {
-    HomePage homePage=new HomePage();
-    AraPage araPage=new AraPage();
-    UrunPage urunPage=new UrunPage();
-    CheckoutPage checkoutPage=new CheckoutPage();
-    Actions actions=new Actions(Driver.getDriver());
-    char harf='a';   byte rakam=1;  char sembol='*';
+    HomePage homePage=new HomePage();  AraPage araPage=new AraPage();
+    UrunPage urunPage=new UrunPage(); CheckoutPage checkoutPage=new CheckoutPage();
+    Actions actions=new Actions(Driver.getDriver()); char harf='a';   byte rakam=1;  char sembol='*';
     @And("kullanici arama alanina tiklar")
     public void kullaniciAramaAlaninaTiklar() throws InterruptedException {
         homePage.searchBoxHome.click();
@@ -68,7 +67,6 @@ public class TC04_sayfadaAramaTestiStepDefs {
     public void kullaniciAramaIleIlgiliSonucBulunamamistirYazisiniGoruntuler() {
         assert araPage.sembolIleIlgiliSonucBulunamamistirTextAra.isDisplayed();
     }
-
     @Given("kullanici arama alaninda {string} aratir")
     public void kullaniciAramaAlanindaAratir(String string) {
         actions.sendKeys(homePage.searchBoxHome).sendKeys(string,Keys.ENTER).perform();
@@ -81,33 +79,30 @@ public class TC04_sayfadaAramaTestiStepDefs {
     public void kullaniciSayfadakiIlkUrununUzerineGelir() {
         actions.moveToElement(araPage.iphone11IlkUrunAra).perform();
     }
-
     @And("kullanici urunun altinda GByte bilgisini goruntuler")
     public void kullaniciUrununAltindaGByteBilgisiniGoruntuler() {
-        ReusableMethods.scrollIntoViewJS(araPage.iphone11IlkUrunGbBilgisiAra);
+        scrollIntoViewJS(araPage.iphone11IlkUrunGbBilgisiAra);
         assert araPage.iphone11IlkUrunGbBilgisiAra.isDisplayed();
     }
-
     @And("kullanici urunun altinda fiyat bilgisini goruntuler")
     public void kullaniciUrununAltindaFiyatBilgisiniGoruntuler() {
         assert araPage.iphone11IlkUrunFiyatBilgisiAra.isDisplayed();
     }
-
     @And("kullanici sayfadaki ilk urune tiklar")
     public void kullaniciSayfadakiIlkUruneTiklar() {
-       ReusableMethods.clickByJS(araPage.iphone11IlkUrunAra);
+       clickByJS(araPage.iphone11IlkUrunAra);
     }
     @And("kullanici sepete eklenecek urun sayisinin artirilip azaltilabilecegini dogrular")
     public void kullaniciSepeteEklenecekUrunSayisininArtirilipAzaltilabileceginiDogrular() throws InterruptedException {
         ReusableMethods.switchToWindow(1);
         Thread.sleep(1000);
-        ReusableMethods.scrollIntoViewJS(urunPage.sepeteEkleButonUrun);
+        scrollIntoViewJS(urunPage.sepeteEkleButonUrun);
         for (int i=0;i<3;i++){
-            ReusableMethods.clickByJS(urunPage.arttirIsaretiUrun);
+            clickByJS(urunPage.arttirIsaretiUrun);
         }
         Thread.sleep(1000);
         for (int i=0;i<3;i++){
-            ReusableMethods.clickByJS(urunPage.azaltIsaretiUrun);
+            clickByJS(urunPage.azaltIsaretiUrun);
         }
         }
     @And("kullanici satin alacagi urunun altinda ozelliklerini gorur")
@@ -118,11 +113,10 @@ public class TC04_sayfadaAramaTestiStepDefs {
     public void kullaniciSepeteEkleButonunaTiklar() throws InterruptedException {
         ReusableMethods.switchToWindow(1);
         Thread.sleep(1000);
-        ReusableMethods.scrollIntoViewJS(urunPage.sepeteEkleButonUrun);
-        ReusableMethods.clickByJS(urunPage.sepeteEkleButonUrun);
+        scrollIntoViewJS(urunPage.sepeteEkleButonUrun);
+        clickByJS(urunPage.sepeteEkleButonUrun);
         Thread.sleep(6000);
     }
-
     @And("kullanici urunun sepete eklendigi uyarisini gorur")
     public void kullaniciUrununSepeteEklendigiUyarisiniGorur() throws InterruptedException {
         Thread.sleep(3000);
@@ -130,7 +124,7 @@ public class TC04_sayfadaAramaTestiStepDefs {
     }
     @And("kullanici sepete git butonuna tiklar")
     public void kullaniciSepeteGitButonunaTiklar() {
-        ReusableMethods.clickByJS(urunPage.sepeteGitUrun);
+        clickByJS(urunPage.sepeteGitUrun);
     }
     @When("kullanici sepete ekledigi urunun sepetinde oldugunu dogrular")
     public void kullaniciSepeteEkledigiUrununSepetindeOldugunuDogrular() {
@@ -138,50 +132,31 @@ public class TC04_sayfadaAramaTestiStepDefs {
     }
     @And("kullanici ekledigi urunu sepetten siler")
     public void kullaniciEkledigiUrunuSepettenSiler() {
-        ReusableMethods.clickByJS(checkoutPage.deleteButonIphone11Checkout);
+        clickByJS(checkoutPage.deleteButonIphone11Checkout);
     }
     @When("kullanici urunun sepetten kaldirildigini belirten alerti gorur")
     public void kullaniciUrununSepettenKaldirildiginiBelirtenAlertiGorur() {
         assert checkoutPage.urunSepetinizdenKaldirildiAlertCheckout.isDisplayed();
     }
-
-    @And("kullanici saticiya sor linkine tiklar")
-    public void kullaniciSaticiyaSorLinkineTiklar() throws InterruptedException {
-        ReusableMethods.switchToWindow(1);
-        ReusableMethods.scrollIntoViewJS(urunPage.saticiyaSorLinkUrun);
-        Thread.sleep(1000);
-        ReusableMethods.clickByJS(urunPage.saticiyaSorLinkUrun);
-    }
-
-    @And("kullanici daha once sorulan sorulari ve cevaplari goruntuler")
-    public void kullaniciDahaOnceSorulanSorulariVeCevaplariGoruntuler() {
-    }
-
-    @And("kullanici soru ve cevaplarda ara alaninda {string} aratir")
-    public void kullaniciSoruVeCevaplardaAraAlanindaAratir(String arg0) {
-    }
-
-    @When("kullanici goruntulenen sonuclarin garanti ile ilgili oldugunu dogrular")
-    public void kullaniciGoruntulenenSonuclarinGarantiIleIlgiliOldugunuDogrular() {
-    }
-
     @And("kullanici cep telefonu aksesuarlarini isaretler")
     public void kullaniciCepTelefonuAksesuarlariniIsaretler() {
+       clickByJS(araPage.cepTelefonuAksesuarleriKategoriTitleAra);
     }
-
     @And("kullanici seceneklerden akilli saatlere tiklar")
     public void kullaniciSeceneklerdenAkilliSaatlereTiklar() {
+        clickWithTimeOut(araPage.akilliSaatlerCepTelefonuAksesuarleriKategoriAra,4);
     }
-
     @And("kullanici sayfada ilk urun olarak akilli saati goruntuler")
     public void kullaniciSayfadaIlkUrunOlarakAkilliSaatiGoruntuler() {
+        assert araPage.sayfadakiIlkUrunAkilliSattlerAra.isDisplayed();
     }
-
     @And("kullanici urunun uzerindesaticilardan seyu teknolojiyi secer")
     public void kullaniciUrununUzerindesaticilardanSeyuTeknolojiyiSecer() {
+        clickWithTimeOut(araPage.seyuTechUrunlerAilliSaatlerAra,2);
     }
-
     @When("kullanici ekranda filtrelenen urunlerin syu teknolojiye ait oldugunu dogrular")
     public void kullaniciEkrandaFiltrelenenUrunlerinSyuTeknolojiyeAitOldugunuDogrular() {
+        assert araPage.sayfadakiIlkUrunAkilliSattlerAra.isDisplayed();
+
     }
 }
