@@ -77,6 +77,17 @@ Feature:Arama_alani
     When  kullanici urunun sepetten kaldirildigini belirten alerti gorur
     Then  kullanici sayfayi kapatir
 
+   Scenario:
+     Given kullanici arama alaninda "iphone 11" aratir
+     When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular
+     And   kullanici sayfadaki ilk urune tiklar
+    # And   kullanici saticiya sor linke tiklar
+     And   kullanici sepete ekle butona kadar sayfayi kaydirir
+     And   kullanici eskiyi yenile alaninda faydalan linke tiklar
+     And   kullanici giris yap alanina yonlendirilir
+     And   kullanici sayfayi kapatir
+
+
   Scenario: urunle_ilgili_filtreleme_testi
     Given kullanici arama alaninda "iphone 11" aratir
     When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular

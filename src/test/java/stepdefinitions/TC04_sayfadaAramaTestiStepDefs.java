@@ -2,7 +2,10 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.AraPage;
 import pages.CheckoutPage;
@@ -10,10 +13,9 @@ import pages.HomePage;
 import pages.UrunPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
-
 import static utilities.ReusableMethods.*;
-
 public class TC04_sayfadaAramaTestiStepDefs {
+    SearchContext shadowRootElement;
     HomePage homePage=new HomePage();  AraPage araPage=new AraPage();
     UrunPage urunPage=new UrunPage(); CheckoutPage checkoutPage=new CheckoutPage();
     Actions actions=new Actions(Driver.getDriver()); char harf='a';   byte rakam=1;  char sembol='*';
@@ -158,5 +160,15 @@ public class TC04_sayfadaAramaTestiStepDefs {
     public void kullaniciEkrandaFiltrelenenUrunlerinSyuTeknolojiyeAitOldugunuDogrular() {
         assert araPage.sayfadakiIlkUrunAkilliSattlerAra.isDisplayed();
 
+    }
+
+    @And("kullanici saticiya sor linke tiklar")
+    public void kullaniciSaticiyaSorLinkeTiklar() {
+        switchToWindow(1);
+        SearchContext shadowRootElement =
+                Driver.getDriver().findElement(By.cssSelector(".cst-asktoseller-button")).getShadowRoot();
+        WebElement saticiyaSor =
+                shadowRootElement.findElement(By.cssSelector("button"));
+        saticiyaSor.click();
     }
 }
