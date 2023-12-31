@@ -15,7 +15,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import static utilities.ReusableMethods.*;
 public class TC04_sayfadaAramaTestiStepDefs {
-    SearchContext shadowRootElement;
+    //SearchContext shadowRootElement;
     HomePage homePage=new HomePage();  AraPage araPage=new AraPage();
     UrunPage urunPage=new UrunPage(); CheckoutPage checkoutPage=new CheckoutPage();
     Actions actions=new Actions(Driver.getDriver()); char harf='a';   byte rakam=1;  char sembol='*';
@@ -159,16 +159,20 @@ public class TC04_sayfadaAramaTestiStepDefs {
     @When("kullanici ekranda filtrelenen urunlerin syu teknolojiye ait oldugunu dogrular")
     public void kullaniciEkrandaFiltrelenenUrunlerinSyuTeknolojiyeAitOldugunuDogrular() {
         assert araPage.sayfadakiIlkUrunAkilliSattlerAra.isDisplayed();
-
     }
-
     @And("kullanici saticiya sor linke tiklar")
-    public void kullaniciSaticiyaSorLinkeTiklar() {
-        switchToWindow(1);
+    public void kullaniciSaticiyaSorLinkeTiklar() throws InterruptedException {
+        //switchToWindow(1);
+        /*
         SearchContext shadowRootElement =
                 Driver.getDriver().findElement(By.cssSelector(".cst-asktoseller-button")).getShadowRoot();
         WebElement saticiyaSor =
                 shadowRootElement.findElement(By.cssSelector("button"));
         saticiyaSor.click();
+
+         */
+        clickByJS(urunPage.saticiyaSorLinkShadowRoot1Urun);
+        Thread.sleep(1000);
+        clickByJS(urunPage.saticiyaSorLinkShadowRoo2Urun);
     }
 }
