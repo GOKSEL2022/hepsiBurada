@@ -81,11 +81,11 @@ Feature:Arama_alani
      Given kullanici arama alaninda "iphone 11" aratir
      When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular
      And   kullanici sayfadaki ilk urune tiklar
-    # And   kullanici saticiya sor linke tiklar
-     And   kullanici sepete ekle butona kadar sayfayi kaydirir
-     And   kullanici eskiyi yenile alaninda faydalan linke tiklar
-     And   kullanici giris yap alanina yonlendirilir
-     And   kullanici sayfayi kapatir
+     And   kullanici saticiya sor linke tiklar
+    # And   kullanici sepete ekle butona kadar sayfayi kaydirir
+     #And   kullanici eskiyi yenile alaninda faydalan linke tiklar
+     #And   kullanici giris yap alanina yonlendirilir
+     #And   kullanici sayfayi kapatir
 
 
   Scenario: urunle_ilgili_filtreleme_testi
@@ -98,6 +98,12 @@ Feature:Arama_alani
     And   kullanici urunun uzerindesaticilardan seyu teknolojiyi secer
     When  kullanici ekranda filtrelenen urunlerin syu teknolojiye ait oldugunu dogrular
     #Then  kullanici sayfayi kapatir
+
+  Scenario:
+    Given kullanici arama alaninda "iphone 11" aratir
+    When  kullanici acilan sayfada "iphone 11" ile ilgili sonuc bulundugunu dogrular
+    And   kullanici sayfadaki ilk urune tiklar
+    And   kullanici saticiya sor linke tiklar
 
 
 
