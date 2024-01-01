@@ -162,17 +162,22 @@ public class TC04_sayfadaAramaTestiStepDefs {
     }
     @And("kullanici saticiya sor linke tiklar")
     public void kullaniciSaticiyaSorLinkeTiklar() throws InterruptedException {
-        //switchToWindow(1);
+        switchToWindow(1);
         /*
-        SearchContext shadowRootElement =
-                Driver.getDriver().findElement(By.cssSelector(".cst-asktoseller-button")).getShadowRoot();
-        WebElement saticiyaSor =
-                shadowRootElement.findElement(By.cssSelector("button"));
-        saticiyaSor.click();
+        Thread.sleep(2000);
+         SearchContext shadowRootElement =
+                    Driver.getDriver().findElement(By.cssSelector(".cst-asktoseller-button")).getShadowRoot();
+            WebElement hiddenElement =
+                    shadowRootElement.findElement(By.xpath("(//style[@type='text/css'])[1]"));
+//            shadowRootElement.findElement(By.cssSelector("banner__reject-button"));
+            hiddenElement.click();
 
          */
-        clickByJS(urunPage.saticiyaSorLinkShadowRoot1Urun);
-        Thread.sleep(1000);
-        clickByJS(urunPage.saticiyaSorLinkShadowRoo2Urun);
+
+        urunPage.saticiyaSorLinkShadowRoot1Urun.click();
+        Thread.sleep(2000);
+        clickWithTimeOut(urunPage.saticiyaSorLinkShadowRoot2Urun,2);
+
+
     }
 }
