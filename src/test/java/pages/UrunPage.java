@@ -34,11 +34,11 @@ public class UrunPage {
     @FindBy(xpath = "//*[.='Sepete git']")
     public WebElement sepeteGitUrun;
 
-    @FindBy(xpath = "(//div[@class='voltran-fragment'])[4]")
+    @FindBy(css = "(//div[@class='voltran-fragment'])[4]")
     public WebElement saticiyaSorLinkShadowRoot1Urun;
 
-    @FindBy(xpath = "(//*[@type='button'])[3]")
-    public WebElement saticiyaSorLinkShadowRoo2Urun;
+    @FindBy(css = "//button[class='buybox']")
+    public WebElement saticiyaSorLinkShadowRoot2Urun;
 
 
 
