@@ -37,17 +37,6 @@ public class ReusableMethods {
         FileUtils.copyFile(source, finalDestination);
         return target;
     }
-    //========Switching Window=====//
-    public static void switchToWindow(String targetTitle) {
-        String origin = Driver.getDriver().getWindowHandle();
-        for (String handle : Driver.getDriver().getWindowHandles()) {
-            Driver.getDriver().switchTo().window(handle);
-            if (Driver.getDriver().getTitle().equals(targetTitle)) {
-                return;
-            }
-        }
-        Driver.getDriver().switchTo().window(origin);
-    }
     //========Hover Over=====//
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());
@@ -231,6 +220,7 @@ public class ReusableMethods {
 
         jcodeModel.build(outputJavaClassDirectory);
 
+
      */
     //windowNumber sıfır (0)'dan başlıyor.
     //index numarasini parametre olarak alir
@@ -239,4 +229,33 @@ public class ReusableMethods {
         List<String> list = new ArrayList<>(Driver.getDriver().getWindowHandles());
         Driver.getDriver().switchTo().window(list.get(windowNumber));
     }
+
+    //    MULTIPLE WINDOW
+    //    1 PARAMETRE ALIR,GECIS YAPMAK ISTEDIGIM SAYFANIN TITLE'I
+    //    ORNEK:
+    //    driver.get("https://the-internet.herokuapp.com/windows");
+    //    switchToWindow("New Window");
+    //    switchToWindow("The Internet");
+    public static void switchToWindow(String targetTitle) {
+        String origin = Driver.getDriver().getWindowHandle();
+        for (String handle : Driver.getDriver().getWindowHandles()) {
+            Driver.getDriver().switchTo().window(handle);
+            if (Driver.getDriver().getTitle().equals(targetTitle)) {
+                return;
+            }
+        }
+        Driver.getDriver().switchTo().window(origin);
+    }
+
+    //    SAYFANIN EN ALTINA IN
+    public void scrollBottomJS() {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollTo(0,document.body.scrollHeight");
+    }
+    //    BU METHOD ILE SAYFANIN EN USTUNE CIKABILIRIZ
+    public void scrollTopJS() {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollTo(0,-document.body.scrollHeight");
+    }
+
 }
