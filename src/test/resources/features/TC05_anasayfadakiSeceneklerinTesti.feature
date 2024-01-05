@@ -35,7 +35,32 @@ Feature: anasayfadaki_linklerin_testi
     And  kullanici iki saniye bekler
     And  kullanici arama alaninin altinda elektronik sekmesinin uzerine gelir
     And  kullanici iki saniye bekler
-    And  kullanici
-
-    #Then kullanici sayfayi
+    And  kullanici tv_goruntu ve ses secenegini tiklar
+    And  kullanici acilan sayfanin ses ve goruntu urunleri icerdigini dogrular
+    And  kullanici iki saniye bekler
+    And  kullanici arama alaninin altinda elektronik sekmesinin uzerine gelir
+    And  kullanici iki saniye bekler
+    And  kullanici beyaz esya secenegini tiklar
+    And  kullanici acilan sayfanin beyaz esya urunleri icerdigini dogrular
+    And  kullanici iki saniye bekler
+    And  kullanici arama alaninin altinda elektronik sekmesinin uzerine gelir
+    And  kullanici iki saniye bekler
+    And  kullanici klima ve isiticilar secenegini tiklar
+    And  kullanici acilan sayfanin isitme_sogutma urunleri icerdigini dogrular
+    And  kullanici iki saniye bekler
+    And  kullanici arama alaninin altinda elektronik sekmesinin uzerine gelir
+    And  kullanici iki saniye bekler
+    And  kullanici elektrikli ev aletleri secenegini tiklar
+    And  kullanici acilan sayfanin elektrikli ev aletleri urunleri icerdigini dogrular
+    And  kullanici iki saniye bekler
+    And  kullanici arama alaninin altinda elektronik sekmesinin uzerine gelir
+    And  kullanici iki saniye bekler
+    And  kullanici foto_kamera secenegini tiklar
+    And  kullanici acilan sayfanin foto_kamera urunleri icerdigini dogrular
+    And  kullanici iki saniye bekler
+    And  kullanici arama alaninin altinda elektronik sekmesinin uzerine gelir
+    And  kullanici iki saniye bekler
+    And  kullanici oyun_oyun konsollari secenegini tiklar
+    And  kullanici acilan sayfanin oyun_oyun konsollari icerdigini dogrular
+    Then kullanici sayfayi
 
