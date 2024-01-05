@@ -2,10 +2,7 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.SearchContext;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.AraPage;
 import pages.CheckoutPage;
@@ -13,12 +10,14 @@ import pages.HomePage;
 import pages.UrunPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
+
+import static utilities.Driver.getDriver;
 import static utilities.ReusableMethods.*;
 public class TC04_sayfadaAramaTestiStepDefs {
     //SearchContext shadowRootElement;
     HomePage homePage=new HomePage();  AraPage araPage=new AraPage();
     UrunPage urunPage=new UrunPage(); CheckoutPage checkoutPage=new CheckoutPage();
-    Actions actions=new Actions(Driver.getDriver()); char harf='a';   byte rakam=1;  char sembol='*';
+    Actions actions=new Actions(getDriver()); char harf='a';   byte rakam=1;  char sembol='*';
     @And("kullanici arama alanina tiklar")
     public void kullaniciAramaAlaninaTiklar() throws InterruptedException {
         homePage.searchBoxHome.click();
@@ -27,7 +26,7 @@ public class TC04_sayfadaAramaTestiStepDefs {
     @And("kullanici arama alanina en az iki karakter girmesi gerektigini gorur")
     public void kullaniciAramaAlaninaEnAzIkiKarakterGirmesiGerektiginiGorur() {
         assert homePage.aramayaBaslamakIcinEnAz2KarakterYazmalisinizTextHome.getText().contains("en az 2 karakter");
-        Driver.getDriver().navigate().refresh();
+        getDriver().navigate().refresh();
     }
     @And("kullanici arama alanina bir adet harf  girer")
     public void kullaniciAramaAlaninaBirAdetHarfGirer() {
@@ -163,22 +162,15 @@ public class TC04_sayfadaAramaTestiStepDefs {
     @And("kullanici saticiya sor linke tiklar")
     public void kullaniciSaticiyaSorLinkeTiklar() throws InterruptedException {
         switchToWindow(1);
-
         Thread.sleep(2000);
-         SearchContext shadowRootElement =
-                    Driver.getDriver().findElement(By.xpath("//cst-asktoseller-button")).getShadowRoot();
-            WebElement hiddenElement =
-                    shadowRootElement.findElement(By.cssSelector(".buybox"));
-//            shadowRootElement.findElement(By.cssSelector("banner__reject-button"));
-            ReusableMethods.clickWithTimeOut(hiddenElement,2);
+        //shadow root içeren elementi clickler
+        WebElement shadow2 = (WebElement) ((JavascriptExecutor) getDriver())
+                .executeScript("return arguments[0].shadowRoot.querySelector('.buybox')", urunPage.saticiyaSorLinkShadowRoot1Urun);
+        ReusableMethods.clickByJS(shadow2);
 
-        /*
+        clickWithTimeOut(urunPage.saticiyaSorLinkShadowRoot2Urun,5);
 
-        urunPage.saticiyaSorLinkShadowRoot1Urun.click();
-        Thread.sleep(2000);
-        clickWithTimeOut(urunPage.saticiyaSorLinkShadowRoot2Urun,2);
 
-         */
 
 
     }
