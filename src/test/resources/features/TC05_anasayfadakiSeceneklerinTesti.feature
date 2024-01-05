@@ -62,5 +62,5 @@ Feature: anasayfadaki_linklerin_testi
     And  kullanici iki saniye bekler
     And  kullanici oyun_oyun konsollari secenegini tiklar
     And  kullanici acilan sayfanin oyun_oyun konsollari icerdigini dogrular
-    Then kullanici sayfayi
+    Then kullanici sayfayi kapatir
 
