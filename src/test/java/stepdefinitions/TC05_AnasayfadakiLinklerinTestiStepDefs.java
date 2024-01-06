@@ -57,5 +57,69 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
     public void kullaniciKonumDegistirildiAlertiGoruntuler() {
         assert homePage.konumDegistirildiAlertHome.isDisplayed();
     }
+
+    @And("kullanici yazicilar_projeksiyon secenegine tiklar")
+    public void kullaniciYazicilar_projeksiyonSecenegineTiklar() {
     }
+
+    @And("kullanici acilan sayfanin yazici model ve fiyatlari icerdigini dogrular")
+    public void kullaniciAcilanSayfaninYaziciModelVeFiyatlariIcerdiginiDogrular() {
+    }
+
+    @And("kullanici telefon_telefon aksesuarlari secenegine tiklar")
+    public void kullaniciTelefon_telefonAksesuarlariSecenegineTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin telefon ile ilgili oldugunu dogrular")
+    public void kullaniciAcilanSayfaninTelefonIleIlgiliOldugunuDogrular() {
+    }
+
+    @And("kullanici tv_goruntu ve ses secenegini tiklar")
+    public void kullaniciTv_goruntuVeSesSeceneginiTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin ses ve goruntu urunleri icerdigini dogrular")
+    public void kullaniciAcilanSayfaninSesVeGoruntuUrunleriIcerdiginiDogrular() {
+    }
+
+    @And("kullanici beyaz esya secenegini tiklar")
+    public void kullaniciBeyazEsyaSeceneginiTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin beyaz esya urunleri icerdigini dogrular")
+    public void kullaniciAcilanSayfaninBeyazEsyaUrunleriIcerdiginiDogrular() {
+    }
+
+    @And("kullanici klima ve isiticilar secenegini tiklar")
+    public void kullaniciKlimaVeIsiticilarSeceneginiTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin isitme_sogutma urunleri icerdigini dogrular")
+    public void kullaniciAcilanSayfaninIsitme_sogutmaUrunleriIcerdiginiDogrular() {
+    }
+
+    @And("kullanici elektrikli ev aletleri secenegini tiklar")
+    public void kullaniciElektrikliEvAletleriSeceneginiTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin elektrikli ev aletleri urunleri icerdigini dogrular")
+    public void kullaniciAcilanSayfaninElektrikliEvAletleriUrunleriIcerdiginiDogrular() {
+    }
+
+    @And("kullanici foto_kamera secenegini tiklar")
+    public void kullaniciFoto_kameraSeceneginiTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin foto_kamera urunleri icerdigini dogrular")
+    public void kullaniciAcilanSayfaninFoto_kameraUrunleriIcerdiginiDogrular() {
+    }
+
+    @And("kullanici oyun_oyun konsollari secenegini tiklar")
+    public void kullaniciOyun_oyunKonsollariSeceneginiTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin oyun_oyun konsollari icerdigini dogrular")
+    public void kullaniciAcilanSayfaninOyun_oyunKonsollariIcerdiginiDogrular() {
+    }
+}
 
