@@ -66,6 +66,30 @@ public class HomePage {
     @FindBy(xpath = "//*[@data-test-id='option-item']")
     public List<WebElement> tumAdalarMahalleSec;
 
+    @FindBy(xpath = "//*[.='Yazıcılar & Projeksiyon']")
+    public WebElement yazicilarProjeksiyonSecenegiElektronikHome;
+
+    @FindBy(xpath = "//*[.='Telefon & Telefon Aksesuarları']")
+    public WebElement telefonTelefonAksesuarlariSecenegiElektronikHome;
+
+    @FindBy(xpath = "//*[.='TV, Görüntü & Ses Sistemleri']")
+    public WebElement tvGoruntuSesSistemleriSecenegiElektronikHome;
+
+    @FindBy(xpath = "//a[text()='Beyaz Eşya']")
+    public WebElement beyazEsyaSecenegiElektronikHome;
+
+    @FindBy(xpath = "//a[text()='Klima ve Isıtıcılar']")
+    public WebElement klimaVeIsiticilarSecenegiElektronikHome;
+
+    @FindBy(xpath = "//a[text()='Elektrikli Ev Aletleri']")
+    public WebElement elektrikliEvAletleriSecenegiElektronikHome;
+
+    @FindBy(xpath = "//a[text()='Foto & Kamera']")
+    public WebElement fotoKameraSecenegiElektronikHome;
+
+    @FindBy(xpath = "//a[text()='Oyun & Oyun Konsolları']")
+    public WebElement oyunOyunKonsollariSecenegiElektronikHome;
+
 
 
 
