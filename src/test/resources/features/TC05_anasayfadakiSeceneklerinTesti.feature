@@ -1,9 +1,13 @@
 @anasayfadaki_linkler
 Feature: anasayfadaki_linklerin_testi
+
+  Background:
+    Given kullanici url ye gider
+    When kullanici anasayfanin acildigini dogrular
+    And  kullanici iki saniye bekler
+
   @konum
   Scenario:konum_secimi_test
-    Given kullanici url ye gider
-    When  kullanici anasayfanin acildigini dogrular
     And   kullanici konum sec linke tiklar
     And   kullanici iki saniye bekler
     And   kullanici bir il secer
@@ -16,9 +20,6 @@ Feature: anasayfadaki_linklerin_testi
     Then  kullanici sayfayi kapatir
 
   Scenario: elektronik_link_seceneklerinin_dogrulama_testi
-    Given kullanici url ye gider
-    When kullanici anasayfanin acildigini dogrular
-    And  kullanici iki saniye bekler
     And  kullanici arama alaninin altinda elektronik sekmesinin uzerine gelir
     And  kullanici iki saniye bekler
     And  kullanici bilgisayar_tablet secenegine tiklar
