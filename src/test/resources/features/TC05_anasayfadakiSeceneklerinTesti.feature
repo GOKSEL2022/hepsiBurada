@@ -69,4 +69,46 @@ Feature: anasayfadaki_linklerin_testi
       Given kullanici moda linke gelir
       When  kullanici iki saniye bekler
       And   kullanici kadin basligina tiklar
+      And   kullanici acilan sayfanin kadin urunleri icerdigini dogrular
+      And   kullanici moda linke gelir
+      And   kullanici iki saniye bekler
+      And   kullanici moda anasayfa basligina tiklar
+      And   kullanici acilan sayfanin moda ile ilgili oldugunu dogrular
+      And   kullanici moda linke gelir
+      And   kullanici iki saniye bekler
+      And   kullanici erkek basligina tiklar
+      And   kullanici acilan sayfanin erkek urunleri icerdigini dogrular
+      And   kullanici moda linke gelir
+      And   kullanici iki saniye bekler
+      And   kullanici ayakkabi_canta basligina tiklar
+      And   kullanici acilan sayfanin ayakkabi_canta urunleri icerdigini dogrular
+      And   kullanici moda linke gelir
+      And   kullanici iki saniye bekler
+      And   kullanici kadin_aksesuar_taki basligina tiklar
+      And   kullanici acilan sayfanin kadin aksesuarlari icerdigini dogrular
+      And   kullanici moda linke gelir
+      And   kullanici iki saniye bekler
+      And   kullanici erkek_aksesuar_taki basligina tiklar
+      And   kullanici acilan sayfanin erkek aksesuarlari icerdigini dogrular
+      And   kullanici moda linke gelir
+      And   kullanici iki saniye bekler
+      And   kullanici altin basligina tiklar
+      And   kullanici acilan sayfanin altin urunleri icerdigini dogrular
+      And   kullanici moda linke gelir
+      And   kullanici iki saniye bekler
+      And   kullanici cocuk basligina tiklar
+      And   kullanici acilan sayfanin cocuk urunleri icerdigini dogrular
+      And   kullanici moda linke gelir
+      And   kullanici iki saniye bekler
+      And   kullanici outdoor giyim_ayakkabi basligina tiklar
+      And   kullanici outdoor giyim_ayakkabi sayfasina yonlendirildigini dogrular
+      And   kullanici moda linke gelir
+      And   kullanici iki saniye bekler
+      And   kullanici yurt disindan basligina tiklar
+      When  kullanici yurdisi urunleri sayfasina yonlendirildigini dogrular
+      Then  kullanici sayfayi kapatir
+
+
+
+
 
