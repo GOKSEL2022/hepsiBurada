@@ -143,7 +143,6 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
     public void kullaniciModaLinkeGelir() {
     }
 
-
     @And("kullanici kadin basligina tiklar")
     public void kullaniciKadinBasliginaTiklar() {
     }
