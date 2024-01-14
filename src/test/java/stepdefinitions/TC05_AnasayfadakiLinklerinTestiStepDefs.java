@@ -144,5 +144,84 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
     }
 
 
+    @And("kullanici kadin basligina tiklar")
+    public void kullaniciKadinBasliginaTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin kadin urunleri icerdigini dogrular")
+    public void kullaniciAcilanSayfaninKadinUrunleriIcerdiginiDogrular() {
+    }
+
+    @And("kullanici moda anasayfa basligina tiklar")
+    public void kullaniciModaAnasayfaBasliginaTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin moda ile ilgili oldugunu dogrular")
+    public void kullaniciAcilanSayfaninModaIleIlgiliOldugunuDogrular() {
+    }
+
+    @And("kullanici erkek basligina tiklar")
+    public void kullaniciErkekBasliginaTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin erkek urunleri icerdigini dogrular")
+    public void kullaniciAcilanSayfaninErkekUrunleriIcerdiginiDogrular() {
+    }
+
+    @And("kullanici ayakkabi_canta basligina tiklar")
+    public void kullaniciAyakkabi_cantaBasliginaTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin ayakkabi_canta urunleri icerdigini dogrular")
+    public void kullaniciAcilanSayfaninAyakkabi_cantaUrunleriIcerdiginiDogrular() {
+    }
+
+    @And("kullanici kadin_aksesuar_taki basligina tiklar")
+    public void kullaniciKadin_aksesuar_takiBasliginaTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin kadin aksesuarlari icerdigini dogrular")
+    public void kullaniciAcilanSayfaninKadinAksesuarlariIcerdiginiDogrular() {
+    }
+
+    @And("kullanici erkek_aksesuar_taki basligina tiklar")
+    public void kullaniciErkek_aksesuar_takiBasliginaTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin erkek aksesuarlari icerdigini dogrular")
+    public void kullaniciAcilanSayfaninErkekAksesuarlariIcerdiginiDogrular() {
+    }
+
+    @And("kullanici altin basligina tiklar")
+    public void kullaniciAltinBasliginaTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin altin urunleri icerdigini dogrular")
+    public void kullaniciAcilanSayfaninAltinUrunleriIcerdiginiDogrular() {
+    }
+
+    @And("kullanici cocuk basligina tiklar")
+    public void kullaniciCocukBasliginaTiklar() {
+    }
+
+    @And("kullanici acilan sayfanin cocuk urunleri icerdigini dogrular")
+    public void kullaniciAcilanSayfaninCocukUrunleriIcerdiginiDogrular() {
+    }
+
+    @And("kullanici outdoor giyim_ayakkabi basligina tiklar")
+    public void kullaniciOutdoorGiyim_ayakkabiBasliginaTiklar() {
+    }
+
+    @And("kullanici outdoor giyim_ayakkabi sayfasina yonlendirildigini dogrular")
+    public void kullaniciOutdoorGiyim_ayakkabiSayfasinaYonlendirildiginiDogrular() {
+    }
+
+    @And("kullanici yurt disindan basligina tiklar")
+    public void kullaniciYurtDisindanBasliginaTiklar() {
+    }
+
+    @When("kullanici yurdisi urunleri sayfasina yonlendirildigini dogrular")
+    public void kullaniciYurdisiUrunleriSayfasinaYonlendirildiginiDogrular() {
+    }
 }
 
