@@ -90,8 +90,20 @@ public class HomePage {
     @FindBy(xpath = "//a[text()='Oyun & Oyun Konsolları']")
     public WebElement oyunOyunKonsollariSecenegiElektronikHome;
 
+    @FindBy(xpath = "(//*[.='Moda'])[1]")
+    public WebElement modaLinkiHome;
 
+    @FindBy(xpath = "//*[@class='sf-ChildMenuItems-KdzkrxSVhcwDy3od0Yre item-1796']")
+    public WebElement kadinSecenegiModaLinkiHome;
 
+    @FindBy(xpath = "//*[@class='sf-ChildMenuItems-KdzkrxSVhcwDy3od0Yre item-2790']")
+    public WebElement modaAnasaydaSecenegiModaLinkiHome;
+
+    @FindBy(xpath = "//*[@class='sf-ChildMenuItems-KdzkrxSVhcwDy3od0Yre item-1801']")
+    public WebElement erkekSecenegiModaLinkiHome;
+
+    @FindBy(xpath = "//*[@class='sf-ChildMenuItems-KdzkrxSVhcwDy3od0Yre item-3623']")
+    public WebElement ayakkabiCantaSecenegiModaLinkiHome;
 
 
 }
