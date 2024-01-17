@@ -141,10 +141,12 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
 
     @Given("kullanici moda linke gelir")
     public void kullaniciModaLinkeGelir() {
+        actions.moveToElement(homePage.modaLinkiHome).perform();
     }
 
     @And("kullanici kadin basligina tiklar")
     public void kullaniciKadinBasliginaTiklar() {
+        clickWithTimeOut(homePage.kadinSecenegiModaLinkiHome,2);
     }
 
     @And("kullanici acilan sayfanin kadin urunleri icerdigini dogrular")
