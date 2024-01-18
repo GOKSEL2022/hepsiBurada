@@ -1,22 +1,17 @@
 package stepdefinitions;
-import com.github.javafaker.Faker;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.AraPage;
 import pages.BilgisayarlarPage;
+import pages.GiyimAyakkabiPage;
 import pages.HomePage;
 import utilities.Driver;
-import java.util.List;
-import java.util.Random;
 import static utilities.ReusableMethods.*;
 
 public class TC05_AnasayfadakiLinklerinTestiStepDefs {
     AraPage araPage=new AraPage(); HomePage homePage=new HomePage();
     BilgisayarlarPage bilgisayarlarPage=new BilgisayarlarPage();
+    GiyimAyakkabiPage giyimAyakkabiPage=new GiyimAyakkabiPage();
     Actions actions=new Actions(Driver.getDriver());
     @And("kullanici arama alaninin altinda elektronik sekmesinin uzerine gelir")
     public void kullaniciAramaAlanininAltindaElektronikSekmesininUzerineGelir() {
@@ -151,14 +146,17 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
 
     @And("kullanici acilan sayfanin kadin urunleri icerdigini dogrular")
     public void kullaniciAcilanSayfaninKadinUrunleriIcerdiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("bayan-giyim-modelleri");
     }
 
     @And("kullanici moda anasayfa basligina tiklar")
     public void kullaniciModaAnasayfaBasliginaTiklar() {
+        clickWithTimeOut(homePage.modaAnasaydaSecenegiModaLinkiHome,2);
     }
 
     @And("kullanici acilan sayfanin moda ile ilgili oldugunu dogrular")
     public void kullaniciAcilanSayfaninModaIleIlgiliOldugunuDogrular() {
+        assert giyimAyakkabiPage.modaAksesuarTitleGiyimAyakkabi.isDisplayed();
     }
 
     @And("kullanici erkek basligina tiklar")
