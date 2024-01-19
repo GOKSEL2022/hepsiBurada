@@ -65,7 +65,8 @@ Feature: anasayfadaki_linklerin_testi
     And  kullanici acilan sayfanin oyun_oyun konsollari icerdigini dogrular
     Then kullanici sayfayi kapatir
 
-    Scenario: moda_link_seceneklerinin_dogrulama_testi
+    @moda_link
+  Scenario: moda_link_seceneklerinin_dogrulama_testi
       Given kullanici moda linke gelir
       When  kullanici iki saniye bekler
       And   kullanici kadin basligina tiklar
