@@ -1,10 +1,7 @@
 package stepdefinitions;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.interactions.Actions;
-import pages.AraPage;
-import pages.BilgisayarlarPage;
-import pages.GiyimAyakkabiPage;
-import pages.HomePage;
+import pages.*;
 import utilities.Driver;
 import static utilities.ReusableMethods.*;
 
@@ -12,6 +9,7 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
     AraPage araPage=new AraPage(); HomePage homePage=new HomePage();
     BilgisayarlarPage bilgisayarlarPage=new BilgisayarlarPage();
     GiyimAyakkabiPage giyimAyakkabiPage=new GiyimAyakkabiPage();
+    StaticPage staticPage=new StaticPage();
     Actions actions=new Actions(Driver.getDriver());
     @And("kullanici arama alaninin altinda elektronik sekmesinin uzerine gelir")
     public void kullaniciAramaAlanininAltindaElektronikSekmesininUzerineGelir() {
@@ -161,20 +159,24 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
 
     @And("kullanici erkek basligina tiklar")
     public void kullaniciErkekBasliginaTiklar() {
+        clickByJS(homePage.erkekSecenegiModaLinkiHome);
     }
 
     @And("kullanici acilan sayfanin erkek urunleri icerdigini dogrular")
     public void kullaniciAcilanSayfaninErkekUrunleriIcerdiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("erkek-giyim-modelleri");
     }
 
     @And("kullanici ayakkabi_canta basligina tiklar")
     public void kullaniciAyakkabi_cantaBasliginaTiklar() {
+        clickByJS(homePage.ayakkabiCantaSecenegiModaLinkiHome);
     }
 
     @And("kullanici acilan sayfanin ayakkabi_canta urunleri icerdigini dogrular")
     public void kullaniciAcilanSayfaninAyakkabi_cantaUrunleriIcerdiginiDogrular() {
-    }
+        assert staticPage.ayakkabiCantaImageStatic.isDisplayed();
 
+    }
     @And("kullanici kadin_aksesuar_taki basligina tiklar")
     public void kullaniciKadin_aksesuar_takiBasliginaTiklar() {
     }
