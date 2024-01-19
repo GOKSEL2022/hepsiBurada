@@ -166,7 +166,6 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
     public void kullaniciAcilanSayfaninErkekUrunleriIcerdiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("erkek-giyim-modelleri");
     }
-
     @And("kullanici ayakkabi_canta basligina tiklar")
     public void kullaniciAyakkabi_cantaBasliginaTiklar() {
         clickByJS(homePage.ayakkabiCantaSecenegiModaLinkiHome);
@@ -175,22 +174,27 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
     @And("kullanici acilan sayfanin ayakkabi_canta urunleri icerdigini dogrular")
     public void kullaniciAcilanSayfaninAyakkabi_cantaUrunleriIcerdiginiDogrular() {
         assert staticPage.ayakkabiCantaImageStatic.isDisplayed();
-
     }
     @And("kullanici kadin_aksesuar_taki basligina tiklar")
-    public void kullaniciKadin_aksesuar_takiBasliginaTiklar() {
+    public void kullaniciKadin_aksesuar_takiBasliginaTiklar() throws InterruptedException {
+        scrollIntoViewJS(homePage.telefonTelefonAksesuarlariSecenegiElektronikHome);
+        Thread.sleep(1000);
+        clickByJS(homePage.telefonTelefonAksesuarlariSecenegiElektronikHome);
     }
-
     @And("kullanici acilan sayfanin kadin aksesuarlari icerdigini dogrular")
     public void kullaniciAcilanSayfaninKadinAksesuarlariIcerdiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("bayan-kol-saatleri");
     }
-
     @And("kullanici erkek_aksesuar_taki basligina tiklar")
-    public void kullaniciErkek_aksesuar_takiBasliginaTiklar() {
+    public void kullaniciErkek_aksesuar_takiBasliginaTiklar() throws InterruptedException {
+        scrollIntoViewJS(homePage.erkekSecenegiModaLinkiHome);
+        Thread.sleep(1000);
+        clickByJS(homePage.erkekSecenegiModaLinkiHome);
     }
 
     @And("kullanici acilan sayfanin erkek aksesuarlari icerdigini dogrular")
     public void kullaniciAcilanSayfaninErkekAksesuarlariIcerdiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("erkek-kol-saatleri");
     }
 
     @And("kullanici altin basligina tiklar")
