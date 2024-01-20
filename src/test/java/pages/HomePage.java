@@ -105,5 +105,11 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='sf-ChildMenuItems-KdzkrxSVhcwDy3od0Yre item-3623']")
     public WebElement ayakkabiCantaSecenegiModaLinkiHome;
 
+    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/kulce-ziynet-cumhuriyet-altinlari-c-530175']")
+    public WebElement altinSecenegiModaLinkHome;
+
+    @FindBy(xpath = "//*[@title='Hepsiburada']")
+    public WebElement hepsiBuradaTitleHome;
+
 
 }

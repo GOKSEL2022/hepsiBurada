@@ -83,6 +83,7 @@ Feature: anasayfadaki_linklerin_testi
       And   kullanici iki saniye bekler
       And   kullanici ayakkabi_canta basligina tiklar
       And   kullanici acilan sayfanin ayakkabi_canta urunleri icerdigini dogrular
+      And   kullanici hepsiBuradaTitle a tiklar
       And   kullanici moda linke gelir
       And   kullanici iki saniye bekler
       And   kullanici kadin_aksesuar_taki basligina tiklar

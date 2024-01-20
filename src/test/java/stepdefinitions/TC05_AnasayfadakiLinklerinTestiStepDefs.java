@@ -199,10 +199,13 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
 
     @And("kullanici altin basligina tiklar")
     public void kullaniciAltinBasliginaTiklar() {
+        scrollIntoViewJS(homePage.altinSecenegiModaLinkHome);
+        clickWithTimeOut(homePage.altinSecenegiModaLinkHome,2);
     }
 
     @And("kullanici acilan sayfanin altin urunleri icerdigini dogrular")
     public void kullaniciAcilanSayfaninAltinUrunleriIcerdiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("kulce-ziynet-cumhuriyet-altinlari");
     }
 
     @And("kullanici cocuk basligina tiklar")
@@ -227,6 +230,11 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
 
     @When("kullanici yurdisi urunleri sayfasina yonlendirildigini dogrular")
     public void kullaniciYurdisiUrunleriSayfasinaYonlendirildiginiDogrular() {
+    }
+
+    @And("kullanici hepsiBuradaTitle a tiklar")
+    public void kullaniciHepsiBuradaTitleATiklar() {
+        clickByJS(homePage.hepsiBuradaTitleHome);
     }
 }
 
