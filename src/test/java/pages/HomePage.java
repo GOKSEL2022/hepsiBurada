@@ -111,5 +111,19 @@ public class HomePage {
     @FindBy(xpath = "//*[@title='Hepsiburada']")
     public WebElement hepsiBuradaTitleHome;
 
+    @FindBy(css = "a[class='sf-ChildMenuItems-KdzkrxSVhcwDy3od0Yre item-995']")
+    public WebElement cocukSecenegiModaLinkiHome;
+
+    @FindBy(css = "a[class='sf-ChildMenuItems-KdzkrxSVhcwDy3od0Yre item-3404']")
+    public WebElement yurtdisindanSecenegiModaLinkiHome;
+
+    @FindBy(css = "a[class='sf-ChildMenuItems-KdzkrxSVhcwDy3od0Yre item-1307']")
+    public WebElement outdoorGiyimAyakkabiSecenegiModaLinkiHome;
+
+    @FindBy(css = "a[class='sf-ChildMenuItems-KdzkrxSVhcwDy3od0Yre item-1283']")
+    public WebElement kadinAksesuarTakiSecenegiModaLinkiHome;
+
+
+
 
 }
