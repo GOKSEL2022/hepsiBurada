@@ -210,14 +210,18 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
 
     @And("kullanici cocuk basligina tiklar")
     public void kullaniciCocukBasliginaTiklar() {
+        scrollIntoViewJS(homePage.cocukSecenegiModaLinkiHome);
+        clickByJS(homePage.cocukSecenegiModaLinkiHome);
     }
 
     @And("kullanici acilan sayfanin cocuk urunleri icerdigini dogrular")
     public void kullaniciAcilanSayfaninCocukUrunleriIcerdiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("cocuk-giyim-kiyafetleri");
     }
-
     @And("kullanici outdoor giyim_ayakkabi basligina tiklar")
     public void kullaniciOutdoorGiyim_ayakkabiBasliginaTiklar() {
+        scrollIntoViewJS(homePage.outdoorGiyimAyakkabiSecenegiModaLinkiHome);
+        clickByJS(homePage.outdoorGiyimAyakkabiSecenegiModaLinkiHome);
     }
 
     @And("kullanici outdoor giyim_ayakkabi sayfasina yonlendirildigini dogrular")
