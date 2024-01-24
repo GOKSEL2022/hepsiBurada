@@ -223,17 +223,20 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
         scrollIntoViewJS(homePage.outdoorGiyimAyakkabiSecenegiModaLinkiHome);
         clickByJS(homePage.outdoorGiyimAyakkabiSecenegiModaLinkiHome);
     }
-
     @And("kullanici outdoor giyim_ayakkabi sayfasina yonlendirildigini dogrular")
     public void kullaniciOutdoorGiyim_ayakkabiSayfasinaYonlendirildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("outdoor-giyim-ayakkabilar");
     }
 
     @And("kullanici yurt disindan basligina tiklar")
     public void kullaniciYurtDisindanBasliginaTiklar() {
+        scrollIntoViewJS(homePage.yurtdisindanSecenegiModaLinkiHome);
+        clickByJS(homePage.yurtdisindanSecenegiModaLinkiHome);
     }
 
     @When("kullanici yurdisi urunleri sayfasina yonlendirildigini dogrular")
     public void kullaniciYurdisiUrunleriSayfasinaYonlendirildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("yurt-disindan-urunler");
     }
 
     @And("kullanici hepsiBuradaTitle a tiklar")
