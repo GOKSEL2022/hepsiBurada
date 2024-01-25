@@ -111,6 +111,31 @@ Feature: anasayfadaki_linklerin_testi
       Then  kullanici sayfayi kapatir
 
 
+  Scenario: anasayfada_linklerin_tumunun_goruntulenmesi
+    Given kullanici ev_yasam_kirtasiye_ofis linke gelir
+    When  kullanici iki saniye bekler
+    And   kullanici ev_yasam_kirtasiye_ofis seceneklerinin ilkini ve son olani goruntuler
+    And   kullanici oto_bahce_yapi_market linke gelir
+    And   kullanici iki saniye bekler
+    And   kullanici oto_bahce_yapi_market seceneklerinin ilkini ve son olani goruntuler
+    And   kullanici anne_bebek_oyuncak linke gelir
+    And   kullanici iki saniye bekler
+    And   kullanici anne_bebek_oyuncak seceneklerinin ilkini ve son olani goruntuler
+    And   kullanici spor_outdoor linke gelir
+    And   kullanici iki saniye bekler
+    And   kullanici spor_outdoor seceneklerinin ilkini ve son olani goruntuler
+    And   kullanici kozmetik_kisisel bakim linke gelir
+    And   kullanici iki saniye bekler
+    And   kullanici kozmetik_kisisel bakim seceneklerinin ilkini ve son olani goruntuler
+    And   kullanici supermarket_pet shop linke gelir
+    And   kullanici iki saniye bekler
+    And   kullanici supermarket_pet shop seceneklerinin ilkini ve son olani goruntuler
+    And   kullanici kitap_muzik_film_hobi linke gelir
+    And   kullanici iki saniye bekler
+    And   kullanici kitap_muzik_film_hobi seceneklerinin ilkini ve son olani goruntuler
+    And   kullanici sayfayi kapatir
+
+
 
 
 
