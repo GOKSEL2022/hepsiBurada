@@ -133,7 +133,7 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
     }
 
     @Given("kullanici moda linke gelir")
-    public void kullaniciModaLinkeGelir() {
+    public void kullaniciModaLinkeGelir() throws InterruptedException {
         actions.moveToElement(homePage.modaLinkiHome).perform();
     }
 
@@ -242,6 +242,16 @@ public class TC05_AnasayfadakiLinklerinTestiStepDefs {
     @And("kullanici hepsiBuradaTitle a tiklar")
     public void kullaniciHepsiBuradaTitleATiklar() {
         clickByJS(homePage.hepsiBuradaTitleHome);
+    }
+
+    @And("kullanici outdoor giyim_ayakkabi basligini goruntuler")
+    public void kullaniciOutdoorGiyim_ayakkabiBasliginiGoruntuler() {
+        scrollIntoViewJS(homePage.outdoorGiyimAyakkabiSecenegiModaLinkiHome);
+    }
+
+    @And("kullanici erkek basligini goruntuler")
+    public void kullaniciErkekBasliginiGoruntuler() {
+        scrollIntoViewJS(homePage.erkekSecenegiModaLinkiHome);
     }
 }
 
