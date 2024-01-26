@@ -108,6 +108,7 @@ Feature: anasayfadaki_linklerin_testi
       And   kullanici iki saniye bekler
       And   kullanici yurt disindan basligina tiklar
       When  kullanici yurdisi urunleri sayfasina yonlendirildigini dogrular
+      When  kullanici moda linke gelir
       Then  kullanici sayfayi kapatir
 
 
@@ -134,8 +135,6 @@ Feature: anasayfadaki_linklerin_testi
     And   kullanici iki saniye bekler
     And   kullanici kitap_muzik_film_hobi seceneklerinin ilkini ve son olani goruntuler
     And   kullanici sayfayi kapatir
-
-
 
 
 
