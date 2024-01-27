@@ -123,6 +123,16 @@ public class HomePage {
     @FindBy(css = "a[class='sf-ChildMenuItems-KdzkrxSVhcwDy3od0Yre item-1283']")
     public WebElement kadinAksesuarTakiSecenegiModaLinkiHome;
 
+    @FindBy(xpath = "(//*[@class='sf-MenuItems-UHHCg2qrE5_YBqDV_7AC'])[3]")
+    public WebElement evYasamKirtasiyeOfisLinkiHome;
+
+    @FindBy(xpath = "(//*[.='Yurt Dışından'])[3]")
+    public WebElement yurtDisindanSecenegiEvYasamKirtasiyeOfisLinkiHome;
+
+    @FindBy(xpath= "//*[.='Ev Tekstili']")
+    public WebElement evTekstiliSecenegiEvYasamKirtasiyeOfisLinkiHome;
+
+
 
 
 

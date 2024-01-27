@@ -2,16 +2,26 @@ package stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
+import utilities.Driver;
+import utilities.ReusableMethods;
+
+import static utilities.ReusableMethods.scrollIntoViewJS;
 
 public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     HomePage homePage=new HomePage();
+    Actions actions=new Actions(Driver.getDriver());
     @Given("kullanici ev_yasam_kirtasiye_ofis linke gelir")
     public void kullaniciEv_yasam_kirtasiye_ofisLinkeGelir() {
+        actions.moveToElement(homePage.evYasamKirtasiyeOfisLinkiHome).perform();
     }
-
     @And("kullanici ev_yasam_kirtasiye_ofis seceneklerinin ilkini ve son olani goruntuler")
-    public void kullaniciEv_yasam_kirtasiye_ofisSeceneklerininIlkiniVeSonOlaniGoruntuler() {
+    public void kullaniciEv_yasam_kirtasiye_ofisSeceneklerininIlkiniVeSonOlaniGoruntuler() throws InterruptedException {
+        scrollIntoViewJS(homePage.yurtDisindanSecenegiEvYasamKirtasiyeOfisLinkiHome);
+        Thread.sleep(2000);
+        scrollIntoViewJS(homePage.evTekstiliSecenegiEvYasamKirtasiyeOfisLinkiHome);
+
     }
 
     @And("kullanici oto_bahce_yapi_market linke gelir")
