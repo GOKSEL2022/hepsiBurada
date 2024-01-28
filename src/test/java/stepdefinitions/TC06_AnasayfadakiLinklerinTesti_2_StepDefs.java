@@ -8,6 +8,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 import static utilities.ReusableMethods.scrollIntoViewJS;
+import static utilities.ReusableMethods.waitFor;
 
 public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     HomePage homePage=new HomePage();
@@ -17,19 +18,23 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
         actions.moveToElement(homePage.evYasamKirtasiyeOfisLinkiHome).perform();
     }
     @And("kullanici ev_yasam_kirtasiye_ofis seceneklerinin ilkini ve son olani goruntuler")
-    public void kullaniciEv_yasam_kirtasiye_ofisSeceneklerininIlkiniVeSonOlaniGoruntuler() throws InterruptedException {
+    public void kullaniciEv_yasam_kirtasiye_ofisSeceneklerininIlkiniVeSonOlaniGoruntuler() {
         scrollIntoViewJS(homePage.yurtDisindanSecenegiEvYasamKirtasiyeOfisLinkiHome);
-        Thread.sleep(2000);
+        waitFor(2);
         scrollIntoViewJS(homePage.evTekstiliSecenegiEvYasamKirtasiyeOfisLinkiHome);
 
     }
-
     @And("kullanici oto_bahce_yapi_market linke gelir")
     public void kullaniciOto_bahce_yapi_marketLinkeGelir() {
+        actions.moveToElement(homePage.otoBahceYapiMarketLinkiHome).perform();
+        waitFor(2);
     }
 
     @And("kullanici oto_bahce_yapi_market seceneklerinin ilkini ve son olani goruntuler")
     public void kullaniciOto_bahce_yapi_marketSeceneklerininIlkiniVeSonOlaniGoruntuler() {
+        scrollIntoViewJS(homePage.bahceSecenegiotoBahceYapiMarketLinkiHome);
+        waitFor(2);
+        scrollIntoViewJS(homePage.banyoMutfakSecenegiotoBahceYapiMarketLinkiHome);
     }
 
     @And("kullanici anne_bebek_oyuncak linke gelir")
