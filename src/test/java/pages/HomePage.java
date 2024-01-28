@@ -132,6 +132,15 @@ public class HomePage {
     @FindBy(xpath= "//*[.='Ev Tekstili']")
     public WebElement evTekstiliSecenegiEvYasamKirtasiyeOfisLinkiHome;
 
+    @FindBy(xpath = "(//*[@class='sf-MenuItems-UHHCg2qrE5_YBqDV_7AC'])[4]")
+    public WebElement otoBahceYapiMarketLinkiHome;
+
+    @FindBy(xpath = "(//*[@class='sf-MenuItems-UHHCg2qrE5_YBqDV_7AC'])[4]")
+    public WebElement bahceSecenegiotoBahceYapiMarketLinkiHome;
+
+    @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/banyolar-c-455418'])[2]")
+    public WebElement banyoMutfakSecenegiotoBahceYapiMarketLinkiHome;
+
 
 
 
