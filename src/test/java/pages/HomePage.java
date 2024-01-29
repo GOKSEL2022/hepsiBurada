@@ -141,6 +141,19 @@ public class HomePage {
     @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/banyolar-c-455418'])[2]")
     public WebElement banyoMutfakSecenegiotoBahceYapiMarketLinkiHome;
 
+    @FindBy(xpath = "(//*[.='Anne, Bebek, Oyuncak'])[2]")
+    public WebElement anneBebekOyuncakLinkiHome;
+
+    @FindBy(xpath = "//*[.='Bebek Odası & Güvenlik']")
+    public WebElement bebekOdasiGuvenlikSecenegiAnneBebekOyuncakLinkiHome;
+
+    @FindBy(xpath = "//*[.='Bebek Bezi & Islak Mendil']")
+    public WebElement bebekBeziIslakMendilSecenegiAnneBebekOyuncakLinkiHome;
+
+
+
+
+
 
 
 

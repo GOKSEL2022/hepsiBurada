@@ -39,10 +39,15 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici anne_bebek_oyuncak linke gelir")
     public void kullaniciAnne_bebek_oyuncakLinkeGelir() {
+        actions.moveToElement(homePage.anneBebekOyuncakLinkiHome).perform();
+        waitFor(2);
     }
 
     @And("kullanici anne_bebek_oyuncak seceneklerinin ilkini ve son olani goruntuler")
     public void kullaniciAnne_bebek_oyuncakSeceneklerininIlkiniVeSonOlaniGoruntuler() {
+        scrollIntoViewJS(homePage.bebekOdasiGuvenlikSecenegiAnneBebekOyuncakLinkiHome);
+        waitFor(2);
+        scrollIntoViewJS(homePage.bebekBeziIslakMendilSecenegiAnneBebekOyuncakLinkiHome);
     }
 
     @And("kullanici spor_outdoor linke gelir")
