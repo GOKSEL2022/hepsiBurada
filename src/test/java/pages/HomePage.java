@@ -150,6 +150,14 @@ public class HomePage {
     @FindBy(xpath = "//*[.='Bebek Bezi & Islak Mendil']")
     public WebElement bebekBeziIslakMendilSecenegiAnneBebekOyuncakLinkiHome;
 
+    @FindBy(xpath = "(//*[@class='sf-MenuItems-UHHCg2qrE5_YBqDV_7AC'])[6]")
+    public WebElement sporOutdoorLinkiHome;
+
+    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/outdoor-doga-sporlari-c-22007826']")
+    public WebElement dogaSporlariSecenegiSporOutdoorLinkiHome;
+
+    @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/fitness-kondisyon-urunleri-c-353045'])[1]")
+    public WebElement fitnessKondisyonUrunleriSecenegiSporOutdoorLinkiHome;
 
 
 
