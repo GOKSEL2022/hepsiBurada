@@ -52,10 +52,14 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici spor_outdoor linke gelir")
     public void kullaniciSpor_outdoorLinkeGelir() {
+        actions.moveToElement(homePage.sporOutdoorLinkiHome).perform();
     }
 
     @And("kullanici spor_outdoor seceneklerinin ilkini ve son olani goruntuler")
     public void kullaniciSpor_outdoorSeceneklerininIlkiniVeSonOlaniGoruntuler() {
+        scrollIntoViewJS(homePage.dogaSporlariSecenegiSporOutdoorLinkiHome);
+        waitFor(2);
+        scrollIntoViewJS(homePage.fitnessKondisyonUrunleriSecenegiSporOutdoorLinkiHome);
     }
 
     @And("kullanici kozmetik_kisisel bakim linke gelir")
