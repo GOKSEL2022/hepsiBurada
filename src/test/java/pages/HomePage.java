@@ -159,6 +159,9 @@ public class HomePage {
     @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/fitness-kondisyon-urunleri-c-353045'])[1]")
     public WebElement fitnessKondisyonUrunleriSecenegiSporOutdoorLinkiHome;
 
+    @FindBy(xpath = "(//*[.='Anne, Bebek, Oyuncak'])[2]")
+    public WebElement kozmetikKisiselBakimLinkiHome;
+
 
 
 
