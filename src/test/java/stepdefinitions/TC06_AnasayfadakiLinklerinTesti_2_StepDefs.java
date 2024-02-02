@@ -64,10 +64,15 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici kozmetik_kisisel bakim linke gelir")
     public void kullaniciKozmetik_kisiselBakimLinkeGelir() {
+        actions.moveToElement(homePage.kozmetikKisiselBakimLinkiHome).perform();
     }
 
     @And("kullanici kozmetik_kisisel bakim seceneklerinin ilkini ve son olani goruntuler")
     public void kullaniciKozmetik_kisiselBakimSeceneklerininIlkiniVeSonOlaniGoruntuler() {
+        scrollIntoViewJS(homePage.tirasUrunleriKozmetikKisiselBakimLinkiHome);
+        waitFor(2);
+        scrollIntoViewJS(homePage.ciltBakimiKozmetikKisiselBakimLinkiHome);
+
     }
 
     @And("kullanici supermarket_pet shop linke gelir")

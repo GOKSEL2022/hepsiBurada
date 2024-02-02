@@ -162,6 +162,12 @@ public class HomePage {
     @FindBy(xpath = "(//*[.='Anne, Bebek, Oyuncak'])[2]")
     public WebElement kozmetikKisiselBakimLinkiHome;
 
+    @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/erkek-tiras-urunleri-c-26012116'])[1]")
+    public WebElement tirasUrunleriKozmetikKisiselBakimLinkiHome;
+
+    @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/cilt-bakim-urunleri-c-32000005'])[1]")
+    public WebElement ciltBakimiKozmetikKisiselBakimLinkiHome;
+
 
 
 
