@@ -168,6 +168,16 @@ public class HomePage {
     @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/cilt-bakim-urunleri-c-32000005'])[1]")
     public WebElement ciltBakimiKozmetikKisiselBakimLinkiHome;
 
+    @FindBy(xpath = "(//*[.='Süpermarket, Pet Shop'])[1]")
+    public WebElement supermarketPetshopLinkHome;
+
+    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/mutfak-sarf-malzemeleri-c-60001205']")
+    public WebElement evTuketimMalzemeleriSupermarketPetshopLinkHome;
+
+    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/gida-urunleri-c-28001469']")
+    public WebElement gidaUrunleriSupermarketPetshopLinkHome;
+
+
 
 
 
