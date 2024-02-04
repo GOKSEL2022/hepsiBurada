@@ -19,7 +19,7 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     }
     @And("kullanici ev_yasam_kirtasiye_ofis seceneklerinin ilkini ve son olani goruntuler")
     public void kullaniciEv_yasam_kirtasiye_ofisSeceneklerininIlkiniVeSonOlaniGoruntuler() {
-        scrollIntoViewJS(homePage.yurtDisindanSecenegiEvYasamKirtasiyeOfisLinkiHome);
+        scrollIntoViewJS(homePage.ofisMobilyalariSecenegiEvYasamKirtasiyeOfisLinkiHome);
         waitFor(2);
         scrollIntoViewJS(homePage.evTekstiliSecenegiEvYasamKirtasiyeOfisLinkiHome);
 
@@ -57,7 +57,7 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici spor_outdoor seceneklerinin ilkini ve son olani goruntuler")
     public void kullaniciSpor_outdoorSeceneklerininIlkiniVeSonOlaniGoruntuler() {
-        scrollIntoViewJS(homePage.dogaSporlariSecenegiSporOutdoorLinkiHome);
+        scrollIntoViewJS(homePage.bisikletSecenegiSporOutdoorLinkiHome);
         waitFor(2);
         scrollIntoViewJS(homePage.fitnessKondisyonUrunleriSecenegiSporOutdoorLinkiHome);
     }
