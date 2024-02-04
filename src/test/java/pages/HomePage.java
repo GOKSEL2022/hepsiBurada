@@ -126,8 +126,8 @@ public class HomePage {
     @FindBy(xpath = "(//*[@class='sf-MenuItems-UHHCg2qrE5_YBqDV_7AC'])[3]")
     public WebElement evYasamKirtasiyeOfisLinkiHome;
 
-    @FindBy(xpath = "(//*[.='Yurt Dışından'])[3]")
-    public WebElement yurtDisindanSecenegiEvYasamKirtasiyeOfisLinkiHome;
+    @FindBy(xpath = "//*[.='Ofis Mobilyaları']")
+    public WebElement ofisMobilyalariSecenegiEvYasamKirtasiyeOfisLinkiHome;
 
     @FindBy(xpath= "//*[.='Ev Tekstili']")
     public WebElement evTekstiliSecenegiEvYasamKirtasiyeOfisLinkiHome;
@@ -153,8 +153,8 @@ public class HomePage {
     @FindBy(xpath = "(//*[@class='sf-MenuItems-UHHCg2qrE5_YBqDV_7AC'])[6]")
     public WebElement sporOutdoorLinkiHome;
 
-    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/outdoor-doga-sporlari-c-22007826']")
-    public WebElement dogaSporlariSecenegiSporOutdoorLinkiHome;
+    @FindBy(xpath = "//*[.='Bisiklet']")
+    public WebElement bisikletSecenegiSporOutdoorLinkiHome;
 
     @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/fitness-kondisyon-urunleri-c-353045'])[1]")
     public WebElement fitnessKondisyonUrunleriSecenegiSporOutdoorLinkiHome;
