@@ -72,17 +72,18 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
         scrollIntoViewJS(homePage.tirasUrunleriKozmetikKisiselBakimLinkiHome);
         waitFor(2);
         scrollIntoViewJS(homePage.ciltBakimiKozmetikKisiselBakimLinkiHome);
-
     }
-
     @And("kullanici supermarket_pet shop linke gelir")
     public void kullaniciSupermarket_petShopLinkeGelir() {
+        actions.moveToElement(homePage.supermarketPetshopLinkHome).perform();
     }
 
     @And("kullanici supermarket_pet shop seceneklerinin ilkini ve son olani goruntuler")
     public void kullaniciSupermarket_petShopSeceneklerininIlkiniVeSonOlaniGoruntuler() {
+        scrollIntoViewJS(homePage.evTuketimMalzemeleriSupermarketPetshopLinkHome);
+        waitFor(2);
+        scrollIntoViewJS(homePage.gidaUrunleriSupermarketPetshopLinkHome);
     }
-
     @And("kullanici kitap_muzik_film_hobi linke gelir")
     public void kullaniciKitap_muzik_film_hobiLinkeGelir() {
     }
