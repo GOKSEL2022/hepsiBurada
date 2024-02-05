@@ -150,7 +150,7 @@ public class HomePage {
     @FindBy(xpath = "//*[.='Bebek Bezi & Islak Mendil']")
     public WebElement bebekBeziIslakMendilSecenegiAnneBebekOyuncakLinkiHome;
 
-    @FindBy(xpath = "(//*[@class='sf-MenuItems-UHHCg2qrE5_YBqDV_7AC'])[6]")
+    @FindBy(xpath = "(//*[.='Spor, Outdoor'])[1]")
     public WebElement sporOutdoorLinkiHome;
 
     @FindBy(xpath = "//*[.='Bisiklet']")
@@ -159,7 +159,7 @@ public class HomePage {
     @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/fitness-kondisyon-urunleri-c-353045'])[1]")
     public WebElement fitnessKondisyonUrunleriSecenegiSporOutdoorLinkiHome;
 
-    @FindBy(xpath = "(//*[.='Anne, Bebek, Oyuncak'])[2]")
+    @FindBy(xpath = "(//*[.='Kozmetik, Kişisel Bakım'])[1]")
     public WebElement kozmetikKisiselBakimLinkiHome;
 
     @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/erkek-tiras-urunleri-c-26012116'])[1]")
@@ -176,6 +176,15 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/gida-urunleri-c-28001469']")
     public WebElement gidaUrunleriSupermarketPetshopLinkHome;
+
+    @FindBy(xpath = "(//*[.='Kitap, Müzik, Film, Hobi'])[2]")
+    public WebElement kitapMuzikFilmHobiLinkHome;
+
+    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/hobi-eglence-urunleri-c-2147483605']")
+    public WebElement hobiOyunKSecenegiitapMuzikFilmHobiLinkHome;
+
+    @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/filmler-c-2147483640'])[1]")
+    public WebElement filmSecenegiitapMuzikFilmHobiLinkHome;
 
 
 
