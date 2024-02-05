@@ -86,9 +86,13 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     }
     @And("kullanici kitap_muzik_film_hobi linke gelir")
     public void kullaniciKitap_muzik_film_hobiLinkeGelir() {
+        actions.moveToElement(homePage.kitapMuzikFilmHobiLinkHome).perform();
     }
 
     @And("kullanici kitap_muzik_film_hobi seceneklerinin ilkini ve son olani goruntuler")
     public void kullaniciKitap_muzik_film_hobiSeceneklerininIlkiniVeSonOlaniGoruntuler() {
+        scrollIntoViewJS(homePage.hobiOyunKSecenegiitapMuzikFilmHobiLinkHome);
+        waitFor(2);
+        scrollIntoViewJS(homePage.filmSecenegiitapMuzikFilmHobiLinkHome);
     }
 }
