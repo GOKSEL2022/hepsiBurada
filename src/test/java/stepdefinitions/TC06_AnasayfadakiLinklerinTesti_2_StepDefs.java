@@ -1,12 +1,9 @@
 package stepdefinitions;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import utilities.Driver;
-import utilities.ReusableMethods;
-
 import static utilities.ReusableMethods.scrollIntoViewJS;
 import static utilities.ReusableMethods.waitFor;
 
@@ -94,5 +91,29 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
         scrollIntoViewJS(homePage.hobiOyunKSecenegiitapMuzikFilmHobiLinkHome);
         waitFor(2);
         scrollIntoViewJS(homePage.filmSecenegiitapMuzikFilmHobiLinkHome);
+    }
+
+    @And("kullanici premium firsatlardan bir urunu sepete ekler")
+    public void kullaniciPremiumFirsatlardanBirUrunuSepeteEkler() {
+    }
+
+    @And("kullanici ekledigi urunun sepet sayfasinda oldugunu dogrular")
+    public void kullaniciEkledigiUrununSepetSayfasindaOldugunuDogrular() {
+    }
+
+    @And("kullanici secilen urunler textinin altinda odemesi gereken toplam ucreti goruntuler")
+    public void kullaniciSecilenUrunlerTextininAltindaOdemesiGerekenToplamUcretiGoruntuler() {
+    }
+
+    @And("kullanici urunlerin ucretini goruntuler")
+    public void kullaniciUrunlerinUcretiniGoruntuler() {
+    }
+
+    @And("kullanici kargo ucretini goruntuler")
+    public void kullaniciKargoUcretiniGoruntuler() {
+    }
+
+    @When("kullanici urunler ve kargo ucretlerinin secilen urunlerin toplam fiyatina esit oldugunu dogrular")
+    public void kullaniciUrunlerVeKargoUcretlerininSecilenUrunlerinToplamFiyatinaEsitOldugunuDogrular() {
     }
 }
