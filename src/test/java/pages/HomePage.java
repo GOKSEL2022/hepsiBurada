@@ -186,6 +186,15 @@ public class HomePage {
     @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/filmler-c-2147483640'])[1]")
     public WebElement filmSecenegiitapMuzikFilmHobiLinkHome;
 
+    @FindBy(xpath = "(//*[.='Premium fırsatları'])[1]")
+    public WebElement premiumFirsatlarTextHome;
+
+    @FindBy(xpath = "src=\"https://productimages.hepsiburada.net/s/440/222-222/110000473971984.jpg\"")
+    public WebElement premiumFirsatlarIlkUrunHome;
+
+    @FindBy(xpath = "sf-reco-hbCFRu boXv sj3avfrr2o2")
+    public WebElement sepeteEkleButonPremiumFirsatlarIlkUrunHome;
+
 
 
 
