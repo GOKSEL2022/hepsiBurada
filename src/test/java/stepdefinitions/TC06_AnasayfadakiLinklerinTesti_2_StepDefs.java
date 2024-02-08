@@ -4,8 +4,8 @@ import io.cucumber.java.en.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import utilities.Driver;
-import static utilities.ReusableMethods.scrollIntoViewJS;
-import static utilities.ReusableMethods.waitFor;
+
+import static utilities.ReusableMethods.*;
 
 public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     HomePage homePage=new HomePage();
@@ -88,13 +88,17 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici kitap_muzik_film_hobi seceneklerinin ilkini ve son olani goruntuler")
     public void kullaniciKitap_muzik_film_hobiSeceneklerininIlkiniVeSonOlaniGoruntuler() {
-        scrollIntoViewJS(homePage.hobiOyunKSecenegiitapMuzikFilmHobiLinkHome);
+        scrollIntoViewJS(homePage.kitapMuzikFilmHobiLinkHome);
         waitFor(2);
         scrollIntoViewJS(homePage.filmSecenegiitapMuzikFilmHobiLinkHome);
     }
 
     @And("kullanici premium firsatlardan bir urunu sepete ekler")
     public void kullaniciPremiumFirsatlardanBirUrunuSepeteEkler() {
+        scrollIntoViewJS(homePage.premiumFirsatlarIlkUrunHome);
+        waitFor(2);
+        clickByJS(homePage.sepeteEkleButonPremiumFirsatlarIlkUrunHome);
+
     }
 
     @And("kullanici ekledigi urunun sepet sayfasinda oldugunu dogrular")
