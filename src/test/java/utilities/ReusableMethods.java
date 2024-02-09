@@ -197,31 +197,7 @@ public class ReusableMethods {
         JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());
         jsexecutor.executeScript("arguments[0].scrollIntoView(true);", element);
     }
-    /*
-    public void convertJsonToJavaClass(URL source, File outputJavaClassDirectory, String packageName, String javaClassName)
 
-            throws IOException {
-        JCodeModel jcodeModel = new JCodeModel();
-
-        GenerationConfig config = new DefaultGenerationConfig() {
-            @Override
-            public boolean isGenerateBuilders() {
-                return true;
-            }
-
-            @Override
-            public SourceType getSourceType() {
-                return SourceType.JSON;
-            }
-        };
-
-        SchemaMapper mapper = new SchemaMapper(new RuleFactory(config, new Jackson2Annotator(config), new SchemaStore()), new SchemaGenerator());
-        mapper.generate(jcodeModel, javaClassName, packageName, source);
-
-        jcodeModel.build(outputJavaClassDirectory);
-
-
-     */
     //windowNumber sıfır (0)'dan başlıyor.
     //index numarasini parametre olarak alir
     //ve o index'li pencereye gecis yapar.
