@@ -95,7 +95,8 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici premium firsatlardan bir urunu sepete ekler")
     public void kullaniciPremiumFirsatlardanBirUrunuSepeteEkler() {
-        scrollIntoViewJS(homePage.premiumFirsatlarIlkUrunHome);
+        scrollIntoViewJS(homePage.premiumFirsatlarTextHome);
+        actions.moveToElement(homePage.premiumFirsatlarIlkUrunHome).perform();
         waitFor(2);
         clickByJS(homePage.sepeteEkleButonPremiumFirsatlarIlkUrunHome);
 
