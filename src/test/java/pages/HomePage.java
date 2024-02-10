@@ -195,6 +195,9 @@ public class HomePage {
     @FindBy(xpath = "//*[@data-test-id='product-info-button']")
     public WebElement sepeteEkleButonPremiumFirsatlarIlkUrunHome;
 
+    @FindBy(xpath = "//*[@class='hb-toast-message']")
+    public WebElement urunSepeteEklendiAlertHome;
+
 
 
 
