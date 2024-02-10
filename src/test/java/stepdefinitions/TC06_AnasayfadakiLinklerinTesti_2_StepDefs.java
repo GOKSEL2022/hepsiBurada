@@ -99,11 +99,10 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
         actions.moveToElement(homePage.premiumFirsatlarIlkUrunHome).perform();
         waitFor(2);
         clickByJS(homePage.sepeteEkleButonPremiumFirsatlarIlkUrunHome);
-
     }
-
     @And("kullanici ekledigi urunun sepet sayfasinda oldugunu dogrular")
     public void kullaniciEkledigiUrununSepetSayfasindaOldugunuDogrular() {
+        assert homePage.urunSepeteEklendiAlertHome.isDisplayed();
     }
 
     @And("kullanici secilen urunler textinin altinda odemesi gereken toplam ucreti goruntuler")
