@@ -198,6 +198,9 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='hb-toast-message']")
     public WebElement urunSepeteEklendiAlertHome;
 
+    @FindBy(xpath = "//*[@href='https://checkout.hepsiburada.com']")
+    public WebElement sepeteGitLinkUrunSepeteEklendiAlertHome;
+
 
 
 

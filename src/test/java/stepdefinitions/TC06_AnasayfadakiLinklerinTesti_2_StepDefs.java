@@ -102,7 +102,10 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     }
     @And("kullanici ekledigi urunun sepet sayfasinda oldugunu dogrular")
     public void kullaniciEkledigiUrununSepetSayfasindaOldugunuDogrular() {
-        assert homePage.urunSepeteEklendiAlertHome.isDisplayed();
+        assert Driver.getDriver().switchTo().alert().getText().contains("ürün sepete eklendi");
+        //assert homePage.urunSepeteEklendiAlertHome.isDisplayed();
+        clickWithTimeOut(homePage.sepeteGitLinkUrunSepeteEklendiAlertHome,2);
+        assert Driver.getDriver().getCurrentUrl().contains("sepetim");
     }
 
     @And("kullanici secilen urunler textinin altinda odemesi gereken toplam ucreti goruntuler")
