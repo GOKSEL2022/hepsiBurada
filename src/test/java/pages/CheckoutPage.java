@@ -21,4 +21,10 @@ public class CheckoutPage {
 
     @FindBy(xpath = "//*[@class='payed_prices_1G2ue']")
     public WebElement secilenUrunlerToplamUcret;
+
+    @FindBy(xpath = "//*[@class='products_2984E']")
+    public WebElement urunlerFiyatCheckout;
+
+    @FindBy(xpath = "//*[@class='cargo_1Nqun']")
+    public WebElement kargoFiyatCheckout;
 }
