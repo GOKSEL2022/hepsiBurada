@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.*;
 import org.openqa.selenium.interactions.Actions;
+import pages.CheckoutPage;
 import pages.HomePage;
 import utilities.Driver;
 
@@ -9,6 +10,7 @@ import static utilities.ReusableMethods.*;
 
 public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     HomePage homePage=new HomePage();
+    CheckoutPage checkoutPage=new CheckoutPage();
     Actions actions=new Actions(Driver.getDriver());
     @Given("kullanici ev_yasam_kirtasiye_ofis linke gelir")
     public void kullaniciEv_yasam_kirtasiye_ofisLinkeGelir() {
@@ -110,6 +112,7 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici secilen urunler textinin altinda odemesi gereken toplam ucreti goruntuler")
     public void kullaniciSecilenUrunlerTextininAltindaOdemesiGerekenToplamUcretiGoruntuler() {
+        assert checkoutPage.secilenUrunlerToplamUcret.isDisplayed();
     }
 
     @And("kullanici urunlerin ucretini goruntuler")
