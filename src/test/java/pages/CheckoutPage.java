@@ -18,4 +18,7 @@ public class CheckoutPage {
 
     @FindBy(xpath = "//div[@class='hb-toast-text']")
     public WebElement urunSepetinizdenKaldirildiAlertCheckout;
+
+    @FindBy(xpath = "//*[@class='payed_prices_1G2ue']")
+    public WebElement secilenUrunlerToplamUcret;
 }
