@@ -9,6 +9,9 @@ import utilities.Driver;
 import static utilities.ReusableMethods.*;
 
 public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
+    int urunToplamUcret;
+    int urunUcreti;
+    int kargoUcreti;
     HomePage homePage=new HomePage();
     CheckoutPage checkoutPage=new CheckoutPage();
     Actions actions=new Actions(Driver.getDriver());
@@ -113,17 +116,24 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     @And("kullanici secilen urunler textinin altinda odemesi gereken toplam ucreti goruntuler")
     public void kullaniciSecilenUrunlerTextininAltindaOdemesiGerekenToplamUcretiGoruntuler() {
         assert checkoutPage.secilenUrunlerToplamUcret.isDisplayed();
-    }
 
+    }
     @And("kullanici urunlerin ucretini goruntuler")
     public void kullaniciUrunlerinUcretiniGoruntuler() {
-    }
+        assert checkoutPage.urunlerFiyatCheckout.isDisplayed();
 
+    }
     @And("kullanici kargo ucretini goruntuler")
     public void kullaniciKargoUcretiniGoruntuler() {
+        assert checkoutPage.kargoFiyatCheckout.isDisplayed();
+
     }
 
     @When("kullanici urunler ve kargo ucretlerinin secilen urunlerin toplam fiyatina esit oldugunu dogrular")
     public void kullaniciUrunlerVeKargoUcretlerininSecilenUrunlerinToplamFiyatinaEsitOldugunuDogrular() {
+        int kargoUcreti=Integer.parseInt(checkoutPage.kargoFiyatCheckout.getText().replaceAll("//D",""));
+        int urunUcreti=Integer.parseInt(checkoutPage.urunlerFiyatCheckout.getText().replaceAll("//D",""));
+        int urunToplamUcret=Integer.parseInt(checkoutPage.secilenUrunlerToplamUcret.getText().replaceAll("//D",""));
+        assert urunUcreti + kargoUcreti == urunToplamUcret;
     }
 }
