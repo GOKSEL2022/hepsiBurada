@@ -9,9 +9,6 @@ import utilities.Driver;
 import static utilities.ReusableMethods.*;
 
 public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
-    int urunToplamUcret;
-    int urunUcreti;
-    int kargoUcreti;
     HomePage homePage=new HomePage();
     CheckoutPage checkoutPage=new CheckoutPage();
     Actions actions=new Actions(Driver.getDriver());
