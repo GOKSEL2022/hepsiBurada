@@ -128,9 +128,9 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @When("kullanici urunler ve kargo ucretlerinin secilen urunlerin toplam fiyatina esit oldugunu dogrular")
     public void kullaniciUrunlerVeKargoUcretlerininSecilenUrunlerinToplamFiyatinaEsitOldugunuDogrular() {
-        int kargoUcreti=Integer.parseInt(checkoutPage.kargoFiyatCheckout.getText().replaceAll("//D",""));
-        int urunUcreti=Integer.parseInt(checkoutPage.urunlerFiyatCheckout.getText().replaceAll("//D",""));
-        int urunToplamUcret=Integer.parseInt(checkoutPage.secilenUrunlerToplamUcret.getText().replaceAll("//D",""));
+        int kargoUcreti=Integer.parseInt(checkoutPage.kargoFiyatCheckout.getText().replaceAll("\\D",""));
+        int urunUcreti=Integer.parseInt(checkoutPage.urunlerFiyatCheckout.getText().replaceAll("\\D",""));
+        int urunToplamUcret=Integer.parseInt(checkoutPage.secilenUrunlerToplamUcret.getText().replaceAll("\\D",""));
         assert urunUcreti + kargoUcreti == urunToplamUcret;
     }
 }
