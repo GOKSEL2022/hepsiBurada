@@ -1,7 +1,9 @@
 Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
-  Scenario: urun_adedi_ve_fiyat_uyum_testi
+  Background:
     Given kullanici url ye gider
     When  kullanici anasayfanin acildigini dogrular
+
+  Scenario: urun_adedi_ve_fiyat_uyum_testi
     And   kullanici premium firsatlardan bir urunu sepete ekler
     And   kullanici urunun sepete eklendigi uyarisini gorur
     And   kullanici sepete git butonuna tiklar
@@ -11,3 +13,10 @@ Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
     And   kullanici kargo ucretini goruntuler
     When  kullanici urunler ve kargo ucretlerinin secilen urunlerin toplam fiyatina esit oldugunu dogrular
     Then  kullanici sayfayi kapatir
+
+    Scenario: filtreleyerek_urun_dogrulama
+      Given kullanici ev_yasam_kirtasiye_ofis linke gelir
+      When  kullanici ev tekstili secenegine tiklar
+      And   kullanici ev tekstili sayfasinin acildigini dogrular
+
+
