@@ -133,4 +133,12 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
         int urunToplamUcret=Integer.parseInt(checkoutPage.secilenUrunlerToplamUcret.getText().replaceAll("\\D",""));
         assert urunUcreti + kargoUcreti == urunToplamUcret;
     }
+
+    @When("kullanici ev tekstili secenegine tiklar")
+    public void kullaniciEvTekstiliSecenegineTiklar() {
+    }
+
+    @And("kullanici ev tekstili sayfasinin acildigini dogrular")
+    public void kullaniciEvTekstiliSayfasininAcildiginiDogrular() {
+    }
 }
