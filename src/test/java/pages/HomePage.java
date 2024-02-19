@@ -201,6 +201,9 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='https://checkout.hepsiburada.com']")
     public WebElement sepeteGitLinkUrunSepeteEklendiAlertHome;
 
+    @FindBy(xpath = "//*[.='Ev Tekstili']")
+    public WebElement evTekstiliSecenegiEvYasamKirtasiyeOfisLinkHome;
+
 
 
 
