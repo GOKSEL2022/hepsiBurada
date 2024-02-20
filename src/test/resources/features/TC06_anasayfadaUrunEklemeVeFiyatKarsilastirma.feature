@@ -18,5 +18,34 @@ Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
       Given kullanici ev_yasam_kirtasiye_ofis linke gelir
       When  kullanici ev tekstili secenegine tiklar
       And   kullanici ev tekstili sayfasinin acildigini dogrular
+      And   kullanici kategorilerden haliyi secer
+      And   kullanici marka olarak merinos haliyi secer
+      And   kullanici fiyat araligi olarak en az bin girer
+      And   kullanici fiyat olarak en cok bes bin girer
+      And   kullanici search butona tiklar
+      And   kullanici aralik olarak bin ve bes bin secildigini dogrular
+      And   kullanici renk olarak yesil secer
+      And   kullanici hav yuksekligi 10 mm secer
+      And   kullanici taban olarak dokuma taban secer
+      And   kullanici iplik turu olarak akrilik_pamuk_polyester secer
+      And   kullanici renk olarak yesil secili oldugunu dogrular
+      And   kullanici tema olarak desenli secer
+      And   kullanici filtrelenen urune tiklar
+      And   kullanici acilan sayfada sectigi urunun oldugunu dogrular
+      And   kullanici urunun altinda filtreledigi ozellikleri goruntuler
+      And   kullanici tum ozellikler linke tiklar
+      And   kullanici urunle ilgili ozellikleri goruntuler
+      Then  kullanici sayfayi kapatir
+
+
+
+
+
+
+
+
+
+
+
 
 
