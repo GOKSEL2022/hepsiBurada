@@ -145,4 +145,72 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     public void kullaniciEvTekstiliSayfasininAcildiginiDogrular() {
         assert evTekstiliPage.evTekstiliUrunleriTextEvTekstili.isDisplayed();
     }
+
+    @And("kullanici kategorilerden haliyi secer")
+    public void kullaniciKategorilerdenHaliyiSecer() {
+    }
+
+    @And("kullanici marka olarak merinos haliyi secer")
+    public void kullaniciMarkaOlarakMerinosHaliyiSecer() {
+    }
+
+    @And("kullanici fiyat araligi olarak en az bin girer")
+    public void kullaniciFiyatAraligiOlarakEnAzBinGirer() {
+    }
+
+    @And("kullanici fiyat olarak en cok bes bin girer")
+    public void kullaniciFiyatOlarakEnCokBesBinGirer() {
+    }
+
+    @And("kullanici search butona tiklar")
+    public void kullaniciSearchButonaTiklar() {
+    }
+
+    @And("kullanici aralik olarak bin ve bes bin secildigini dogrular")
+    public void kullaniciAralikOlarakBinVeBesBinSecildiginiDogrular() {
+    }
+
+    @And("kullanici renk olarak yesil secer")
+    public void kullaniciRenkOlarakYesilSecer() {
+    }
+
+    @And("kullanici hav yuksekligi {int} mm secer")
+    public void kullaniciHavYuksekligiMmSecer(int arg0) {
+    }
+
+    @And("kullanici taban olarak dokuma taban secer")
+    public void kullaniciTabanOlarakDokumaTabanSecer() {
+    }
+
+    @And("kullanici iplik turu olarak akrilik_pamuk_polyester secer")
+    public void kullaniciIplikTuruOlarakAkrilik_pamuk_polyesterSecer() {
+    }
+
+    @And("kullanici renk olarak yesil secili oldugunu dogrular")
+    public void kullaniciRenkOlarakYesilSeciliOldugunuDogrular() {
+    }
+
+    @And("kullanici tema olarak desenli secer")
+    public void kullaniciTemaOlarakDesenliSecer() {
+    }
+
+    @And("kullanici filtrelenen urune tiklar")
+    public void kullaniciFiltrelenenUruneTiklar() {
+    }
+
+    @And("kullanici acilan sayfada sectigi urunun oldugunu dogrular")
+    public void kullaniciAcilanSayfadaSectigiUrununOldugunuDogrular() {
+    }
+
+    @And("kullanici urunun altinda filtreledigi ozellikleri goruntuler")
+    public void kullaniciUrununAltindaFiltreledigiOzellikleriGoruntuler() {
+    }
+
+    @And("kullanici tum ozellikler linke tiklar")
+    public void kullaniciTumOzelliklerLinkeTiklar() {
+    }
+
+    @And("kullanici urunle ilgili ozellikleri goruntuler")
+    public void kullaniciUrunleIlgiliOzellikleriGoruntuler() {
+    }
 }
