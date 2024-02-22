@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 9, 2024 12:50:08 AM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 23, 2024 01:17:37 AM</span></a>
 </li>
 </ul>
 </div>
@@ -71,13 +71,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 9, 2024 12:50:08 AM</h3>
+<h3>Feb 23, 2024 01:17:37 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 9, 2024 12:50:38 AM</h3>
+<h3>Feb 23, 2024 01:17:42 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -148,10 +148,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='21%'><b>10</b> steps passed</small></div>
+<div><small data-tooltip='0%'><b>0</b> steps passed</small></div>
 <div>
-<small data-tooltip='2%'><b>1</b> steps failed,
-<b>35</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='4%'><b>1</b> steps failed,
+<b>22</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -167,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"anasayfadaki_linklerin_testi":27.719
+"Urun eklenir ve fiyat karsilastirmasi yapilir":3.613
 };
 </script>
 <div class="row">
@@ -177,15 +177,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@moda_link</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0%</td>
-</tr>
-<tr>
-<td>@anasayfadaki_linkler</td>
+<td>@filtreleme_testi</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -226,10 +218,10 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 10,
+passGrandChild: 0,
 failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 35,
+skipGrandChild: 22,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -251,7 +243,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@moda_link</a><a class="dropdown-item" href="#">@anasayfadaki_linkler</a>
+<a class="dropdown-item" href="#">@filtreleme_testi</a>
 </ul>
 </li>
 </ul>
@@ -262,9 +254,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">anasayfadaki_linklerin_testi</p>
+            <p class="name">Urun eklenir ve fiyat karsilastirmasi yapilir</p>
             <p class="text-sm">
-              <span>12:50:10 AM</span> / <span>00:00:27:719</span>
+              <span>1:17:38 AM</span> / <span>00:00:03:613</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -272,10 +264,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">anasayfadaki_linklerin_testi</h5>
-<span class='badge badge-success'>02.09.2024 12:50:10 AM</span>
-<span class='badge badge-danger'>02.09.2024 12:50:38 AM</span>
-<span class='badge badge-default'>00:00:27:719</span>
+<h5 class="test-status text-fail">Urun eklenir ve fiyat karsilastirmasi yapilir</h5>
+<span class='badge badge-success'>02.23.2024 1:17:38 AM</span>
+<span class='badge badge-danger'>02.23.2024 1:17:42 AM</span>
+<span class='badge badge-default'>00:00:03:613</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -287,263 +279,143 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>moda_link_seceneklerinin_dogrulama_testi</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>filtreleyerek_urun_dogrulama</div>
       </div>
     </div>
         <div class="">
           <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.TC01_AnasayfaStepDefs.kullaniciUrlYeGider()">
+              <div class="step fail-bg" title="stepdefinitions.TC01_AnasayfaStepDefs.kullaniciUrlYeGider()">
                 <span>Given kullanici url ye gider</span>
       <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC01_AnasayfaStepDefs.kullaniciAnasayfaninAcildiginiDogrular()">
-                <span>When kullanici anasayfanin acildigini dogrular</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC02_UyeOlStepDefs.kullaniciIkiSaniyeBekler()">
-                <span>And kullanici iki saniye bekler</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciModaLinkeGelir()">
-                <span>Given kullanici moda linke gelir</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC02_UyeOlStepDefs.kullaniciIkiSaniyeBekler()">
-                <span>When kullanici iki saniye bekler</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciKadinBasliginaTiklar()">
-                <span>And kullanici kadin basligina tiklar</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciAcilanSayfaninKadinUrunleriIcerdiginiDogrular()">
-                <span>And kullanici acilan sayfanin kadin urunleri icerdigini dogrular</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciModaLinkeGelir()">
-                <span>And kullanici moda linke gelir</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC02_UyeOlStepDefs.kullaniciIkiSaniyeBekler()">
-                <span>And kullanici iki saniye bekler</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciModaAnasayfaBasliginaTiklar()">
-                <span>And kullanici moda anasayfa basligina tiklar</span>
-      <div>
-      </div>
-              </div>
-              <div class="step fail-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciAcilanSayfaninModaIleIlgiliOldugunuDogrular()">
-                <span>And kullanici acilan sayfanin moda ile ilgili oldugunu dogrular</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.160)
+        <textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 121.0.6167.189 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: 'DESKTOP-PJ2N82C', ip: '192.168.1.114'
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af48d0b00a6ffb97075521f39279e875, findElement {using=xpath, value=(//*[.='Giyim Ürünleri ve Moda & Aksesuar'])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.160, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62585}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62585/devtoo..., se:cdpVersion: 121.0.6167.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: af48d0b00a6ffb97075521f39279e875
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy26.isDisplayed(Unknown Source)
-	at stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciAcilanSayfaninModaIleIlgiliOldugunuDogrular(TC05_AnasayfadakiLinklerinTestiStepDefs.java:157)
-	at ✽.kullanici acilan sayfanin moda ile ilgili oldugunu dogrular(file:///C:/Users/Public/hepsiBurada/src/test/resources/features/TC05_anasayfadakiSeceneklerinTesti.feature:77)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:159)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+	at utilities.Driver.getDriver(Driver.java:33)
+	at stepdefinitions.TC01_AnasayfaStepDefs.kullaniciUrlYeGider(TC01_AnasayfaStepDefs.java:13)
+	at ✽.kullanici url ye gider(file:///C:/Users/Public/hepsiBurada/src/test/resources/features/TC06_anasayfadaUrunEklemeVeFiyatKarsilastirma.feature:3)
 </textarea>
       
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciModaLinkeGelir()">
-                <span>And kullanici moda linke gelir</span>
+              <div class="step skip-bg" title="stepdefinitions.TC01_AnasayfaStepDefs.kullaniciAnasayfaninAcildiginiDogrular()">
+                <span>When kullanici anasayfanin acildigini dogrular</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC02_UyeOlStepDefs.kullaniciIkiSaniyeBekler()">
-                <span>And kullanici iki saniye bekler</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciEv_yasam_kirtasiye_ofisLinkeGelir()">
+                <span>Given kullanici ev_yasam_kirtasiye_ofis linke gelir</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciErkekBasliginaTiklar()">
-                <span>And kullanici erkek basligina tiklar</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciEvTekstiliSecenegineTiklar()">
+                <span>When kullanici ev tekstili secenegine tiklar</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciAcilanSayfaninErkekUrunleriIcerdiginiDogrular()">
-                <span>And kullanici acilan sayfanin erkek urunleri icerdigini dogrular</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciEvTekstiliSayfasininAcildiginiDogrular()">
+                <span>And kullanici ev tekstili sayfasinin acildigini dogrular</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciModaLinkeGelir()">
-                <span>And kullanici moda linke gelir</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciKategorilerdenHaliyiSecer()">
+                <span>And kullanici kategorilerden haliyi secer</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC02_UyeOlStepDefs.kullaniciIkiSaniyeBekler()">
-                <span>And kullanici iki saniye bekler</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciMarkaOlarakMerinosHaliyiSecer()">
+                <span>And kullanici marka olarak merinos haliyi secer</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciAyakkabi_cantaBasliginaTiklar()">
-                <span>And kullanici ayakkabi_canta basligina tiklar</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciFiyatAraligiOlarakEnAzBinGirer()">
+                <span>And kullanici fiyat araligi olarak en az bin girer</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciAcilanSayfaninAyakkabi_cantaUrunleriIcerdiginiDogrular()">
-                <span>And kullanici acilan sayfanin ayakkabi_canta urunleri icerdigini dogrular</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciFiyatOlarakEnCokBesBinGirer()">
+                <span>And kullanici fiyat olarak en cok bes bin girer</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciHepsiBuradaTitleATiklar()">
-                <span>And kullanici hepsiBuradaTitle a tiklar</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciSearchButonaTiklar()">
+                <span>And kullanici search butona tiklar</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciModaLinkeGelir()">
-                <span>And kullanici moda linke gelir</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciAralikOlarakBinVeBesBinSecildiginiDogrular()">
+                <span>And kullanici aralik olarak bin ve bes bin secildigini dogrular</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC02_UyeOlStepDefs.kullaniciIkiSaniyeBekler()">
-                <span>And kullanici iki saniye bekler</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciRenkOlarakYesilSecer()">
+                <span>And kullanici renk olarak yesil secer</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciKadin_aksesuar_takiBasliginaTiklar()">
-                <span>And kullanici kadin_aksesuar_taki basligina tiklar</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciHavYuksekligiMmSecer(int)">
+                <span>And kullanici hav yuksekligi 10 mm secer</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciAcilanSayfaninKadinAksesuarlariIcerdiginiDogrular()">
-                <span>And kullanici acilan sayfanin kadin aksesuarlari icerdigini dogrular</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciTabanOlarakDokumaTabanSecer()">
+                <span>And kullanici taban olarak dokuma taban secer</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciModaLinkeGelir()">
-                <span>And kullanici moda linke gelir</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciIplikTuruOlarakAkrilik_pamuk_polyesterSecer()">
+                <span>And kullanici iplik turu olarak akrilik_pamuk_polyester secer</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC02_UyeOlStepDefs.kullaniciIkiSaniyeBekler()">
-                <span>And kullanici iki saniye bekler</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciRenkOlarakYesilSeciliOldugunuDogrular()">
+                <span>And kullanici renk olarak yesil secili oldugunu dogrular</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciErkek_aksesuar_takiBasliginaTiklar()">
-                <span>And kullanici erkek_aksesuar_taki basligina tiklar</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciTemaOlarakDesenliSecer()">
+                <span>And kullanici tema olarak desenli secer</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciAcilanSayfaninErkekAksesuarlariIcerdiginiDogrular()">
-                <span>And kullanici acilan sayfanin erkek aksesuarlari icerdigini dogrular</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciFiltrelenenUruneTiklar()">
+                <span>And kullanici filtrelenen urune tiklar</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciModaLinkeGelir()">
-                <span>And kullanici moda linke gelir</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciAcilanSayfadaSectigiUrununOldugunuDogrular()">
+                <span>And kullanici acilan sayfada sectigi urunun oldugunu dogrular</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC02_UyeOlStepDefs.kullaniciIkiSaniyeBekler()">
-                <span>And kullanici iki saniye bekler</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciUrununAltindaFiltreledigiOzellikleriGoruntuler()">
+                <span>And kullanici urunun altinda filtreledigi ozellikleri goruntuler</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciAltinBasliginaTiklar()">
-                <span>And kullanici altin basligina tiklar</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciTumOzelliklerLinkeTiklar()">
+                <span>And kullanici tum ozellikler linke tiklar</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciAcilanSayfaninAltinUrunleriIcerdiginiDogrular()">
-                <span>And kullanici acilan sayfanin altin urunleri icerdigini dogrular</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciModaLinkeGelir()">
-                <span>And kullanici moda linke gelir</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC02_UyeOlStepDefs.kullaniciIkiSaniyeBekler()">
-                <span>And kullanici iki saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciCocukBasliginaTiklar()">
-                <span>And kullanici cocuk basligina tiklar</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciAcilanSayfaninCocukUrunleriIcerdiginiDogrular()">
-                <span>And kullanici acilan sayfanin cocuk urunleri icerdigini dogrular</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciModaLinkeGelir()">
-                <span>And kullanici moda linke gelir</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC02_UyeOlStepDefs.kullaniciIkiSaniyeBekler()">
-                <span>And kullanici iki saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciOutdoorGiyim_ayakkabiBasliginaTiklar()">
-                <span>And kullanici outdoor giyim_ayakkabi basligina tiklar</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciOutdoorGiyim_ayakkabiSayfasinaYonlendirildiginiDogrular()">
-                <span>And kullanici outdoor giyim_ayakkabi sayfasina yonlendirildigini dogrular</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciModaLinkeGelir()">
-                <span>And kullanici moda linke gelir</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC02_UyeOlStepDefs.kullaniciIkiSaniyeBekler()">
-                <span>And kullanici iki saniye bekler</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciYurtDisindanBasliginaTiklar()">
-                <span>And kullanici yurt disindan basligina tiklar</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciYurdisiUrunleriSayfasinaYonlendirildiginiDogrular()">
-                <span>When kullanici yurdisi urunleri sayfasina yonlendirildigini dogrular</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepdefinitions.TC05_AnasayfadakiLinklerinTestiStepDefs.kullaniciModaLinkeGelir()">
-                <span>When kullanici moda linke gelir</span>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciUrunleIlgiliOzellikleriGoruntuler()">
+                <span>And kullanici urunle ilgili ozellikleri goruntuler</span>
       <div>Step skipped
       </div>
               </div>
@@ -571,7 +443,7 @@ Session ID: af48d0b00a6ffb97075521f39279e875
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
@@ -580,12 +452,12 @@ Session ID: af48d0b00a6ffb97075521f39279e875
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@moda_link</p>
+<p class="name">@filtreleme_testi</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@moda_link</h4>
+<h4>@filtreleme_testi</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -599,47 +471,11 @@ Session ID: af48d0b00a6ffb97075521f39279e875
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>00:50:10 AM</td>
+<td>01:17:38 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>moda_link_seceneklerinin_dogrulama_testi</a>
+<a href="#" class="linked" test-id='1' id='2'>filtreleyerek_urun_dogrulama</a>
 <div class="">
-<span class="badge badge-default">anasayfadaki_linklerin_testi.moda_link_seceneklerinin_dogrulama_testi</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">@anasayfadaki_linkler</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@anasayfadaki_linkler</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>00:50:10 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='2'>moda_link_seceneklerinin_dogrulama_testi</a>
-<div class="">
-<span class="badge badge-default">anasayfadaki_linklerin_testi.moda_link_seceneklerinin_dogrulama_testi</span>
+<span class="badge badge-default">Urun eklenir ve fiyat karsilastirmasi yapilir.filtreleyerek_urun_dogrulama</span>
 </div>
 </td>
 </tr>
@@ -668,12 +504,12 @@ Session ID: af48d0b00a6ffb97075521f39279e875
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.NoSuchWindowException</p>
+<p class="name">org.openqa.selenium.SessionNotCreatedException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.NoSuchWindowException</h4>
+<h4>org.openqa.selenium.SessionNotCreatedException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -687,11 +523,11 @@ Session ID: af48d0b00a6ffb97075521f39279e875
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>00:50:37 AM</td>
+<td>01:17:38 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='13'>And kullanici acilan sayfanin moda ile ilgili oldugunu dogrular</a>
+<a href="#" class="linked" test-id='1' id='3'>Given kullanici url ye gider</a>
 <div class="">
-<span class="badge badge-default">anasayfadaki_linklerin_testi.moda_link_seceneklerinin_dogrulama_testi.And kullanici acilan sayfanin moda ile ilgili oldugunu dogrular</span>
+<span class="badge badge-default">Urun eklenir ve fiyat karsilastirmasi yapilir.filtreleyerek_urun_dogrulama.Given kullanici url ye gider</span>
 </div>
 </td>
 </tr>

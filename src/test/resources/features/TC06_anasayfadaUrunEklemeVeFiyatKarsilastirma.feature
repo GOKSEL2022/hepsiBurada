@@ -14,6 +14,7 @@ Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
     When  kullanici urunler ve kargo ucretlerinin secilen urunlerin toplam fiyatina esit oldugunu dogrular
     Then  kullanici sayfayi kapatir
 
+    @filtreleme_testi
     Scenario: filtreleyerek_urun_dogrulama
       Given kullanici ev_yasam_kirtasiye_ofis linke gelir
       When  kullanici ev tekstili secenegine tiklar

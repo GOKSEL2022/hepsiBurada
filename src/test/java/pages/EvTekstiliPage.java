@@ -12,4 +12,7 @@ public class EvTekstiliPage {
     @FindBy(xpath = "//*[@class='gQjF21piuOrwYvanqai8']")
     public WebElement evTekstiliUrunleriTextEvTekstili;
 
+    @FindBy(xpath = "//*[@href='/halilar-c-9022246']")
+    public WebElement haliLinkKategoriEvTekstili;
+
 }

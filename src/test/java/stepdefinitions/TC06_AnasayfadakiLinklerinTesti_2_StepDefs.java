@@ -4,6 +4,7 @@ import io.cucumber.java.en.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.CheckoutPage;
 import pages.EvTekstiliPage;
+import pages.HalilarPage;
 import pages.HomePage;
 import utilities.Driver;
 
@@ -13,6 +14,7 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     HomePage homePage=new HomePage();
     CheckoutPage checkoutPage=new CheckoutPage();
     EvTekstiliPage evTekstiliPage=new EvTekstiliPage();
+    HalilarPage halilarPage=new HalilarPage();
     Actions actions=new Actions(Driver.getDriver());
     @Given("kullanici ev_yasam_kirtasiye_ofis linke gelir")
     public void kullaniciEv_yasam_kirtasiye_ofisLinkeGelir() {
@@ -148,10 +150,12 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici kategorilerden haliyi secer")
     public void kullaniciKategorilerdenHaliyiSecer() {
+        clickWithTimeOut(evTekstiliPage.haliLinkKategoriEvTekstili,2);
     }
 
     @And("kullanici marka olarak merinos haliyi secer")
     public void kullaniciMarkaOlarakMerinosHaliyiSecer() {
+        clickByJS(halilarPage.merinosCheckboxMarkaHalilar);
     }
 
     @And("kullanici fiyat araligi olarak en az bin girer")
