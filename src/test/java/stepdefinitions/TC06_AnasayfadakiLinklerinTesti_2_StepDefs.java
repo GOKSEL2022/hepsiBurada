@@ -150,11 +150,15 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici kategorilerden haliyi secer")
     public void kullaniciKategorilerdenHaliyiSecer() {
-        clickWithTimeOut(evTekstiliPage.haliLinkKategoriEvTekstili,2);
+        scrollIntoViewJS(evTekstiliPage.evTekstiliUrunleriTextEvTekstili);
+        waitFor(2);
+        clickByJS(evTekstiliPage.haliLinkKategoriEvTekstili);
     }
 
     @And("kullanici marka olarak merinos haliyi secer")
     public void kullaniciMarkaOlarakMerinosHaliyiSecer() {
+        scrollIntoViewJS(halilarPage.merinosCheckboxMarkaHalilar);
+        waitFor(2);
         clickByJS(halilarPage.merinosCheckboxMarkaHalilar);
     }
 
