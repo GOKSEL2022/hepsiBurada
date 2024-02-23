@@ -1,5 +1,6 @@
 package utilities;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,7 +30,9 @@ public class Driver {
                 // configuration.properties dosyasinda browser olarak ne yazdiksa tum testlerimiz o browser'da calisacak
                 // browser secimi yapilmadiysa default olarak chrome devreye girecek
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
+
+                  // WebDriverManager.chromedriver().setup();
+                    WebDriverManager.chromedriver().clearDriverCache().setup();
                     driver = new ChromeDriver();
                     break;
                 case "firefox":
