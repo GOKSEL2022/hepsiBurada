@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.*;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.CheckoutPage;
 import pages.EvTekstiliPage;
@@ -164,10 +165,17 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici fiyat araligi olarak en az bin girer")
     public void kullaniciFiyatAraligiOlarakEnAzBinGirer() {
+        scrollIntoViewJS(halilarPage.fiyatAraligiTextHalilar);
+        waitFor(1);
+        clickWithTimeOut(halilarPage.enAzFiyatAraligiTextBoxHalilar,1);
+        halilarPage.enAzFiyatAraligiTextBoxHalilar.sendKeys("1000", Keys.ENTER,Keys.TAB,"5000");
+        //actions.sendKeys(halilarPage.enAzFiyatAraligiTextBoxHalilar,"1000").perform();
+        //halilarPage.enAzFiyatAraligiTextBoxHalilar.sendKeys("1000");
     }
 
     @And("kullanici fiyat olarak en cok bes bin girer")
     public void kullaniciFiyatOlarakEnCokBesBinGirer() {
+        clickWithTimeOut(halilarPage.enCokFiyatAraligiTextBoxHalilar,1);
     }
 
     @And("kullanici search butona tiklar")

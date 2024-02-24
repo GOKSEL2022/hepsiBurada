@@ -11,4 +11,14 @@ public class HalilarPage {
     }
     @FindBy(xpath = "//*[@value='merinos']")
     public WebElement merinosCheckboxMarkaHalilar;
+
+    @FindBy(xpath = "(//*[.='Fiyat Aralığı'])[1]")
+    public WebElement fiyatAraligiTextHalilar;
+
+    @FindBy(xpath = "(//*[@class='moria-Input-ekkfpy bcnTZc su64jddnmlf'])[1]")
+    public WebElement enAzFiyatAraligiTextBoxHalilar;
+
+    @FindBy(xpath = "(//*[@class='moria-Input-ekkfpy bcnTZc su64jddnmlf'])[2]")
+    public WebElement enCokFiyatAraligiTextBoxHalilar;
+
 }
