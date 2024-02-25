@@ -15,10 +15,13 @@ public class HalilarPage {
     @FindBy(xpath = "(//*[.='Fiyat Aralığı'])[1]")
     public WebElement fiyatAraligiTextHalilar;
 
-    @FindBy(xpath = "(//*[@class='moria-Input-ekkfpy bcnTZc su64jddnmlf'])[1]")
+    @FindBy(xpath = "//input[@placeholder='En az']")
     public WebElement enAzFiyatAraligiTextBoxHalilar;
 
-    @FindBy(xpath = "(//*[@class='moria-Input-ekkfpy bcnTZc su64jddnmlf'])[2]")
+    @FindBy(xpath = "//input[@placeholder='En çok']")
     public WebElement enCokFiyatAraligiTextBoxHalilar;
+
+    @FindBy(xpath = "(//*[@viewBox='0 0 20 20'])[2]")
+    public WebElement searchButtonFiyatAraligiHalilar;
 
 }

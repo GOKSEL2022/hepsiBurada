@@ -167,19 +167,17 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     public void kullaniciFiyatAraligiOlarakEnAzBinGirer() {
         scrollIntoViewJS(halilarPage.fiyatAraligiTextHalilar);
         waitFor(1);
-        clickWithTimeOut(halilarPage.enAzFiyatAraligiTextBoxHalilar,1);
-        halilarPage.enAzFiyatAraligiTextBoxHalilar.sendKeys("1000", Keys.ENTER,Keys.TAB,"5000");
-        //actions.sendKeys(halilarPage.enAzFiyatAraligiTextBoxHalilar,"1000").perform();
-        //halilarPage.enAzFiyatAraligiTextBoxHalilar.sendKeys("1000");
+        halilarPage.enAzFiyatAraligiTextBoxHalilar.sendKeys("1000");
     }
 
     @And("kullanici fiyat olarak en cok bes bin girer")
     public void kullaniciFiyatOlarakEnCokBesBinGirer() {
-        clickWithTimeOut(halilarPage.enCokFiyatAraligiTextBoxHalilar,1);
+        halilarPage.enCokFiyatAraligiTextBoxHalilar.sendKeys("5000");
     }
 
     @And("kullanici search butona tiklar")
     public void kullaniciSearchButonaTiklar() {
+        halilarPage.searchButtonFiyatAraligiHalilar.click();
     }
 
     @And("kullanici aralik olarak bin ve bes bin secildigini dogrular")

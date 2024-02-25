@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 24, 2024 12:46:02 AM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 25, 2024 11:48:16 PM</span></a>
 </li>
 </ul>
 </div>
@@ -57,6 +57,11 @@
 <span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -66,25 +71,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 24, 2024 12:46:02 AM</h3>
+<h3>Feb 25, 2024 11:48:16 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 24, 2024 12:46:30 AM</h3>
+<h3>Feb 25, 2024 11:49:08 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -100,12 +105,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>1</b> features passed
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='100%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -123,9 +128,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
+<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='100%'><b>1</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -143,10 +148,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>23</b> steps passed</small></div>
+<div><small data-tooltip='27%'><b>3</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='9%'><b>1</b> steps failed,
+<b>7</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -162,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"Urun eklenir ve fiyat karsilastirmasi yapilir":26.579
+"Urun eklenir ve fiyat karsilastirmasi yapilir":50.835
 };
 </script>
 <div class="row">
@@ -172,12 +177,12 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@filtreleme_testi</td>
+<td>@fiyat_dogrulama_testi</td>
+<td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>0%</td>
 </tr>
 </tbody>
 </table></div>
@@ -202,21 +207,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 0,
+passParent: 0,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 1,
-failChild: 0,
+passChild: 0,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 23,
-failGrandChild: 0,
+passGrandChild: 3,
+failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 7,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -230,7 +235,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -238,31 +243,31 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@filtreleme_testi</a>
+<a class="dropdown-item" href="#">@fiyat_dogrulama_testi</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Urun eklenir ve fiyat karsilastirmasi yapilir</p>
             <p class="text-sm">
-              <span>12:46:03 AM</span> / <span>00:00:26:579</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:48:17 PM</span> / <span>00:00:50:835</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Urun eklenir ve fiyat karsilastirmasi yapilir</h5>
-<span class='badge badge-success'>02.24.2024 12:46:03 AM</span>
-<span class='badge badge-danger'>02.24.2024 12:46:30 AM</span>
-<span class='badge badge-default'>00:00:26:579</span>
+<h5 class="test-status text-fail">Urun eklenir ve fiyat karsilastirmasi yapilir</h5>
+<span class='badge badge-success'>02.25.2024 11:48:17 PM</span>
+<span class='badge badge-danger'>02.25.2024 11:49:08 PM</span>
+<span class='badge badge-default'>00:00:50:835</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -274,10 +279,10 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>filtreleyerek_urun_dogrulama</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>urun_adedi_ve_fiyat_uyum_testi</div>
       </div>
     </div>
-        <div class="collapse">
+        <div class="">
           <div class="card-body">
               <div class="step pass-bg" title="stepdefinitions.TC01_AnasayfaStepDefs.kullaniciUrlYeGider()">
                 <span>Given kullanici url ye gider</span>
@@ -289,109 +294,161 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciEv_yasam_kirtasiye_ofisLinkeGelir()">
-                <span>Given kullanici ev_yasam_kirtasiye_ofis linke gelir</span>
+              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciPremiumFirsatlardanBirUrunuSepeteEkler()">
+                <span>And kullanici premium firsatlardan bir urunu sepete ekler</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciEvTekstiliSecenegineTiklar()">
-                <span>When kullanici ev tekstili secenegine tiklar</span>
+              <div class="step fail-bg" title="stepdefinitions.TC04_sayfadaAramaTestiStepDefs.kullaniciUrununSepeteEklendigiUyarisiniGorur()">
+                <span>And kullanici urunun sepete eklendigi uyarisini gorur</span>
       <div>
+        <textarea disabled class="code-block">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ece9fd6cb8f01d5ea0cecf1fb1d3de66, findElement [using, value]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.70, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55370}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55370/devtoo..., se:cdpVersion: 122.0.6261.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ece9fd6cb8f01d5ea0cecf1fb1d3de66
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:546)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.isDisplayed(Unknown Source)
+	at stepdefinitions.TC04_sayfadaAramaTestiStepDefs.kullaniciUrununSepeteEklendigiUyarisiniGorur(TC04_sayfadaAramaTestiStepDefs.java:124)
+	at ✽.kullanici urunun sepete eklendigi uyarisini gorur(file:///C:/Users/Public/hepsiBurada/src/test/resources/features/TC06_anasayfadaUrunEklemeVeFiyatKarsilastirma.feature:9)
+Caused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:443)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:359)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.isDisplayed(Unknown Source)
+	at stepdefinitions.TC04_sayfadaAramaTestiStepDefs.kullaniciUrununSepeteEklendigiUyarisiniGorur(TC04_sayfadaAramaTestiStepDefs.java:124)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at java.net.http/jdk.internal.net.http.common.Utils.wrapWithExtraDetail(Utils.java:348)
+	at java.net.http/jdk.internal.net.http.Http1Response$HeadersReader.onReadError(Http1Response.java:565)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.checkForErrors(Http1AsyncReceiver.java:302)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.flush(Http1AsyncReceiver.java:268)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$LockingRestartableTask.run(SequentialScheduler.java:205)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:303)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:256)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1337)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1282)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1282)
+</textarea>
+      
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciEvTekstiliSayfasininAcildiginiDogrular()">
-                <span>And kullanici ev tekstili sayfasinin acildigini dogrular</span>
-      <div>
+              <div class="step skip-bg" title="stepdefinitions.TC04_sayfadaAramaTestiStepDefs.kullaniciSepeteGitButonunaTiklar()">
+                <span>And kullanici sepete git butonuna tiklar</span>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciKategorilerdenHaliyiSecer()">
-                <span>And kullanici kategorilerden haliyi secer</span>
-      <div>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciEkledigiUrununSepetSayfasindaOldugunuDogrular()">
+                <span>And kullanici ekledigi urunun sepet sayfasinda oldugunu dogrular</span>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciMarkaOlarakMerinosHaliyiSecer()">
-                <span>And kullanici marka olarak merinos haliyi secer</span>
-      <div>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciSecilenUrunlerTextininAltindaOdemesiGerekenToplamUcretiGoruntuler()">
+                <span>And kullanici secilen urunler textinin altinda odemesi gereken toplam ucreti goruntuler</span>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciFiyatAraligiOlarakEnAzBinGirer()">
-                <span>And kullanici fiyat araligi olarak en az bin girer</span>
-      <div>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciUrunlerinUcretiniGoruntuler()">
+                <span>And kullanici urunlerin ucretini goruntuler</span>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciFiyatOlarakEnCokBesBinGirer()">
-                <span>And kullanici fiyat olarak en cok bes bin girer</span>
-      <div>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciKargoUcretiniGoruntuler()">
+                <span>And kullanici kargo ucretini goruntuler</span>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciSearchButonaTiklar()">
-                <span>And kullanici search butona tiklar</span>
-      <div>
+              <div class="step skip-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciUrunlerVeKargoUcretlerininSecilenUrunlerinToplamFiyatinaEsitOldugunuDogrular()">
+                <span>When kullanici urunler ve kargo ucretlerinin secilen urunlerin toplam fiyatina esit oldugunu dogrular</span>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciAralikOlarakBinVeBesBinSecildiginiDogrular()">
-                <span>And kullanici aralik olarak bin ve bes bin secildigini dogrular</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciRenkOlarakYesilSecer()">
-                <span>And kullanici renk olarak yesil secer</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciHavYuksekligiMmSecer(int)">
-                <span>And kullanici hav yuksekligi 10 mm secer</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciTabanOlarakDokumaTabanSecer()">
-                <span>And kullanici taban olarak dokuma taban secer</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciIplikTuruOlarakAkrilik_pamuk_polyesterSecer()">
-                <span>And kullanici iplik turu olarak akrilik_pamuk_polyester secer</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciRenkOlarakYesilSeciliOldugunuDogrular()">
-                <span>And kullanici renk olarak yesil secili oldugunu dogrular</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciTemaOlarakDesenliSecer()">
-                <span>And kullanici tema olarak desenli secer</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciFiltrelenenUruneTiklar()">
-                <span>And kullanici filtrelenen urune tiklar</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciAcilanSayfadaSectigiUrununOldugunuDogrular()">
-                <span>And kullanici acilan sayfada sectigi urunun oldugunu dogrular</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciUrununAltindaFiltreledigiOzellikleriGoruntuler()">
-                <span>And kullanici urunun altinda filtreledigi ozellikleri goruntuler</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciTumOzelliklerLinkeTiklar()">
-                <span>And kullanici tum ozellikler linke tiklar</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC06_AnasayfadakiLinklerinTesti_2_StepDefs.kullaniciUrunleIlgiliOzellikleriGoruntuler()">
-                <span>And kullanici urunle ilgili ozellikleri goruntuler</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefinitions.TC01_AnasayfaStepDefs.kullaniciSayfayiKapatir()">
+              <div class="step skip-bg" title="stepdefinitions.TC01_AnasayfaStepDefs.kullaniciSayfayiKapatir()">
                 <span>Then kullanici sayfayi kapatir</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
           </div>
@@ -420,15 +477,15 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@filtreleme_testi</p>
+<p class="name">@fiyat_dogrulama_testi</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@filtreleme_testi</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<h4>@fiyat_dogrulama_testi</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -439,13 +496,65 @@ eventsCount: 5,
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>00:46:03 AM</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:48:17 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>filtreleyerek_urun_dogrulama</a>
+<a href="#" class="linked" test-id='1' id='2'>urun_adedi_ve_fiyat_uyum_testi</a>
 <div class="">
-<span class="badge badge-default">Urun eklenir ve fiyat karsilastirmasi yapilir.filtreleyerek_urun_dogrulama</span>
+<span class="badge badge-default">Urun eklenir ve fiyat karsilastirmasi yapilir.urun_adedi_ve_fiyat_uyum_testi</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.remote.UnreachableBrowserException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.remote.UnreachableBrowserException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>23:48:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>And kullanici urunun sepete eklendigi uyarisini gorur</a>
+<div class="">
+<span class="badge badge-default">Urun eklenir ve fiyat karsilastirmasi yapilir.urun_adedi_ve_fiyat_uyum_testi.And kullanici urunun sepete eklendigi uyarisini gorur</span>
 </div>
 </td>
 </tr>
