@@ -3,6 +3,7 @@ Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
     Given kullanici url ye gider
     When  kullanici anasayfanin acildigini dogrular
 
+    @fiyat_dogrulama_testi
   Scenario: urun_adedi_ve_fiyat_uyum_testi
     And   kullanici premium firsatlardan bir urunu sepete ekler
     And   kullanici urunun sepete eklendigi uyarisini gorur
@@ -36,7 +37,7 @@ Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
       And   kullanici urunun altinda filtreledigi ozellikleri goruntuler
       And   kullanici tum ozellikler linke tiklar
       And   kullanici urunle ilgili ozellikleri goruntuler
-      Then  kullanici sayfayi kapatir
+      #Then  kullanici sayfayi kapatir
 
 
 
