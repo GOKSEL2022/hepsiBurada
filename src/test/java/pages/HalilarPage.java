@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class HalilarPage {
     public HalilarPage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -23,5 +25,8 @@ public class HalilarPage {
 
     @FindBy(xpath = "(//*[@viewBox='0 0 20 20'])[2]")
     public WebElement searchButtonFiyatAraligiHalilar;
+
+    @FindBy(xpath = "//*[@value='1000-5000']")
+    public WebElement binBesBinCheckboxHalilar;
 
 }

@@ -2,12 +2,15 @@ package stepdefinitions;
 
 import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.CheckoutPage;
 import pages.EvTekstiliPage;
 import pages.HalilarPage;
 import pages.HomePage;
 import utilities.Driver;
+
+import java.util.List;
 
 import static utilities.ReusableMethods.*;
 
@@ -182,6 +185,11 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici aralik olarak bin ve bes bin secildigini dogrular")
     public void kullaniciAralikOlarakBinVeBesBinSecildiginiDogrular() {
+        if (halilarPage.binBesBinCheckboxHalilar.isSelected()){
+            scrollIntoViewJS(halilarPage.fiyatAraligiTextHalilar);
+            waitFor(1);
+            assert halilarPage.binBesBinCheckboxHalilar.isDisplayed();
+        }
     }
 
     @And("kullanici renk olarak yesil secer")
