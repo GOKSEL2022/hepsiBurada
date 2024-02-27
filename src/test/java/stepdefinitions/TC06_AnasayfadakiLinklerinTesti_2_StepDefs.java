@@ -185,19 +185,12 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici aralik olarak bin ve bes bin secildigini dogrular")
     public void kullaniciAralikOlarakBinVeBesBinSecildiginiDogrular() {
-        if (halilarPage.binBesBinCheckboxHalilar.isSelected()){
             scrollIntoViewJS(halilarPage.fiyatAraligiTextHalilar);
             waitFor(1);
             assert halilarPage.binBesBinCheckboxHalilar.isDisplayed();
-        }
     }
-
     @And("kullanici renk olarak yesil secer")
     public void kullaniciRenkOlarakYesilSecer() {
-    }
-
-    @And("kullanici hav yuksekligi {int} mm secer")
-    public void kullaniciHavYuksekligiMmSecer(int arg0) {
     }
 
     @And("kullanici taban olarak dokuma taban secer")
@@ -234,5 +227,21 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici urunle ilgili ozellikleri goruntuler")
     public void kullaniciUrunleIlgiliOzellikleriGoruntuler() {
+    }
+
+    @And("kullanici degerlendirme puani olarak dort yildiz ve uzerini secer")
+    public void kullaniciDegerlendirmePuaniOlarakDortYildizVeUzeriniSecer() {
+    }
+
+    @And("kullanici kuponlu urunler secenegini aktiflestirir")
+    public void kullaniciKuponluUrunlerSeceneginiAktiflestirir() {
+    }
+
+    @And("kullanici ebat olarak iki_yuz_x_bes_yuz cm secer")
+    public void kullaniciEbatOlarakIki_yuz_x_bes_yuzCmSecer() {
+    }
+
+    @And("kullanici hav yuksekligi on mm secer")
+    public void kullaniciHavYuksekligiOnMmSecer() {
     }
 }
