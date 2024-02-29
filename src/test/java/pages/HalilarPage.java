@@ -29,4 +29,15 @@ public class HalilarPage {
     @FindBy(xpath = "//*[@value='1000-5000']")
     public WebElement binBesBinCheckboxHalilar;
 
+    @FindBy(xpath = "//*[@value='4-max']")
+    public WebElement dortYildizVeUzeriPuanHalilar;
+
+    @FindBy(xpath = "(//*[@aria-checked='false'])[1]")
+    public WebElement kuponluUrunlerCheckboxHalilar;
+
+    @FindBy(xpath = "//*[@value='200€20x€20300€20cm']")
+    public WebElement ikiYuzUcYuzCmEbatHalilar;
+
+
+
 }

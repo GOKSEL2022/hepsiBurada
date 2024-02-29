@@ -28,7 +28,7 @@ Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
       And   kullanici aralik olarak bin ve bes bin secildigini dogrular
       And   kullanici degerlendirme puani olarak dort yildiz ve uzerini secer
       And   kullanici kuponlu urunler secenegini aktiflestirir
-      And   kullanici ebat olarak iki_yuz_x_bes_yuz cm secer
+      And   kullanici ebat olarak iki_yuz_x_uc_yuz cm secer
       And   kullanici renk olarak yesil secer
       And   kullanici hav yuksekligi on mm secer
       And   kullanici taban olarak dokuma taban secer
