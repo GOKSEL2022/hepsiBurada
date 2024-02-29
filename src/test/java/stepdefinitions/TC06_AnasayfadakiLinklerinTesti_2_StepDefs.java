@@ -189,6 +189,21 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
             waitFor(1);
             assert halilarPage.binBesBinCheckboxHalilar.isDisplayed();
     }
+    @And("kullanici degerlendirme puani olarak dort yildiz ve uzerini secer")
+    public void kullaniciDegerlendirmePuaniOlarakDortYildizVeUzeriniSecer() {
+        scrollIntoViewJS(halilarPage.dortYildizVeUzeriPuanHalilar);
+        clickWithTimeOut(halilarPage.dortYildizVeUzeriPuanHalilar,1);
+    }
+    @And("kullanici kuponlu urunler secenegini aktiflestirir")
+    public void kullaniciKuponluUrunlerSeceneginiAktiflestirir() {
+        halilarPage.kuponluUrunlerCheckboxHalilar.click();
+    }
+    @And("kullanici ebat olarak iki_yuz_x_uc_yuz cm secer")
+    public void kullaniciEbatOlarakIki_yuz_x_uc_yuzCmSecer() {
+        scrollIntoViewJS(halilarPage.ikiYuzUcYuzCmEbatHalilar);
+        clickWithTimeOut(halilarPage.ikiYuzUcYuzCmEbatHalilar,1);
+    }
+
     @And("kullanici renk olarak yesil secer")
     public void kullaniciRenkOlarakYesilSecer() {
     }
@@ -229,17 +244,7 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     public void kullaniciUrunleIlgiliOzellikleriGoruntuler() {
     }
 
-    @And("kullanici degerlendirme puani olarak dort yildiz ve uzerini secer")
-    public void kullaniciDegerlendirmePuaniOlarakDortYildizVeUzeriniSecer() {
-    }
 
-    @And("kullanici kuponlu urunler secenegini aktiflestirir")
-    public void kullaniciKuponluUrunlerSeceneginiAktiflestirir() {
-    }
-
-    @And("kullanici ebat olarak iki_yuz_x_bes_yuz cm secer")
-    public void kullaniciEbatOlarakIki_yuz_x_bes_yuzCmSecer() {
-    }
 
     @And("kullanici hav yuksekligi on mm secer")
     public void kullaniciHavYuksekligiOnMmSecer() {
