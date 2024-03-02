@@ -200,8 +200,8 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     }
     @And("kullanici ebat olarak iki_yuz_x_uc_yuz cm secer")
     public void kullaniciEbatOlarakIki_yuz_x_uc_yuzCmSecer() {
-        scrollIntoViewJS(halilarPage.ikiYuzUcYuzCmEbatHalilar);
-        clickWithTimeOut(halilarPage.ikiYuzUcYuzCmEbatHalilar,1);
+        //scrollIntoViewJS(halilarPage.ikiYuzUcYuzCmEbatHalilar);
+        //clickWithTimeOut(halilarPage.ikiYuzUcYuzCmEbatHalilar,1);
     }
 
     @And("kullanici renk olarak yesil secer")
@@ -250,5 +250,7 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici hav yuksekligi on mm secer")
     public void kullaniciHavYuksekligiOnMmSecer() {
+        scrollIntoViewJS(halilarPage.onMmHavYuksekligiKategoriHalilar);
+        clickWithTimeOut(halilarPage.onMmHavYuksekligiKategoriHalilar,1);
     }
 }
