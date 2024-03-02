@@ -41,6 +41,9 @@ public class HalilarPage {
     @FindBy(xpath = "(//*[@name='renktipi'])[5]")
     public WebElement yesilRenkkategoriHalilar;
 
+    @FindBy(xpath = "(//*[@name='havyuksekligi'])[1]")
+    public WebElement onMmHavYuksekligiKategoriHalilar;
+
 
 
 }
