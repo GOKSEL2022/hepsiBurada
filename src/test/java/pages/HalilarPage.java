@@ -38,6 +38,9 @@ public class HalilarPage {
     @FindBy(xpath = "//*[@value='200€20x€20300€20cm']")
     public WebElement ikiYuzUcYuzCmEbatHalilar;
 
+    @FindBy(xpath = "(//*[@name='renktipi'])[5]")
+    public WebElement yesilRenkkategoriHalilar;
+
 
 
 }
