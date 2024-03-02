@@ -206,6 +206,8 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici renk olarak yesil secer")
     public void kullaniciRenkOlarakYesilSecer() {
+        scrollIntoViewJS(halilarPage.yesilRenkkategoriHalilar);
+        clickWithTimeOut(halilarPage.yesilRenkkategoriHalilar,1);
     }
 
     @And("kullanici taban olarak dokuma taban secer")
