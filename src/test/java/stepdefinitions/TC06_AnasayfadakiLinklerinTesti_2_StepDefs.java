@@ -198,16 +198,16 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     public void kullaniciKuponluUrunlerSeceneginiAktiflestirir() {
         halilarPage.kuponluUrunlerCheckboxHalilar.click();
     }
-    @And("kullanici ebat olarak iki_yuz_x_uc_yuz cm secer")
-    public void kullaniciEbatOlarakIki_yuz_x_uc_yuzCmSecer() {
-        //scrollIntoViewJS(halilarPage.ikiYuzUcYuzCmEbatHalilar);
-        //clickWithTimeOut(halilarPage.ikiYuzUcYuzCmEbatHalilar,1);
+    @And("kullanici ebat olarak yuz_x_uc_yuz cm secer")
+    public void kullaniciEbatOlarakYuz_x_uc_yuzCmSecer() {
+        scrollIntoViewJS(halilarPage.yuzUcYuzCmEbatHalilar);
+        clickWithTimeOut(halilarPage.yuzUcYuzCmEbatHalilar,1);
     }
 
-    @And("kullanici renk olarak yesil secer")
-    public void kullaniciRenkOlarakYesilSecer() {
-        scrollIntoViewJS(halilarPage.yesilRenkkategoriHalilar);
-        clickWithTimeOut(halilarPage.yesilRenkkategoriHalilar,1);
+    @And("kullanici renk olarak krem secer")
+    public void kullaniciRenkOlarakKremSecer() {
+        scrollIntoViewJS(halilarPage.kremRenk1KategoriHalilar);
+        clickWithTimeOut(halilarPage.kremRenk1KategoriHalilar,1);
     }
 
     @And("kullanici taban olarak dokuma taban secer")
@@ -218,8 +218,8 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     public void kullaniciIplikTuruOlarakAkrilik_pamuk_polyesterSecer() {
     }
 
-    @And("kullanici renk olarak yesil secili oldugunu dogrular")
-    public void kullaniciRenkOlarakYesilSeciliOldugunuDogrular() {
+    @And("kullanici renk olarak krem secili oldugunu dogrular")
+    public void kullaniciRenkOlarakKremSeciliOldugunuDogrular() {
     }
 
     @And("kullanici tema olarak desenli secer")
