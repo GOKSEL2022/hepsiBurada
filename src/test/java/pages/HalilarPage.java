@@ -35,14 +35,22 @@ public class HalilarPage {
     @FindBy(xpath = "(//*[@aria-checked='false'])[1]")
     public WebElement kuponluUrunlerCheckboxHalilar;
 
-    @FindBy(xpath = "//*[@value='200€20x€20300€20cm']")
-    public WebElement ikiYuzUcYuzCmEbatHalilar;
-
-    @FindBy(xpath = "(//*[@name='renktipi'])[5]")
-    public WebElement yesilRenkkategoriHalilar;
+    @FindBy(xpath = "//*[@value='100€20x€20300€20cm']")
+    public WebElement yuzUcYuzCmEbatHalilar;
 
     @FindBy(xpath = "(//*[@name='havyuksekligi'])[1]")
     public WebElement onMmHavYuksekligiKategoriHalilar;
+
+    @FindBy(xpath = "//*[@value='Akrilik']")
+    public WebElement akrilikIplikTuruKategoriHalilar;
+
+    @FindBy(xpath = "(//*[@value='Krem'])[1]")
+    public WebElement kremRenk1KategoriHalilar;
+
+    @FindBy(xpath = "(//*[@value='Krem'])[2]")
+    public WebElement kremRenk2KategoriHalilar;
+
+
 
 
 

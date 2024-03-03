@@ -28,12 +28,12 @@ Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
       And   kullanici aralik olarak bin ve bes bin secildigini dogrular
       And   kullanici degerlendirme puani olarak dort yildiz ve uzerini secer
       And   kullanici kuponlu urunler secenegini aktiflestirir
-      And   kullanici ebat olarak iki_yuz_x_uc_yuz cm secer
-      And   kullanici renk olarak yesil secer
+      And   kullanici ebat olarak yuz_x_uc_yuz cm secer
+      And   kullanici renk olarak krem secer
       And   kullanici hav yuksekligi on mm secer
       And   kullanici taban olarak dokuma taban secer
       And   kullanici iplik turu olarak akrilik_pamuk_polyester secer
-      And   kullanici renk olarak yesil secili oldugunu dogrular
+      And   kullanici renk olarak krem secili oldugunu dogrular
       And   kullanici tema olarak desenli secer
       And   kullanici filtrelenen urune tiklar
       And   kullanici acilan sayfada sectigi urunun oldugunu dogrular
