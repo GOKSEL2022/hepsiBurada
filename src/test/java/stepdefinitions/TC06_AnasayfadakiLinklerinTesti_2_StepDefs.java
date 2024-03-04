@@ -220,10 +220,12 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici renk olarak krem secili oldugunu dogrular")
     public void kullaniciRenkOlarakKremSeciliOldugunuDogrular() {
+        scrollIntoViewJS(halilarPage.kremRenk2KategoriHalilar);
+        assert halilarPage.kremRenk2KategoriHalilar.isDisplayed();
     }
 
-    @And("kullanici tema olarak desenli secer")
-    public void kullaniciTemaOlarakDesenliSecer() {
+    @And("kullanici tema olarak modern secer")
+    public void kullaniciTemaOlarakModernSecer() {
     }
 
     @And("kullanici filtrelenen urune tiklar")
