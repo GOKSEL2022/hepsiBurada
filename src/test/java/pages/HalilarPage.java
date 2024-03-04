@@ -47,8 +47,11 @@ public class HalilarPage {
     @FindBy(xpath = "(//*[@value='Krem'])[1]")
     public WebElement kremRenk1KategoriHalilar;
 
-    @FindBy(xpath = "(//*[@value='Krem'])[2]")
+    @FindBy(xpath = "(//*[.='Krem'])[6]")
     public WebElement kremRenk2KategoriHalilar;
+
+    @FindBy(xpath = "//*[@value='Dokuma€20Taban']")
+    public WebElement dokumaTabanKategoriHalilar;
 
 
 
