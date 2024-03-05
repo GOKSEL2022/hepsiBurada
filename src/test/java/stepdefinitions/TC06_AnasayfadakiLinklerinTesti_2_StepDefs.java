@@ -255,4 +255,16 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
         scrollIntoViewJS(halilarPage.onMmHavYuksekligiKategoriHalilar);
         clickWithTimeOut(halilarPage.onMmHavYuksekligiKategoriHalilar,1);
     }
+
+    @And("kullanici girisimci kadin urunleri secenegini aktif hale getirir")
+    public void kullaniciGirisimciKadinUrunleriSeceneginiAktifHaleGetirir() {
+    }
+
+    @And("kullanici girisimci Indirimli urunler secenegini aktif hale getirir")
+    public void kullaniciGirisimciIndirimliUrunlerSeceneginiAktifHaleGetirir() {
+    }
+
+    @And("kullanici girisimci Sepette Kampanyali urunler secenegini aktif hale getirir")
+    public void kullaniciGirisimciSepetteKampanyaliUrunlerSeceneginiAktifHaleGetirir() {
+    }
 }
