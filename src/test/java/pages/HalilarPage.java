@@ -53,6 +53,9 @@ public class HalilarPage {
     @FindBy(xpath = "//*[@value='Dokuma€20Taban']")
     public WebElement dokumaTabanKategoriHalilar;
 
+    @FindBy(xpath = "(//*[@type='button'])[4]")
+    public WebElement girisimciKadinUrunleriCheckboxKategoriHalilar;
+
 
 
 

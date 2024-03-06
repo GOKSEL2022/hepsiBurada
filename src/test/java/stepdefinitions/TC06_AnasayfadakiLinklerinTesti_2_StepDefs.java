@@ -198,8 +198,8 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     public void kullaniciKuponluUrunlerSeceneginiAktiflestirir() {
         halilarPage.kuponluUrunlerCheckboxHalilar.click();
     }
-    @And("kullanici ebat olarak yuz_x_uc_yuz cm secer")
-    public void kullaniciEbatOlarakYuz_x_uc_yuzCmSecer() {
+    @And("kullanici ebat olarak iki_yuz_x_uc_yuz cm secer")
+    public void kullaniciEbatOlarakIki_yuz_x_uc_yuzCmSecer() {
         scrollIntoViewJS(halilarPage.yuzUcYuzCmEbatHalilar);
         clickWithTimeOut(halilarPage.yuzUcYuzCmEbatHalilar,1);
     }
@@ -258,6 +258,8 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici girisimci kadin urunleri secenegini aktif hale getirir")
     public void kullaniciGirisimciKadinUrunleriSeceneginiAktifHaleGetirir() {
+        scrollIntoViewJS(halilarPage.girisimciKadinUrunleriCheckboxKategoriHalilar);
+        clickByJS(halilarPage.girisimciKadinUrunleriCheckboxKategoriHalilar);
     }
 
     @And("kullanici girisimci Indirimli urunler secenegini aktif hale getirir")
