@@ -53,8 +53,32 @@ public class HalilarPage {
     @FindBy(xpath = "//*[@value='Dokuma€20Taban']")
     public WebElement dokumaTabanKategoriHalilar;
 
+    @FindBy(xpath = "(//*[@type='button'])[2]")
+    public WebElement hepsiBuradaLimitiCheckboxKategoriHalilar;
+
+    @FindBy(xpath = "(//*[@type='button'])[3]")
+    public WebElement fotografliDegerlendirmeCheckboxKategoriHalilar;
+
     @FindBy(xpath = "(//*[@type='button'])[4]")
+    public WebElement guncelDegerlendirmeCheckboxKategoriHalilar;
+    @FindBy(xpath = "(//*[@type='button'])[5]")
     public WebElement girisimciKadinUrunleriCheckboxKategoriHalilar;
+
+    @FindBy(xpath = "(//*[@type='button'])[6]")
+    public WebElement yurtDisindanUrunlerCheckboxKategoriHalilar;
+
+    @FindBy(xpath = "(//*[@type='button'])[7]")
+    public WebElement indirimliUrunlerCheckboxKategoriHalilar;
+
+    @FindBy(xpath = "(//*[@type='button'])[8]")
+    public WebElement guvenleKapindaCheckboxKategoriHalilar;
+
+    @FindBy(xpath = "(//*[@type='button'])[9]")
+    public WebElement sepetteKampanyaliUrunlerCheckboxKategoriHalilar;
+
+
+
+
 
 
 
