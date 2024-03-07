@@ -31,9 +31,9 @@ Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
       And   kullanici ebat olarak iki_yuz_x_uc_yuz cm secer
       And   kullanici renk olarak krem secer
       And   kullanici hav yuksekligi on mm secer
-      #And   kullanici taban olarak dokuma taban secer
-      #And   kullanici iplik turu olarak akrilik_pamuk_polyester secer
-      #And   kullanici tema olarak modern secer
+      And   kullanici taban olarak dokuma taban secer
+      And   kullanici iplik turu olarak akrilik_pamuk_polyester secer
+      And   kullanici tema olarak modern secer
       And   kullanici girisimci kadin urunleri secenegini aktif hale getirir
       And   kullanici girisimci Indirimli urunler secenegini aktif hale getirir
       And   kullanici girisimci Sepette Kampanyali urunler secenegini aktif hale getirir
