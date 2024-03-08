@@ -264,9 +264,11 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici girisimci Indirimli urunler secenegini aktif hale getirir")
     public void kullaniciGirisimciIndirimliUrunlerSeceneginiAktifHaleGetirir() {
+        clickByJS(halilarPage.yurtDisindanUrunlerCheckboxKategoriHalilar);
     }
 
     @And("kullanici girisimci Sepette Kampanyali urunler secenegini aktif hale getirir")
     public void kullaniciGirisimciSepetteKampanyaliUrunlerSeceneginiAktifHaleGetirir() {
+        clickByJS(halilarPage.girisimciKadinUrunleriCheckboxKategoriHalilar);
     }
 }
