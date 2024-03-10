@@ -272,4 +272,24 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     public void kullaniciGirisimciSepetteKampanyaliUrunlerSeceneginiAktifHaleGetirir() {
         clickByJS(halilarPage.girisimciKadinUrunleriCheckboxKategoriHalilar);
     }
+
+    @And("kullanici hepsi burada limiti secenegini aktif hale getirir")
+    public void kullaniciHepsiBuradaLimitiSeceneginiAktifHaleGetirir() {
+    }
+
+    @And("kullanici fotografli degerlendirme secenegini aktif hale getirir")
+    public void kullaniciFotografliDegerlendirmeSeceneginiAktifHaleGetirir() {
+    }
+
+    @And("kullanici guncel degerlendirme secenegini aktif hale getirir")
+    public void kullaniciGuncelDegerlendirmeSeceneginiAktifHaleGetirir() {
+    }
+
+    @And("kullanici yurtdisindan secenegini aktif hale getirir")
+    public void kullaniciYurtdisindanSeceneginiAktifHaleGetirir() {
+    }
+
+    @And("kullanici guvenle kapinda secenegini aktif hale getirir")
+    public void kullaniciGuvenleKapindaSeceneginiAktifHaleGetirir() {
+    }
 }
