@@ -226,6 +226,7 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici tema olarak modern secer")
     public void kullaniciTemaOlarakModernSecer() {
+
     }
 
     @And("kullanici filtrelenen urune tiklar")
