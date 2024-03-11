@@ -275,14 +275,17 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici hepsi burada limiti secenegini aktif hale getirir")
     public void kullaniciHepsiBuradaLimitiSeceneginiAktifHaleGetirir() {
+        clickByJS(halilarPage.hepsiBuradaLimitiCheckboxKategoriHalilar);
     }
 
     @And("kullanici fotografli degerlendirme secenegini aktif hale getirir")
     public void kullaniciFotografliDegerlendirmeSeceneginiAktifHaleGetirir() {
+        clickByJS(halilarPage.fotografliDegerlendirmeCheckboxKategoriHalilar);
     }
 
     @And("kullanici guncel degerlendirme secenegini aktif hale getirir")
     public void kullaniciGuncelDegerlendirmeSeceneginiAktifHaleGetirir() {
+        clickByJS(halilarPage.guncelDegerlendirmeCheckboxKategoriHalilar);
     }
 
     @And("kullanici yurtdisindan secenegini aktif hale getirir")
