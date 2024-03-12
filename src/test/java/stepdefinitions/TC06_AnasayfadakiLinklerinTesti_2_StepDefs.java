@@ -290,9 +290,11 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici yurtdisindan secenegini aktif hale getirir")
     public void kullaniciYurtdisindanSeceneginiAktifHaleGetirir() {
+        clickByJS(halilarPage.yurtDisindanUrunlerCheckboxKategoriHalilar);
     }
 
     @And("kullanici guvenle kapinda secenegini aktif hale getirir")
     public void kullaniciGuvenleKapindaSeceneginiAktifHaleGetirir() {
+        clickByJS(halilarPage.guvenleKapindaCheckboxKategoriHalilar);
     }
 }
