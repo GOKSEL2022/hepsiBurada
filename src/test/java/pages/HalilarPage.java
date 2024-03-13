@@ -44,14 +44,17 @@ public class HalilarPage {
     @FindBy(xpath = "//*[@value='Akrilik']")
     public WebElement akrilikIplikTuruKategoriHalilar;
 
+    @FindBy(xpath = "//*[@value='Dokuma€20Taban']")
+    public WebElement dokumaTabanKategoriHalilar;
+
+    @FindBy(xpath = "//*[@value='Modern']")
+    public WebElement modernTemaKategoriHalilar;
+
     @FindBy(xpath = "(//*[@value='Krem'])[1]")
     public WebElement kremRenk1KategoriHalilar;
 
     @FindBy(xpath = "(//*[.='Krem'])[6]")
     public WebElement kremRenk2KategoriHalilar;
-
-    @FindBy(xpath = "//*[@value='Dokuma€20Taban']")
-    public WebElement dokumaTabanKategoriHalilar;
 
     @FindBy(xpath = "(//*[@type='button'])[2]")
     public WebElement hepsiBuradaLimitiCheckboxKategoriHalilar;
@@ -75,6 +78,9 @@ public class HalilarPage {
 
     @FindBy(xpath = "(//*[@type='button'])[9]")
     public WebElement sepetteKampanyaliUrunlerCheckboxKategoriHalilar;
+
+    @FindBy(xpath = "//*[.='Cool Halı']")
+    public WebElement filtrelenenIlkUrunHalilar;
 
 
 

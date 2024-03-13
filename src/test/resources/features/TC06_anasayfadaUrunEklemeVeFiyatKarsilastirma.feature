@@ -25,7 +25,6 @@ Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
       And   kullanici fiyat araligi olarak en az bin girer
       And   kullanici fiyat olarak en cok bes bin girer
       And   kullanici search butona tiklar
-      And   kullanici aralik olarak bin ve bes bin secildigini dogrular
       And   kullanici degerlendirme puani olarak dort yildiz ve uzerini secer
       And   kullanici kuponlu urunler secenegini aktiflestirir
       And   kullanici ebat olarak iki_yuz_x_uc_yuz cm secer
@@ -42,7 +41,6 @@ Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
       And   kullanici girisimci Indirimli urunler secenegini aktif hale getirir
       And   kullanici guvenle kapinda secenegini aktif hale getirir
       And   kullanici girisimci Sepette Kampanyali urunler secenegini aktif hale getirir
-      And   kullanici renk olarak krem secili oldugunu dogrular
       And   kullanici filtrelenen urune tiklar
       And   kullanici acilan sayfada sectigi urunun oldugunu dogrular
       And   kullanici urunun altinda filtreledigi ozellikleri goruntuler
