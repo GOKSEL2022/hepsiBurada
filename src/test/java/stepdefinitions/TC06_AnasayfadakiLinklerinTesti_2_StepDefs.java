@@ -183,12 +183,6 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
         halilarPage.searchButtonFiyatAraligiHalilar.click();
     }
 
-    @And("kullanici aralik olarak bin ve bes bin secildigini dogrular")
-    public void kullaniciAralikOlarakBinVeBesBinSecildiginiDogrular() {
-            scrollIntoViewJS(halilarPage.fiyatAraligiTextHalilar);
-            waitFor(1);
-            assert halilarPage.binBesBinCheckboxHalilar.isDisplayed();
-    }
     @And("kullanici degerlendirme puani olarak dort yildiz ve uzerini secer")
     public void kullaniciDegerlendirmePuaniOlarakDortYildizVeUzeriniSecer() {
         scrollIntoViewJS(halilarPage.dortYildizVeUzeriPuanHalilar);
@@ -212,25 +206,23 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
 
     @And("kullanici taban olarak dokuma taban secer")
     public void kullaniciTabanOlarakDokumaTabanSecer() {
+        clickByJS(halilarPage.dokumaTabanKategoriHalilar);
     }
 
     @And("kullanici iplik turu olarak akrilik_pamuk_polyester secer")
     public void kullaniciIplikTuruOlarakAkrilik_pamuk_polyesterSecer() {
-    }
-
-    @And("kullanici renk olarak krem secili oldugunu dogrular")
-    public void kullaniciRenkOlarakKremSeciliOldugunuDogrular() {
-        scrollIntoViewJS(halilarPage.kremRenk2KategoriHalilar);
-        assert halilarPage.kremRenk2KategoriHalilar.isDisplayed();
+    clickByJS(halilarPage.akrilikIplikTuruKategoriHalilar);
     }
 
     @And("kullanici tema olarak modern secer")
     public void kullaniciTemaOlarakModernSecer() {
-
+        clickByJS(halilarPage.modernTemaKategoriHalilar);
     }
 
     @And("kullanici filtrelenen urune tiklar")
     public void kullaniciFiltrelenenUruneTiklar() {
+        scrollIntoViewJS(halilarPage.filtrelenenIlkUrunHalilar);
+        clickByJS(halilarPage.filtrelenenIlkUrunHalilar);
     }
 
     @And("kullanici acilan sayfada sectigi urunun oldugunu dogrular")

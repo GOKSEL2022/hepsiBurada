@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features="src/test/resources/features", // features in pathi
         glue= {"stepdefinitions", "hooks"}, //stepdefinitions pathi
-        tags="@fiyat_dogrulama_testi"  ,
+        tags="@filtreleme_testi"  ,
         dryRun= false // dryRun ,eksik step olup olmadigini kontrol eder.
 )
 public class Runner {
