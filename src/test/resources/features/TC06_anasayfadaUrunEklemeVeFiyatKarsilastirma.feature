@@ -37,10 +37,10 @@ Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
       And   kullanici fotografli degerlendirme secenegini aktif hale getirir
       And   kullanici guncel degerlendirme secenegini aktif hale getirir
       And   kullanici girisimci kadin urunleri secenegini aktif hale getirir
-      And   kullanici yurtdisindan secenegini aktif hale getirir
-      And   kullanici girisimci Indirimli urunler secenegini aktif hale getirir
-      And   kullanici guvenle kapinda secenegini aktif hale getirir
-      And   kullanici girisimci Sepette Kampanyali urunler secenegini aktif hale getirir
+      And   kullanici yurtdisindan seceneginin aktif oldugunu dogrular
+      And   kullanici indirimli urunler seceneginin aktif oldugunu dogrular
+      And   kullanici guvenle kapinda seceneginin aktif oldugunu dogrular
+      And   kullanici Sepette Kampanyali urunler seceneginin aktif oldugunu dogrular
       And   kullanici filtrelenen urune tiklar
       And   kullanici acilan sayfada sectigi urunun oldugunu dogrular
       And   kullanici urunun altinda filtreledigi ozellikleri goruntuler

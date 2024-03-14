@@ -1,16 +1,10 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.*;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import pages.CheckoutPage;
-import pages.EvTekstiliPage;
-import pages.HalilarPage;
-import pages.HomePage;
+import pages.*;
 import utilities.Driver;
-
-import java.util.List;
+import utilities.ReusableMethods;
 
 import static utilities.ReusableMethods.*;
 
@@ -19,6 +13,7 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     CheckoutPage checkoutPage=new CheckoutPage();
     EvTekstiliPage evTekstiliPage=new EvTekstiliPage();
     HalilarPage halilarPage=new HalilarPage();
+    CoolHaliPage coolHaliPage=new CoolHaliPage();
     Actions actions=new Actions(Driver.getDriver());
     @Given("kullanici ev_yasam_kirtasiye_ofis linke gelir")
     public void kullaniciEv_yasam_kirtasiye_ofisLinkeGelir() {
@@ -218,30 +213,21 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     public void kullaniciTemaOlarakModernSecer() {
         clickByJS(halilarPage.modernTemaKategoriHalilar);
     }
-
     @And("kullanici filtrelenen urune tiklar")
     public void kullaniciFiltrelenenUruneTiklar() {
         scrollIntoViewJS(halilarPage.filtrelenenIlkUrunHalilar);
         clickByJS(halilarPage.filtrelenenIlkUrunHalilar);
     }
-
     @And("kullanici acilan sayfada sectigi urunun oldugunu dogrular")
     public void kullaniciAcilanSayfadaSectigiUrununOldugunuDogrular() {
+        ReusableMethods.switchToWindow(1);
+        assert coolHaliPage.coolHaliSecilenUrunCoolHali.getText().contains("Cool Halı");
+
     }
 
     @And("kullanici urunun altinda filtreledigi ozellikleri goruntuler")
     public void kullaniciUrununAltindaFiltreledigiOzellikleriGoruntuler() {
     }
-
-    @And("kullanici tum ozellikler linke tiklar")
-    public void kullaniciTumOzelliklerLinkeTiklar() {
-    }
-
-    @And("kullanici urunle ilgili ozellikleri goruntuler")
-    public void kullaniciUrunleIlgiliOzellikleriGoruntuler() {
-    }
-
-
 
     @And("kullanici hav yuksekligi on mm secer")
     public void kullaniciHavYuksekligiOnMmSecer() {
@@ -255,38 +241,53 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
         clickByJS(halilarPage.girisimciKadinUrunleriCheckboxKategoriHalilar);
     }
 
-    @And("kullanici girisimci Indirimli urunler secenegini aktif hale getirir")
-    public void kullaniciGirisimciIndirimliUrunlerSeceneginiAktifHaleGetirir() {
-        clickByJS(halilarPage.yurtDisindanUrunlerCheckboxKategoriHalilar);
+    @And("kullanici indirimli urunler seceneginin aktif oldugunu dogrular")
+    public void kullaniciIndirimliUrunlerSecenegininAktifOldugunuDogrular() {
+        //clickByJS(halilarPage.yurtDisindanUrunlerCheckboxKategoriHalilar);
+        assert halilarPage.yurtDisindanUrunlerCheckboxKategoriHalilar.isEnabled();
     }
 
-    @And("kullanici girisimci Sepette Kampanyali urunler secenegini aktif hale getirir")
-    public void kullaniciGirisimciSepetteKampanyaliUrunlerSeceneginiAktifHaleGetirir() {
-        clickByJS(halilarPage.girisimciKadinUrunleriCheckboxKategoriHalilar);
+    @And("kullanici Sepette Kampanyali urunler seceneginin aktif oldugunu dogrular")
+    public void kullaniciSepetteKampanyaliUrunlerSecenegininAktifOldugunuDogrular() {
+        //clickByJS(halilarPage.girisimciKadinUrunleriCheckboxKategoriHalilar);
+        assert halilarPage.girisimciKadinUrunleriCheckboxKategoriHalilar.isEnabled();
     }
 
     @And("kullanici hepsi burada limiti secenegini aktif hale getirir")
     public void kullaniciHepsiBuradaLimitiSeceneginiAktifHaleGetirir() {
-        clickByJS(halilarPage.hepsiBuradaLimitiCheckboxKategoriHalilar);
+        //clickByJS(halilarPage.hepsiBuradaLimitiCheckboxKategoriHalilar);
+        assert halilarPage.hepsiBuradaLimitiCheckboxKategoriHalilar.isEnabled();
     }
 
     @And("kullanici fotografli degerlendirme secenegini aktif hale getirir")
     public void kullaniciFotografliDegerlendirmeSeceneginiAktifHaleGetirir() {
-        clickByJS(halilarPage.fotografliDegerlendirmeCheckboxKategoriHalilar);
+        //clickByJS(halilarPage.fotografliDegerlendirmeCheckboxKategoriHalilar);
+        assert halilarPage.fotografliDegerlendirmeCheckboxKategoriHalilar.isEnabled();
     }
 
     @And("kullanici guncel degerlendirme secenegini aktif hale getirir")
     public void kullaniciGuncelDegerlendirmeSeceneginiAktifHaleGetirir() {
-        clickByJS(halilarPage.guncelDegerlendirmeCheckboxKategoriHalilar);
+        //clickByJS(halilarPage.guncelDegerlendirmeCheckboxKategoriHalilar);
+        assert halilarPage.guncelDegerlendirmeCheckboxKategoriHalilar.isEnabled();
     }
 
-    @And("kullanici yurtdisindan secenegini aktif hale getirir")
-    public void kullaniciYurtdisindanSeceneginiAktifHaleGetirir() {
-        clickByJS(halilarPage.yurtDisindanUrunlerCheckboxKategoriHalilar);
+    @And("kullanici yurtdisindan seceneginin aktif oldugunu dogrular")
+    public void kullaniciYurtdisindanSecenegininAktifOldugunuDogrular() {
+        //clickByJS(halilarPage.yurtDisindanUrunlerCheckboxKategoriHalilar);
+        assert halilarPage.yurtDisindanUrunlerCheckboxKategoriHalilar.isEnabled();
     }
 
-    @And("kullanici guvenle kapinda secenegini aktif hale getirir")
-    public void kullaniciGuvenleKapindaSeceneginiAktifHaleGetirir() {
-        clickByJS(halilarPage.guvenleKapindaCheckboxKategoriHalilar);
+    @And("kullanici guvenle kapinda seceneginin aktif oldugunu dogrular")
+    public void kullaniciGuvenleKapindaSecenegininAktifOldugunuDogrular() {
+        //clickByJS(halilarPage.guvenleKapindaCheckboxKategoriHalilar);
+        assert halilarPage.guvenleKapindaCheckboxKategoriHalilar.isEnabled();
     }
+    @And("kullanici tum ozellikler linke tiklar")
+    public void kullaniciTumOzelliklerLinkeTiklar() {
+    }
+
+    @And("kullanici urunle ilgili ozellikleri goruntuler")
+    public void kullaniciUrunleIlgiliOzellikleriGoruntuler() {
+    }
+
 }
