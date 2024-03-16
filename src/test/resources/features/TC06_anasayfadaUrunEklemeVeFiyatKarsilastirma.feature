@@ -46,7 +46,7 @@ Feature: Urun eklenir ve fiyat karsilastirmasi yapilir
       And   kullanici urunun altinda filtreledigi ozellikleri goruntuler
       And   kullanici tum ozellikler linke tiklar
       And   kullanici urunle ilgili ozellikleri goruntuler
-      #Then  kullanici sayfayi kapatir
+      Then  kullanici sayfayi kapatir
 
 
 
