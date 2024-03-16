@@ -11,4 +11,10 @@ public class CoolHaliPage {
     }
     @FindBy(xpath = "//*[@id='product-name']")
     public WebElement coolHaliSecilenUrunCoolHali;
+
+    @FindBy(xpath = "//*[@class='col lg-4 visible']")
+    public WebElement urunOzellikleriCoolHalilar;
+
+    @FindBy(xpath = "(//*[.='Tüm Özellikler'])[1]")
+    public WebElement tumOzelliklerLinkCoolHalilar;
 }
