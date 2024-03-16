@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.*;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.asserts.SoftAssert;
 import pages.*;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -282,12 +283,23 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
         //clickByJS(halilarPage.guvenleKapindaCheckboxKategoriHalilar);
         assert halilarPage.guvenleKapindaCheckboxKategoriHalilar.isEnabled();
     }
-    @And("kullanici tum ozellikler linke tiklar")
-    public void kullaniciTumOzelliklerLinkeTiklar() {
-    }
 
     @And("kullanici urunle ilgili ozellikleri goruntuler")
     public void kullaniciUrunleIlgiliOzellikleriGoruntuler() {
+        scrollIntoViewJS(coolHaliPage.tumOzelliklerLinkCoolHalilar);
+        SoftAssert softAssert=new SoftAssert();
+        softAssert.assertTrue(coolHaliPage.urunOzellikleriCoolHalilar.getText().contains("Kenar Türü"));
+        softAssert.assertTrue(coolHaliPage.urunOzellikleriCoolHalilar.getText().contains("Ürün Rengi"));
+        softAssert.assertTrue(coolHaliPage.urunOzellikleriCoolHalilar.getText().contains("Hav Yüksekliği"));
+        softAssert.assertTrue(coolHaliPage.urunOzellikleriCoolHalilar.getText().contains("Kesim Şekli"));
+        softAssert.assertTrue(coolHaliPage.urunOzellikleriCoolHalilar.getText().contains("Taban"));
+        softAssert.assertTrue(coolHaliPage.urunOzellikleriCoolHalilar.getText().contains("İplik Türü"));
+        softAssert.assertAll();
+
+    }
+    @And("kullanici tum ozellikler linke tiklar")
+    public void kullaniciTumOzelliklerLinkeTiklar() {
+        clickByJS(coolHaliPage.tumOzelliklerLinkCoolHalilar);
     }
 
 }
