@@ -82,6 +82,12 @@ public class HalilarPage {
     @FindBy(xpath = "//*[.='Cool Halı']")
     public WebElement filtrelenenIlkUrunHalilar;
 
+    @FindBy(xpath = "//*[@id='productDescription']")
+    public  WebElement urunAciklamasiTextTitleHalilar;
+
+    @FindBy(xpath = "//*[@id='productTechSpecContainer']")
+    public  WebElement urunOzellikleriAltBasliklarHalilar;
+
 
 
 
