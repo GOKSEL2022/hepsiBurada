@@ -300,6 +300,9 @@ public class TC06_AnasayfadakiLinklerinTesti_2_StepDefs {
     @And("kullanici tum ozellikler linke tiklar")
     public void kullaniciTumOzelliklerLinkeTiklar() {
         clickByJS(coolHaliPage.tumOzelliklerLinkCoolHalilar);
+        assert halilarPage.urunAciklamasiTextTitleHalilar.getText().contains("Ürün Açıklaması");
+        scrollIntoViewJS(halilarPage.urunOzellikleriAltBasliklarHalilar);
+        assert halilarPage.urunOzellikleriAltBasliklarHalilar.isDisplayed();
     }
 
 }
