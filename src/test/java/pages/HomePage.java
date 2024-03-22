@@ -204,6 +204,12 @@ public class HomePage {
     @FindBy(xpath = "//*[.='Ev Tekstili']")
     public WebElement evTekstiliSecenegiEvYasamKirtasiyeOfisLinkHome;
 
+    @FindBy(xpath = "//*[.='Kategoriler']")
+    public WebElement kategorilerTextAnasayfaAltiHome;
+
+    @FindBy(xpath = "//a[@href='https://www.hepsiburada.com/bilgisayarlar-c-2147483646']")
+    public WebElement bilgisayarLinkKategorilerTextAnasayfaAltiHome;
+
 
 
 
