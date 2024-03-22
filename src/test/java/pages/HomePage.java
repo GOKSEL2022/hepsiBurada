@@ -210,6 +210,9 @@ public class HomePage {
     @FindBy(xpath = "//a[@href='https://www.hepsiburada.com/bilgisayarlar-c-2147483646']")
     public WebElement bilgisayarLinkKategorilerTextAnasayfaAltiHome;
 
+    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/tablet-c-3008012']")
+    public WebElement tabletLinkKategorilerTextAnasayfaAltiHome;
+
 
 
 
