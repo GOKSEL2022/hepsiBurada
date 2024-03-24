@@ -32,4 +32,12 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
     public void kullaniciBirSaniyeBekler() {
         waitFor(1);
     }
+
+    @And("kullanici telefon linke tiklar")
+    public void kullaniciTelefonLinkeTiklar() {
+    }
+
+    @And("kullanici telefon sayfasinin acildigini dogrular")
+    public void kullaniciTelefonSayfasininAcildiginiDogrular() {
+    }
 }
