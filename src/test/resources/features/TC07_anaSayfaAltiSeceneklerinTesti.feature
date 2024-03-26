@@ -14,3 +14,6 @@ Feature: Anasayfa_alt_seceneklerin_testi
     And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
     And   kullanici telefon linke tiklar
     And   kullanici telefon sayfasinin acildigini dogrular
+    And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
+    And   kullanici laptop linke tiklar
+    And   kullanici laptop sayfasinin acildigini dogrular
