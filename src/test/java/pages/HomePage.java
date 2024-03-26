@@ -213,6 +213,15 @@ public class HomePage {
     @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/tablet-c-3008012']")
     public WebElement tabletLinkKategorilerTextAnasayfaAltiHome;
 
+    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/telefonlar-c-2147483642']")
+    public WebElement telefonlarLinkKategorilerTextAnasayfaAltiHome;
+
+    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/laptop-notebook-dizustu-bilgisayarlar-c-98']")
+    public WebElement laptopLinkKategorilerTextAnasayfaAltiHome;
+
+
+
+
 
 
 

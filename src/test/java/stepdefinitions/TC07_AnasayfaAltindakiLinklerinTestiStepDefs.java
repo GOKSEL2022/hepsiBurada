@@ -40,4 +40,12 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
     @And("kullanici telefon sayfasinin acildigini dogrular")
     public void kullaniciTelefonSayfasininAcildiginiDogrular() {
     }
+
+    @And("kullanici laptop linke tiklar")
+    public void kullaniciLaptopLinkeTiklar() {
+    }
+
+    @And("kullanici laptop sayfasinin acildigini dogrular")
+    public void kullaniciLaptopSayfasininAcildiginiDogrular() {
+    }
 }

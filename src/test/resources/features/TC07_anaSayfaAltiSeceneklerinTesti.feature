@@ -1,10 +1,10 @@
-Feature: Anasayfa_alt_seceneklerin_testi
+Feature: Anasayfa_alti_kategoriler_secenekleri_test_edilir
   Background:
     Given kullanici url ye gider
     When  kullanici anasayfanin acildigini dogrular
     And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
 
-  Scenario:
+  Scenario sayfa_alti_kategoriler_ilk_satir_secenek_testi
     And   kullanici bilgisayar linke tiklar
     And   kullanici bilgisayar sayfasinin acildigini dogrular
     And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
