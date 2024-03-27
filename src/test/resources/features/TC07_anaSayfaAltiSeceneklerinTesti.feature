@@ -4,7 +4,7 @@ Feature: Anasayfa_alti_kategoriler_secenekleri_test_edilir
     When  kullanici anasayfanin acildigini dogrular
     And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
 
-  Scenario sayfa_alti_kategoriler_ilk_satir_secenek_testi
+  Scenario: sayfa_alti_kategoriler_ilk_satir_secenek_testi
     And   kullanici bilgisayar linke tiklar
     And   kullanici bilgisayar sayfasinin acildigini dogrular
     And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
@@ -17,3 +17,4 @@ Feature: Anasayfa_alti_kategoriler_secenekleri_test_edilir
     And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
     And   kullanici laptop linke tiklar
     And   kullanici laptop sayfasinin acildigini dogrular
+    And   kullanici sayfayi kapatir
