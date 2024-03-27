@@ -35,17 +35,18 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
 
     @And("kullanici telefon linke tiklar")
     public void kullaniciTelefonLinkeTiklar() {
+        clickByJS(homePage.telefonlarLinkKategorilerTextAnasayfaAltiHome);
     }
-
     @And("kullanici telefon sayfasinin acildigini dogrular")
     public void kullaniciTelefonSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("telefonlar");
     }
-
     @And("kullanici laptop linke tiklar")
     public void kullaniciLaptopLinkeTiklar() {
+        clickByJS(homePage.laptopLinkKategorilerTextAnasayfaAltiHome);
     }
-
     @And("kullanici laptop sayfasinin acildigini dogrular")
     public void kullaniciLaptopSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("laptop-notebook-dizustu-bilgisayarlar");
     }
 }
