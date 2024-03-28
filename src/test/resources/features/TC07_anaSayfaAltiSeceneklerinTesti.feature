@@ -18,3 +18,12 @@ Feature: Anasayfa_alti_kategoriler_secenekleri_test_edilir
     And   kullanici laptop linke tiklar
     And   kullanici laptop sayfasinin acildigini dogrular
     And   kullanici sayfayi kapatir
+
+    Scenario: sayfa_alti_kategoriler_ikinci_satir_secenek_testi
+      And   kullanici kombi linke tiklar
+      And   kullanici kombi sayfasinin acildigini dogrular
+      And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
+      And   kullanici bir saniye bekler
+      And   kullanici klimalar linke tiklar
+      And   kullanici klimalar sayfasinin acildigini dogrular
+      And   kullanici sayfayi kapatir
