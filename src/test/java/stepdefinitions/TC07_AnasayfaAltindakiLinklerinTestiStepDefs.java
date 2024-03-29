@@ -49,4 +49,20 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
     public void kullaniciLaptopSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("laptop-notebook-dizustu-bilgisayarlar");
     }
+
+    @And("kullanici kombi linke tiklar")
+    public void kullaniciKombiLinkeTiklar() {
+    }
+
+    @And("kullanici kombi sayfasinin acildigini dogrular")
+    public void kullaniciKombiSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici klimalar linke tiklar")
+    public void kullaniciKlimalarLinkeTiklar() {
+    }
+
+    @And("kullanici klimalar sayfasinin acildigini dogrular")
+    public void kullaniciKlimalarSayfasininAcildiginiDogrular() {
+    }
 }
