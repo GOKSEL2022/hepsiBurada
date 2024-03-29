@@ -160,15 +160,16 @@ public class TC04_sayfadaAramaTestiStepDefs {
         assert araPage.sayfadakiIlkUrunAkilliSattlerAra.isDisplayed();
     }
     @And("kullanici saticiya sor linke tiklar")
-    public void kullaniciSaticiyaSorLinkeTiklar() throws InterruptedException {
-        switchToWindow(1);
-        Thread.sleep(2000);
-        //shadow root içeren elementi clickler
-        WebElement shadow2 = (WebElement) ((JavascriptExecutor) getDriver())
-                .executeScript("return arguments[0].shadowRoot.querySelector('.buybox')", urunPage.saticiyaSorLinkShadowRoot1Urun);
-        ReusableMethods.clickByJS(shadow2);
+    public void kullaniciSaticiyaSorLinkeTiklar(){
 
-        clickWithTimeOut(urunPage.saticiyaSorLinkShadowRoot2Urun,5);
+        switchToWindow(1);
+        SearchContext context=Driver.getDriver().findElement(By.cssSelector("#voltran-fragment")).getShadowRoot();
+        WebElement saticiyaSorLink=context.findElement(By.cssSelector("#buybox"));
+        saticiyaSorLink.click();
+
+        //switchToWindow(1);
+        //urunPage.saticiyaSorLinkUrun.click();
+
 
 
 

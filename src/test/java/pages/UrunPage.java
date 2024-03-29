@@ -40,6 +40,9 @@ public class UrunPage {
     @FindBy(css = "//button[class='buybox']")
     public WebElement saticiyaSorLinkShadowRoot2Urun;
 
+    @FindBy(css = "(//*[@class='voltran-fragment'])[4]")
+    public WebElement saticiyaSorLinkUrun;
+
 
 
 
