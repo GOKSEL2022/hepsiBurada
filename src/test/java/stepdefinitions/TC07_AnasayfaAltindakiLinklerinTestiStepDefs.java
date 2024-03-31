@@ -52,17 +52,21 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
 
     @And("kullanici kombi linke tiklar")
     public void kullaniciKombiLinkeTiklar() {
+        clickByJS(homePage.kombiLinkKategorilerHome);
     }
 
     @And("kullanici kombi sayfasinin acildigini dogrular")
     public void kullaniciKombiSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("kombiler");
     }
 
     @And("kullanici klimalar linke tiklar")
     public void kullaniciKlimalarLinkeTiklar() {
+        clickByJS(homePage.klimaLinkKategorilerHome);
     }
 
     @And("kullanici klimalar sayfasinin acildigini dogrular")
     public void kullaniciKlimalarSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("klimalar");
     }
 }
