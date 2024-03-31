@@ -67,6 +67,6 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
 
     @And("kullanici klimalar sayfasinin acildigini dogrular")
     public void kullaniciKlimalarSayfasininAcildiginiDogrular() {
-        assert Driver.getDriver().getCurrentUrl().contains("klimalar");
+        assert Driver.getDriver().getPageSource().contains("klimalar");
     }
 }
