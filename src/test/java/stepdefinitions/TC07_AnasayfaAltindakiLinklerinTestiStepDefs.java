@@ -69,4 +69,20 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
     public void kullaniciKlimalarSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getPageSource().contains("klimalar");
     }
+
+    @And("kullanici camasir makinesi linke tiklar")
+    public void kullaniciCamasirMakinesiLinkeTiklar() {
+    }
+
+    @And("kullanici camasir makinesi sayfasinin acildigini dogrular")
+    public void kullaniciCamasirMakinesiSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici bulasik makinesi linke tiklar")
+    public void kullaniciBulasikMakinesiLinkeTiklar() {
+    }
+
+    @And("kullanici bulasik makinesi sayfasinin acildigini dogrular")
+    public void kullaniciBulasikMakinesiSayfasininAcildiginiDogrular() {
+    }
 }
