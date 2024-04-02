@@ -72,17 +72,20 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
 
     @And("kullanici camasir makinesi linke tiklar")
     public void kullaniciCamasirMakinesiLinkeTiklar() {
+        homePage.camasirMakinesiLinkKategorilerHome.click();
     }
 
     @And("kullanici camasir makinesi sayfasinin acildigini dogrular")
     public void kullaniciCamasirMakinesiSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getPageSource().contains("camasir-makineleri");
     }
-
     @And("kullanici bulasik makinesi linke tiklar")
     public void kullaniciBulasikMakinesiLinkeTiklar() {
+        clickByJS(homePage.bulasikMakinesiLinkKategorilerHome);
     }
 
     @And("kullanici bulasik makinesi sayfasinin acildigini dogrular")
     public void kullaniciBulasikMakinesiSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getPageSource().contains("bulasik-makineleri");
     }
 }

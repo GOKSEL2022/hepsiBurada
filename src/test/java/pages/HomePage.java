@@ -225,6 +225,12 @@ public class HomePage {
     @FindBy(css = "a[href='https://www.hepsiburada.com/klimalar-c-17453'")
     public WebElement klimaLinkKategorilerHome;
 
+    @FindBy(css = "a[href='https://www.hepsiburada.com/camasir-makineleri-c-155121'")
+    public WebElement camasirMakinesiLinkKategorilerHome;
+
+    @FindBy(css = "a[href='https://www.hepsiburada.com/bulasik-makineleri-c-22156'")
+    public WebElement bulasikMakinesiLinkKategorilerHome;
+
 
 
 
