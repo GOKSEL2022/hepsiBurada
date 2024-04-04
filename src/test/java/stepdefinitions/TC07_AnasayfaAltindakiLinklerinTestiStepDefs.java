@@ -88,4 +88,28 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
     public void kullaniciBulasikMakinesiSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getPageSource().contains("bulasik-makineleri");
     }
+
+    @And("kullanici gram altin linke tiklar")
+    public void kullaniciGramAltinLinkeTiklar() {
+    }
+
+    @And("kullanici gram altin sayfasinin acildigini dogrular")
+    public void kullaniciGramAltinSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici resat altin linke tiklar")
+    public void kullaniciResatAltinLinkeTiklar() {
+    }
+
+    @And("kullanici resat altin sayfasinin acildigini dogrular")
+    public void kullaniciResatAltinSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici yarim altin linke tiklar")
+    public void kullaniciYarimAltinLinkeTiklar() {
+    }
+
+    @And("kullanici yarim altin sayfasinin acildigini dogrular")
+    public void kullaniciYarimAltinSayfasininAcildiginiDogrular() {
+    }
 }
