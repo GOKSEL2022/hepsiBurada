@@ -112,4 +112,12 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
     @And("kullanici yarim altin sayfasinin acildigini dogrular")
     public void kullaniciYarimAltinSayfasininAcildiginiDogrular() {
     }
+
+    @And("kullanici aycicek yagi linke tiklar")
+    public void kullaniciAycicekYagiLinkeTiklar() {
+    }
+
+    @And("kullanici aycicek yagi sayfasinin acildigini dogrular")
+    public void kullaniciAycicekYagiSayfasininAcildiginiDogrular() {
+    }
 }

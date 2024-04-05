@@ -52,3 +52,8 @@ Feature: Anasayfa_alti_kategoriler_secenekleri_test_edilir
       And   kullanici yarim altin linke tiklar
       And   kullanici yarim altin sayfasinin acildigini dogrular
       And   kullanici sayfayi kapatir
+
+     Scenario:  sayfa_alti_kategoriler_dorduncu_satir_secenek_testi
+       And   kullanici aycicek yagi linke tiklar
+       And   kullanici aycicek yagi sayfasinin acildigini dogrular
+       And   kullanici sayfayi kapatir
