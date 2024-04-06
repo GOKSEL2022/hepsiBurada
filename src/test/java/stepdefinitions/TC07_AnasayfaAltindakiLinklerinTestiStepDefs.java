@@ -91,18 +91,22 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
 
     @And("kullanici gram altin linke tiklar")
     public void kullaniciGramAltinLinkeTiklar() {
+        clickByJS(homePage.gramAltinLinkKategorilerHome);
     }
 
     @And("kullanici gram altin sayfasinin acildigini dogrular")
     public void kullaniciGramAltinSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getPageSource().contains("gram-altin");
     }
 
     @And("kullanici resat altin linke tiklar")
     public void kullaniciResatAltinLinkeTiklar() {
+        clickByJS(homePage.resatAltinLinkKategorilerHome);
     }
 
     @And("kullanici resat altin sayfasinin acildigini dogrular")
     public void kullaniciResatAltinSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getPageSource().contains("resat-altin");
     }
 
     @And("kullanici yarim altin linke tiklar")
