@@ -231,6 +231,18 @@ public class HomePage {
     @FindBy(css = "a[href='https://www.hepsiburada.com/bulasik-makineleri-c-22156'")
     public WebElement bulasikMakinesiLinkKategorilerHome;
 
+    @FindBy(css = "a[href='https://www.hepsiburada.com/1-gram-altin-c-60008293'")
+    public WebElement gramAltinLinkKategorilerHome;
+
+    @FindBy(css = "a[href='https://www.hepsiburada.com/resat-altin-c-80857019'")
+    public WebElement resatAltinLinkKategorilerHome;
+
+    @FindBy(css = "a[href='https://www.hepsiburada.com/yarim-altin-c-60008247'")
+    public WebElement yarimAltinLinkKategorilerHome;
+
+    @FindBy(css = "a[href='https://www.hepsiburada.com/aycicek-yaglari-c-60002211'")
+    public WebElement aycicekYaglariLinkKategorilerHome;
+
 
 
 
