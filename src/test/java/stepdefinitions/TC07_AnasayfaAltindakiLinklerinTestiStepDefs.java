@@ -111,17 +111,21 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
 
     @And("kullanici yarim altin linke tiklar")
     public void kullaniciYarimAltinLinkeTiklar() {
+        clickByJS(homePage.yarimAltinLinkKategorilerHome);
     }
 
     @And("kullanici yarim altin sayfasinin acildigini dogrular")
     public void kullaniciYarimAltinSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("yarim-altin");
     }
 
     @And("kullanici aycicek yagi linke tiklar")
     public void kullaniciAycicekYagiLinkeTiklar() {
+        clickByJS(homePage.aycicekYaglariLinkKategorilerHome);
     }
 
     @And("kullanici aycicek yagi sayfasinin acildigini dogrular")
     public void kullaniciAycicekYagiSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("aycicek-yaglari");
     }
 }
