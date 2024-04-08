@@ -57,3 +57,12 @@ Feature: Anasayfa_alti_kategoriler_secenekleri_test_edilir
        And   kullanici aycicek yagi linke tiklar
        And   kullanici aycicek yagi sayfasinin acildigini dogrular
        And   kullanici sayfayi kapatir
+
+     Scenario:  sayfa_alti_kategoriler_besinci_satir_secenek_testi
+       And   kullanici supurgeler linke tiklar
+       And   kullanici supurgeler sayfasinin acildigini dogrular
+       And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
+       And   kullanici bir saniye bekler
+       And   kullanici robot supurge linke tiklar
+       And   kullanici robot supurge sayfasinin acildigini dogrular
+       And   kullanici sayfayi kapatir
