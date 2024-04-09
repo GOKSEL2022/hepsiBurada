@@ -243,6 +243,17 @@ public class HomePage {
     @FindBy(css = "a[href='https://www.hepsiburada.com/aycicek-yaglari-c-60002211'")
     public WebElement aycicekYaglariLinkKategorilerHome;
 
+    @FindBy(css = "a[href='https://www.hepsiburada.com/supurgeler-c-155123']")
+    public WebElement supurgelerLinkKategorilerHome;
+
+    @FindBy(xpath = "//*[.='Robot Süpürge']")
+    public WebElement robotSupurgeLinkKategorilerHome;
+
+
+    //
+
+
+
 
 
 
