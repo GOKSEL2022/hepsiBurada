@@ -250,9 +250,6 @@ public class HomePage {
     public WebElement robotSupurgeLinkKategorilerHome;
 
 
-    //
-
-
 
 
 
