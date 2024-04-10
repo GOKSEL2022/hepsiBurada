@@ -128,4 +128,24 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
     public void kullaniciAycicekYagiSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("aycicek-yaglari");
     }
+
+    @And("kullanici supurgeler linke tiklar")
+    public void kullaniciSupurgelerLinkeTiklar() {
+        clickByJS(homePage.supurgelerLinkKategorilerHome);
+    }
+
+    @And("kullanici supurgeler sayfasinin acildigini dogrular")
+    public void kullaniciSupurgelerSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("supurgeler");
+    }
+
+    @And("kullanici robot supurge linke tiklar")
+    public void kullaniciRobotSupurgeLinkeTiklar() {
+        clickByJS(homePage.robotSupurgeLinkKategorilerHome);
+    }
+
+    @And("kullanici robot supurge sayfasinin acildigini dogrular")
+    public void kullaniciRobotSupurgeSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("robot-supurge");
+    }
 }
