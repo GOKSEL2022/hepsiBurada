@@ -148,4 +148,20 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
     public void kullaniciRobotSupurgeSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("robot-supurge");
     }
+
+    @And("kullanici airsoft linke tiklar")
+    public void kullaniciAirsoftLinkeTiklar() {
+    }
+
+    @And("kullanici airsoft sayfasinin acildigini dogrular")
+    public void kullaniciAirsoftSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici fritozler linke tiklar")
+    public void kullaniciFritozlerLinkeTiklar() {
+    }
+
+    @And("kullanici fritozler sayfasinin acildigini dogrular")
+    public void kullaniciFritozlerSayfasininAcildiginiDogrular() {
+    }
 }
