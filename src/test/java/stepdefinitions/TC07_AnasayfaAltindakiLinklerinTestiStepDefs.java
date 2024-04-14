@@ -164,4 +164,28 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
     @And("kullanici fritozler sayfasinin acildigini dogrular")
     public void kullaniciFritozlerSayfasininAcildiginiDogrular() {
     }
+
+    @And("kullanici kitap linke tiklar")
+    public void kullaniciKitapLinkeTiklar() {
+    }
+
+    @And("kullanici kitap sayfasinin acildigini dogrular")
+    public void kullaniciKitapSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici film linke tiklar")
+    public void kullaniciFilmLinkeTiklar() {
+    }
+
+    @And("kullanici film sayfasinin acildigini dogrular")
+    public void kullaniciFilmSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici muzik linke tiklar")
+    public void kullaniciMuzikLinkeTiklar() {
+    }
+
+    @And("kullanici muzik sayfasinin acildigini dogrular")
+    public void kullaniciMuzikSayfasininAcildiginiDogrular() {
+    }
 }
