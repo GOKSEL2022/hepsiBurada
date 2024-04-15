@@ -74,7 +74,7 @@ Feature: Anasayfa_alti_kategoriler_secenekleri_test_edilir
     And   kullanici bir saniye bekler
     And   kullanici fritozler linke tiklar
     And   kullanici fritozler sayfasinin acildigini dogrular
-    And   kullanici sayfayi kapatir
+    #And   kullanici sayfayi kapatir
 
 
   Scenario: sayfa_alti_kategoriler_altinci_satir_secenek_testi
