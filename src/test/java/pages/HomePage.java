@@ -255,13 +255,13 @@ public class HomePage {
     @FindBy(css = "a[href='https://www.hepsiburada.com/fritozler-c-22017'")
     public WebElement fritozlerLinkKategorilerHome;
 
-    @FindBy(linkText = "https://www.hepsiburada.com/kitaplar-c-2147483645")
+    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/kitaplar-c-2147483645']")
     public WebElement kitapLinkKategorilerHome;
 
-    @FindBy(linkText = "https://www.hepsiburada.com/filmler-c-2147483640")
+    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/filmler-c-2147483640']")
     public WebElement filmLinkKategorilerHome;
 
-    @FindBy(linkText = "https://www.hepsiburada.com/muzik-c-2147483641")
+    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/muzik-c-2147483641']")
     public WebElement muzikLinkKategorilerHome;
 
 
