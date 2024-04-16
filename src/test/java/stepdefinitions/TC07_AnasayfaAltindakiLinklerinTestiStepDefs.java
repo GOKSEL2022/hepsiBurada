@@ -151,41 +151,51 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
 
     @And("kullanici airsoft linke tiklar")
     public void kullaniciAirsoftLinkeTiklar() {
+        clickByJS(homePage.airsoftLinkKategorilerHome);
     }
 
     @And("kullanici airsoft sayfasinin acildigini dogrular")
     public void kullaniciAirsoftSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("airsoft");
     }
 
     @And("kullanici fritozler linke tiklar")
     public void kullaniciFritozlerLinkeTiklar() {
+        clickByJS(homePage.fritozlerLinkKategorilerHome);
     }
 
     @And("kullanici fritozler sayfasinin acildigini dogrular")
     public void kullaniciFritozlerSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("fritozler");
     }
 
     @And("kullanici kitap linke tiklar")
     public void kullaniciKitapLinkeTiklar() {
+        clickByJS(homePage.kitapLinkKategorilerHome);
     }
 
     @And("kullanici kitap sayfasinin acildigini dogrular")
     public void kullaniciKitapSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getPageSource().contains("kitaplar");
     }
 
     @And("kullanici film linke tiklar")
     public void kullaniciFilmLinkeTiklar() {
+        clickByJS(homePage.filmLinkKategorilerHome);
     }
 
     @And("kullanici film sayfasinin acildigini dogrular")
     public void kullaniciFilmSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getPageSource().contains("filmler");
     }
 
     @And("kullanici muzik linke tiklar")
     public void kullaniciMuzikLinkeTiklar() {
+        clickByJS(homePage.muzikLinkKategorilerHome);
     }
 
     @And("kullanici muzik sayfasinin acildigini dogrular")
     public void kullaniciMuzikSayfasininAcildiginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("muzik");
     }
 }

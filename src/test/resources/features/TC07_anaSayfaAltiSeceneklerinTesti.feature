@@ -77,7 +77,7 @@ Feature: Anasayfa_alti_kategoriler_secenekleri_test_edilir
     #And   kullanici sayfayi kapatir
 
 
-  Scenario: sayfa_alti_kategoriler_altinci_satir_secenek_testi
+  Scenario: sayfa_alti_kategoriler_yedinci_satir_secenek_testi
     And   kullanici kitap linke tiklar
     And   kullanici kitap sayfasinin acildigini dogrular
     And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
