@@ -74,7 +74,7 @@ Feature: Anasayfa_alti_kategoriler_secenekleri_test_edilir
     And   kullanici bir saniye bekler
     And   kullanici fritozler linke tiklar
     And   kullanici fritozler sayfasinin acildigini dogrular
-    #And   kullanici sayfayi kapatir
+    And   kullanici sayfayi kapatir
 
 
   Scenario: sayfa_alti_kategoriler_yedinci_satir_secenek_testi
@@ -88,4 +88,13 @@ Feature: Anasayfa_alti_kategoriler_secenekleri_test_edilir
     And   kullanici bir saniye bekler
     And   kullanici muzik linke tiklar
     And   kullanici muzik sayfasinin acildigini dogrular
+    And   kullanici sayfayi kapatir
+
+   Scenario: sayfa_alti_kategoriler_sekizinci_satir_secenek_testi
+    And   kullanici kis lastigi linke tiklar
+    And   kullanici kis lastigi sayfasinin acildigini dogrular
+    And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
+    And   kullanici bir saniye bekler
+    And   kullanici oto aksesuar linke tiklar
+    And   kullanici oto aksesuar sayfasinin acildigini dogrular
     And   kullanici sayfayi kapatir
