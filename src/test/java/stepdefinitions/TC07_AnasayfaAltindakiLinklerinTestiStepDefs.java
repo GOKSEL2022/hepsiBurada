@@ -198,4 +198,20 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
     public void kullaniciMuzikSayfasininAcildiginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("muzik");
     }
+
+    @And("kullanici kis lastigi linke tiklar")
+    public void kullaniciKisLastigiLinkeTiklar() {
+    }
+
+    @And("kullanici kis lastigi sayfasinin acildigini dogrular")
+    public void kullaniciKisLastigiSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici oto aksesuar linke tiklar")
+    public void kullaniciOtoAksesuarLinkeTiklar() {
+    }
+
+    @And("kullanici oto aksesuar sayfasinin acildigini dogrular")
+    public void kullaniciOtoAksesuarSayfasininAcildiginiDogrular() {
+    }
 }
