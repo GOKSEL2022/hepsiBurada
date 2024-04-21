@@ -98,3 +98,22 @@ Feature: Anasayfa_alti_kategoriler_secenekleri_test_edilir
     And   kullanici oto aksesuar linke tiklar
     And   kullanici oto aksesuar sayfasinin acildigini dogrular
     And   kullanici sayfayi kapatir
+
+  Scenario: sayfa_alti_kategoriler_dokuzuncu_satir_secenek_testi
+    And   kullanici mobilyalar linke tiklar
+    And   kullanici mobilyalar sayfasinin acildigini dogrular
+    And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
+    And   kullanici bir saniye bekler
+    And   kullanici mutfak masa takimlari linke tiklar
+    And   kullanici mutfak masa takimlari sayfasinin acildigini dogrular
+    And   kullanici sayfayi kapatir
+
+  Scenario:  sayfa_alti_kategoriler_onuncu_satir_secenek_testi
+    And   kullanici kahve makinesi linke tiklar
+    And   kullanici kahve makinesi sayfasinin acildigini dogrular
+    And   kullanici anasayfanin altinda bulunan kategoriler basligina gelir
+    And   kullanici bir saniye bekler
+    And   kullanici cay makinesi linke tiklar
+    And   kullanici cay makinesi sayfasinin acildigini dogrular
+    And   kullanici sayfayi kapatir
+
