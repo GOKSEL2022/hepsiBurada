@@ -5,7 +5,7 @@ import pages.HomePage;
 import utilities.Driver;
 import static utilities.ReusableMethods.*;
 
-public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
+public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
     HomePage homePage=new HomePage();
     Actions actions=new Actions(Driver.getDriver());
     @And("kullanici anasayfanin altinda bulunan kategoriler basligina gelir")
@@ -213,5 +213,37 @@ public class TC07_AnasayfaAltindakiLinklerinTestiStepDefs {
 
     @And("kullanici oto aksesuar sayfasinin acildigini dogrular")
     public void kullaniciOtoAksesuarSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici mobilyalar linke tiklar")
+    public void kullaniciMobilyalarLinkeTiklar() {
+    }
+
+    @And("kullanici mobilyalar sayfasinin acildigini dogrular")
+    public void kullaniciMobilyalarSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici mutfak masa takimlari linke tiklar")
+    public void kullaniciMutfakMasaTakimlariLinkeTiklar() {
+    }
+
+    @And("kullanici mutfak masa takimlari sayfasinin acildigini dogrular")
+    public void kullaniciMutfakMasaTakimlariSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici kahve makinesi linke tiklar")
+    public void kullaniciKahveMakinesiLinkeTiklar() {
+    }
+
+    @And("kullanici kahve makinesi sayfasinin acildigini dogrular")
+    public void kullaniciKahveMakinesiSayfasininAcildiginiDogrular() {
+    }
+
+    @And("kullanici cay makinesi linke tiklar")
+    public void kullaniciCayMakinesiLinkeTiklar() {
+    }
+
+    @And("kullanici cay makinesi sayfasinin acildigini dogrular")
+    public void kullaniciCayMakinesiSayfasininAcildiginiDogrular() {
     }
 }
