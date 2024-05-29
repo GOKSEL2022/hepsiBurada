@@ -1,12 +1,7 @@
 package stepdefinitions;
-
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.junit.Assert;
+import io.cucumber.java.en.*;
 import utilities.ConfigReader;
 import utilities.Driver;
-
 public class TC01_AnasayfaStepDefs {
     @Given("kullanici url ye gider")
     public void kullaniciUrlYeGider() {
@@ -14,7 +9,7 @@ public class TC01_AnasayfaStepDefs {
     }
     @When("kullanici anasayfanin acildigini dogrular")
     public void kullaniciAnasayfaninAcildiginiDogrular() {
-      Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("hepsiburada"));
+        assert Driver.getDriver().getCurrentUrl().contains("hepsiburada");
     }
     @Then("kullanici sayfayi kapatir")
     public void kullaniciSayfayiKapatir() {
