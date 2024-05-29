@@ -1,15 +1,12 @@
 package stepdefinitions;
-
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.GirisPage;
 import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
+import static utilities.ReusableMethods.clickByJS;
 
 public class TC03_GirisYapStepDefs {
     HomePage homePage=new HomePage();
@@ -17,11 +14,11 @@ public class TC03_GirisYapStepDefs {
     Actions actions=new Actions(Driver.getDriver());
     @And("kullanici girisYapLinkGiris_yapHome linkini tiklar")
     public void kullaniciGirisYapLinkGiris_yapHomeLinkiniTiklar() {
-        ReusableMethods.clickByJS(homePage.girisYapLinkGiris_yapHome);
+        clickByJS(homePage.girisYapLinkGiris_yapHome);
     }
     @Given("kullanici girisYapButonOnaylamaGiris e tiklar")
     public void kullaniciGirisYapButonOnaylamaGirisETiklar() {
-        ReusableMethods.clickByJS(girisPage.girisYapButonOnaylamaGiris);
+        clickByJS(girisPage.girisYapButonOnaylamaGiris);
     }
     @When("kullanici ePosta veya telefon alanina kayitli email girer ve enter a tiklar")
     public void kullaniciEPostaVeyaTelefonAlaninaKayitliEmailGirerVeEnterATiklar() {
