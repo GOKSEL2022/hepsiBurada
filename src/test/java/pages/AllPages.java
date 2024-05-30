@@ -8,7 +8,27 @@ public class AllPages {
     private AccountPage accountPage;
     private AppleidPage appleidPage;
     private FacebookPage facebookPage;
-
+    private AraPage araPage;
+    private UrunPage urunPage;
+    private CheckoutPage checkoutPage;
+    public CheckoutPage checkoutPage() {
+        if (checkoutPage == null) {
+            checkoutPage = new CheckoutPage();
+        }
+        return checkoutPage;
+    }
+    public UrunPage urunPage() {
+        if (urunPage == null) {
+            urunPage = new UrunPage();
+        }
+        return urunPage;
+    }
+    public AraPage araPage() {
+        if (araPage == null) {
+            araPage = new AraPage();
+        }
+        return araPage;
+    }
     public FacebookPage facebookPage() {
         if (facebookPage == null) {
             facebookPage = new FacebookPage();
