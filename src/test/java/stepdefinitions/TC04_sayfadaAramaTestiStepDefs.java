@@ -1,7 +1,5 @@
 package stepdefinitions;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.AraPage;
@@ -15,9 +13,12 @@ import static utilities.Driver.getDriver;
 import static utilities.ReusableMethods.*;
 public class TC04_sayfadaAramaTestiStepDefs {
     //SearchContext shadowRootElement;
-    HomePage homePage=new HomePage();  AraPage araPage=new AraPage();
-    UrunPage urunPage=new UrunPage(); CheckoutPage checkoutPage=new CheckoutPage();
-    Actions actions=new Actions(getDriver()); char harf='a';   byte rakam=1;  char sembol='*';
+    HomePage homePage=new HomePage();
+    AraPage araPage=new AraPage();
+    UrunPage urunPage=new UrunPage();
+    CheckoutPage checkoutPage=new CheckoutPage();
+    Actions actions=new Actions(getDriver());
+    char harf='a';   byte rakam=1;  char sembol='*';
     @And("kullanici arama alanina tiklar")
     public void kullaniciAramaAlaninaTiklar() throws InterruptedException {
         homePage.searchBoxHome.click();
