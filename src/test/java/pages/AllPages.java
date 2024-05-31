@@ -11,11 +11,35 @@ public class AllPages {
     private AraPage araPage;
     private UrunPage urunPage;
     private CheckoutPage checkoutPage;
+    private BilgisayarlarPage bilgisayarlarPage;
+    private GiyimAyakkabiPage giyimAyakkabiPage;
+    private  StaticPage staticPage;
     public CheckoutPage checkoutPage() {
         if (checkoutPage == null) {
             checkoutPage = new CheckoutPage();
         }
         return checkoutPage;
+    }
+
+    public StaticPage staticPage() {
+        if (staticPage == null) {
+            staticPage = new StaticPage();
+        }
+        return staticPage;
+    }
+
+    public GiyimAyakkabiPage giyimAyakkabiPage() {
+        if (giyimAyakkabiPage == null) {
+            giyimAyakkabiPage = new GiyimAyakkabiPage();
+        }
+        return giyimAyakkabiPage;
+    }
+
+    public BilgisayarlarPage bilgisayarlarPage() {
+        if (checkoutPage == null) {
+            bilgisayarlarPage = new BilgisayarlarPage();
+        }
+        return bilgisayarlarPage;
     }
     public UrunPage urunPage() {
         if (urunPage == null) {
