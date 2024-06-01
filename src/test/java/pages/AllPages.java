@@ -14,11 +14,36 @@ public class AllPages {
     private BilgisayarlarPage bilgisayarlarPage;
     private GiyimAyakkabiPage giyimAyakkabiPage;
     private  StaticPage staticPage;
+    private EvTekstiliPage evTekstiliPage;
+    private HalilarPage halilarPage;
+    private CoolHaliPage coolHaliPage;
+
     public CheckoutPage checkoutPage() {
         if (checkoutPage == null) {
             checkoutPage = new CheckoutPage();
         }
         return checkoutPage;
+    }
+
+    public CoolHaliPage coolHaliPage() {
+        if (coolHaliPage == null) {
+            coolHaliPage = new CoolHaliPage();
+        }
+        return coolHaliPage;
+    }
+
+    public HalilarPage halilarPage() {
+        if (halilarPage == null) {
+            halilarPage = new HalilarPage();
+        }
+        return halilarPage;
+    }
+
+    public EvTekstiliPage evTekstiliPage() {
+        if (evTekstiliPage == null) {
+            evTekstiliPage = new EvTekstiliPage();
+        }
+        return evTekstiliPage;
     }
 
     public StaticPage staticPage() {
