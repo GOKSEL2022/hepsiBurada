@@ -1,20 +1,22 @@
 package stepdefinitions;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.interactions.Actions;
+import pages.AllPages;
 import pages.HomePage;
 import utilities.Driver;
 import static utilities.ReusableMethods.*;
 
 public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
+    AllPages allPages=new AllPages();
     HomePage homePage=new HomePage();
     Actions actions=new Actions(Driver.getDriver());
     @And("kullanici anasayfanin altinda bulunan kategoriler basligina gelir")
     public void kullaniciAnasayfaninAltindaBulunanKategorilerBasliginaGelir() {
-        scrollIntoViewJS(homePage.kategorilerTextAnasayfaAltiHome);
+        scrollIntoViewJS(allPages.homePage().kategorilerTextAnasayfaAltiHome);
     }
     @And("kullanici bilgisayar linke tiklar")
     public void kullaniciBilgisayarLinkeTiklar() {
-        clickByJS(homePage.bilgisayarLinkKategorilerTextAnasayfaAltiHome);
+        clickByJS(allPages.homePage().bilgisayarLinkKategorilerTextAnasayfaAltiHome);
     }
     @And("kullanici bilgisayar sayfasinin acildigini dogrular")
     public void kullaniciBilgisayarSayfasininAcildiginiDogrular() {
@@ -22,7 +24,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
     }
     @And("kullanici tablet linke tiklar")
     public void kullaniciTabletLinkeTiklar() {
-        clickByJS(homePage.tabletLinkKategorilerTextAnasayfaAltiHome);
+        clickByJS(allPages.homePage().tabletLinkKategorilerTextAnasayfaAltiHome);
     }
     @And("kullanici tablet sayfasinin acildigini dogrular")
     public void kullaniciTabletSayfasininAcildiginiDogrular() {
@@ -35,7 +37,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici telefon linke tiklar")
     public void kullaniciTelefonLinkeTiklar() {
-        clickByJS(homePage.telefonlarLinkKategorilerTextAnasayfaAltiHome);
+        clickByJS(allPages.homePage().telefonlarLinkKategorilerTextAnasayfaAltiHome);
     }
     @And("kullanici telefon sayfasinin acildigini dogrular")
     public void kullaniciTelefonSayfasininAcildiginiDogrular() {
@@ -43,7 +45,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
     }
     @And("kullanici laptop linke tiklar")
     public void kullaniciLaptopLinkeTiklar() {
-        clickByJS(homePage.laptopLinkKategorilerTextAnasayfaAltiHome);
+        clickByJS(allPages.homePage().laptopLinkKategorilerTextAnasayfaAltiHome);
     }
     @And("kullanici laptop sayfasinin acildigini dogrular")
     public void kullaniciLaptopSayfasininAcildiginiDogrular() {
@@ -52,7 +54,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici kombi linke tiklar")
     public void kullaniciKombiLinkeTiklar() {
-        clickByJS(homePage.kombiLinkKategorilerHome);
+        clickByJS(allPages.homePage().kombiLinkKategorilerHome);
     }
 
     @And("kullanici kombi sayfasinin acildigini dogrular")
@@ -62,7 +64,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici klimalar linke tiklar")
     public void kullaniciKlimalarLinkeTiklar() {
-        clickByJS(homePage.klimaLinkKategorilerHome);
+        clickByJS(allPages.homePage().klimaLinkKategorilerHome);
     }
 
     @And("kullanici klimalar sayfasinin acildigini dogrular")
@@ -72,7 +74,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici camasir makinesi linke tiklar")
     public void kullaniciCamasirMakinesiLinkeTiklar() {
-        homePage.camasirMakinesiLinkKategorilerHome.click();
+        allPages.homePage().camasirMakinesiLinkKategorilerHome.click();
     }
 
     @And("kullanici camasir makinesi sayfasinin acildigini dogrular")
@@ -81,7 +83,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
     }
     @And("kullanici bulasik makinesi linke tiklar")
     public void kullaniciBulasikMakinesiLinkeTiklar() {
-        clickByJS(homePage.bulasikMakinesiLinkKategorilerHome);
+        clickByJS(allPages.homePage().bulasikMakinesiLinkKategorilerHome);
     }
 
     @And("kullanici bulasik makinesi sayfasinin acildigini dogrular")
@@ -91,7 +93,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici gram altin linke tiklar")
     public void kullaniciGramAltinLinkeTiklar() {
-        clickByJS(homePage.gramAltinLinkKategorilerHome);
+        clickByJS(allPages.homePage().gramAltinLinkKategorilerHome);
     }
 
     @And("kullanici gram altin sayfasinin acildigini dogrular")
@@ -101,7 +103,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici resat altin linke tiklar")
     public void kullaniciResatAltinLinkeTiklar() {
-        clickByJS(homePage.resatAltinLinkKategorilerHome);
+        clickByJS(allPages.homePage().resatAltinLinkKategorilerHome);
     }
 
     @And("kullanici resat altin sayfasinin acildigini dogrular")
@@ -111,7 +113,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici yarim altin linke tiklar")
     public void kullaniciYarimAltinLinkeTiklar() {
-        clickByJS(homePage.yarimAltinLinkKategorilerHome);
+        clickByJS(allPages.homePage().yarimAltinLinkKategorilerHome);
     }
 
     @And("kullanici yarim altin sayfasinin acildigini dogrular")
@@ -121,7 +123,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici aycicek yagi linke tiklar")
     public void kullaniciAycicekYagiLinkeTiklar() {
-        clickByJS(homePage.aycicekYaglariLinkKategorilerHome);
+        clickByJS(allPages.homePage().aycicekYaglariLinkKategorilerHome);
     }
 
     @And("kullanici aycicek yagi sayfasinin acildigini dogrular")
@@ -131,7 +133,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici supurgeler linke tiklar")
     public void kullaniciSupurgelerLinkeTiklar() {
-        clickByJS(homePage.supurgelerLinkKategorilerHome);
+        clickByJS(allPages.homePage().supurgelerLinkKategorilerHome);
     }
 
     @And("kullanici supurgeler sayfasinin acildigini dogrular")
@@ -141,7 +143,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici robot supurge linke tiklar")
     public void kullaniciRobotSupurgeLinkeTiklar() {
-        clickByJS(homePage.robotSupurgeLinkKategorilerHome);
+        clickByJS(allPages.homePage().robotSupurgeLinkKategorilerHome);
     }
 
     @And("kullanici robot supurge sayfasinin acildigini dogrular")
@@ -151,7 +153,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici airsoft linke tiklar")
     public void kullaniciAirsoftLinkeTiklar() {
-        clickByJS(homePage.airsoftLinkKategorilerHome);
+        clickByJS(allPages.homePage().airsoftLinkKategorilerHome);
     }
 
     @And("kullanici airsoft sayfasinin acildigini dogrular")
@@ -161,7 +163,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici fritozler linke tiklar")
     public void kullaniciFritozlerLinkeTiklar() {
-        clickByJS(homePage.fritozlerLinkKategorilerHome);
+        clickByJS(allPages.homePage().fritozlerLinkKategorilerHome);
     }
 
     @And("kullanici fritozler sayfasinin acildigini dogrular")
@@ -171,7 +173,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici kitap linke tiklar")
     public void kullaniciKitapLinkeTiklar() {
-        clickByJS(homePage.kitapLinkKategorilerHome);
+        clickByJS(allPages.homePage().kitapLinkKategorilerHome);
     }
 
     @And("kullanici kitap sayfasinin acildigini dogrular")
@@ -181,7 +183,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici film linke tiklar")
     public void kullaniciFilmLinkeTiklar() {
-        clickByJS(homePage.filmLinkKategorilerHome);
+        clickByJS(allPages.homePage().filmLinkKategorilerHome);
     }
 
     @And("kullanici film sayfasinin acildigini dogrular")
@@ -191,7 +193,7 @@ public class TC07_AnasayfaAltindakiKategoriLinklerinTestiStepDefs {
 
     @And("kullanici muzik linke tiklar")
     public void kullaniciMuzikLinkeTiklar() {
-        clickByJS(homePage.muzikLinkKategorilerHome);
+        clickByJS(allPages.homePage().muzikLinkKategorilerHome);
     }
 
     @And("kullanici muzik sayfasinin acildigini dogrular")
