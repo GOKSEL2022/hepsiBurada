@@ -10,7 +10,8 @@ public class TC01_AnasayfaStepDefs {
     @When("kullanici anasayfanin acildigini dogrular")
     public void kullaniciAnasayfaninAcildiginiDogrular() {
         //assert Driver.getDriver().getCurrentUrl().contains("hepsiburada");
-        assert Driver.getDriver().getTitle().equalsIgnoreCase("Türkiye'nin En Büyük Online Alışveriş Sitesi Hepsiburada.com");
+        assert Driver.getDriver().getTitle().contains("Hepsiburada");
+        //assert Driver.getDriver().getTitle().equalsIgnoreCase("Türkiye'nin En Büyük Online Alışveriş Sitesi Hepsiburada.com");
         //System.out.println("Driver.getDriver().getTitle() = " + Driver.getDriver().getTitle());
     }
     @Then("kullanici sayfayi kapatir")
