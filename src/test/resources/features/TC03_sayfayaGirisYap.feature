@@ -33,3 +33,8 @@ Feature: kullanici_sayfaya_giris_yapar
        | yekparebiran@gmail.     |
        | yekparebiran@gmail      |
 
+     Scenario: giris_yap_dropdown_menu_testi
+       Given kullanici url ye gider
+       When  kullanici giris_yapHome alanina gelir
+       And   kullanici dropdown menu basliklariini goruntuler
+
