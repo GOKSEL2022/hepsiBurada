@@ -33,4 +33,8 @@ public class TC03_GirisYapStepDefs {
     public void kullaniciEPostaVeyaTelefonAlaninaInvalidEmailGirer(String invalid_email) {
         allPages.girisPage().epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(invalid_email);
     }
+
+    @And("kullanici dropdown menu basliklariini goruntuler")
+    public void kullaniciDropdownMenuBasliklariiniGoruntuler() {
+    }
 }
