@@ -37,4 +37,9 @@ Feature: kullanici_sayfaya_giris_yapar
        Given kullanici url ye gider
        When  kullanici giris_yapHome alanina gelir
        And   kullanici dropdown menu basliklariini goruntuler
+       And   kullanici siparislerim secenegine tiklar
+       And   kullanici giris yap alanina yonlendirildigini dogrular
+       And   kullanici uye olmadan verdiginiz siparisleri buradan takip edebilirsiniz uyarisini goruntuler
+       And   kullanici giris islemi yapmadan siparis takibi basligina tiklar
+
 
