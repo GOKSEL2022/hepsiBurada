@@ -37,4 +37,20 @@ public class TC03_GirisYapStepDefs {
     @And("kullanici dropdown menu basliklariini goruntuler")
     public void kullaniciDropdownMenuBasliklariiniGoruntuler() {
     }
+
+    @And("kullanici siparislerim secenegine tiklar")
+    public void kullaniciSiparislerimSecenegineTiklar() {
+    }
+
+    @And("kullanici giris yap alanina yonlendirildigini dogrular")
+    public void kullaniciGirisYapAlaninaYonlendirildiginiDogrular() {
+    }
+
+    @And("kullanici uye olmadan verdiginiz siparisleri buradan takip edebilirsiniz uyarisini goruntuler")
+    public void kullaniciUyeOlmadanVerdiginizSiparisleriBuradanTakipEdebilirsinizUyarisiniGoruntuler() {
+    }
+
+    @And("kullanici giris islemi yapmadan siparis takibi basligina tiklar")
+    public void kullaniciGirisIslemiYapmadanSiparisTakibiBasliginaTiklar() {
+    }
 }
