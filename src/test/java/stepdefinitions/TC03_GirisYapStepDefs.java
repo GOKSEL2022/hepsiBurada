@@ -36,6 +36,8 @@ public class TC03_GirisYapStepDefs {
 
     @And("kullanici dropdown menu basliklariini goruntuler")
     public void kullaniciDropdownMenuBasliklariiniGoruntuler() {
+        actions.moveToElement(allPages.homePage().giris_yapHome).perform();
+        assert allPages.homePage().girisYapLinkGiris_yapHome.isDisplayed();
     }
 
     @And("kullanici siparislerim secenegine tiklar")
