@@ -55,4 +55,8 @@ public class TC03_GirisYapStepDefs {
     @And("kullanici giris islemi yapmadan siparis takibi basligina tiklar")
     public void kullaniciGirisIslemiYapmadanSiparisTakibiBasliginaTiklar() {
     }
+
+    @And("kullanici siparis icin girdigi eposta adresini girer")
+    public void kullaniciSiparisIcinGirdigiEpostaAdresiniGirer() {
+    }
 }
