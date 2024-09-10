@@ -42,14 +42,17 @@ public class TC03_GirisYapStepDefs {
 
     @And("kullanici siparislerim secenegine tiklar")
     public void kullaniciSiparislerimSecenegineTiklar() {
+        clickByJS(allPages.homePage().siparislerimLinkGirisYapDropdownHome);
     }
 
     @And("kullanici giris yap alanina yonlendirildigini dogrular")
     public void kullaniciGirisYapAlaninaYonlendirildiginiDogrular() {
+        assert allPages.girisPage().epostaAdresiVeyaTelNoTextBoxGiris.isDisplayed();
     }
 
     @And("kullanici uye olmadan verdiginiz siparisleri buradan takip edebilirsiniz uyarisini goruntuler")
     public void kullaniciUyeOlmadanVerdiginizSiparisleriBuradanTakipEdebilirsinizUyarisiniGoruntuler() {
+
     }
 
     @And("kullanici giris islemi yapmadan siparis takibi basligina tiklar")
