@@ -57,9 +57,11 @@ public class TC03_GirisYapStepDefs {
 
     @And("kullanici giris islemi yapmadan siparis takibi basligina tiklar")
     public void kullaniciGirisIslemiYapmadanSiparisTakibiBasliginaTiklar() {
+        clickByJS(allPages.girisPage().siparisTakibiButonGirisYapGiris);
     }
 
     @And("kullanici siparis icin girdigi eposta adresini girer")
     public void kullaniciSiparisIcinGirdigiEpostaAdresiniGirer() {
+        allPages.girisPage().epostaAdresiTextBoxSiparisTakibiButonGirisYapGiris.sendKeys(ConfigReader.getProperty("kayitliEmail"));
     }
 }

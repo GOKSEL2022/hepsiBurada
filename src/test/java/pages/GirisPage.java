@@ -71,6 +71,12 @@ public class GirisPage {
     @FindBy(xpath = "(//*[.='Bu e-posta adresine ait bir hesabınız olduğunu fark ettik.'])[1]")
     public WebElement buEpostaAdresineAitHesapOldugunuFarkEttikTextGiris;
 
+    @FindBy(xpath = "(//*[.='Sipariş takibi'])[2]")
+    public WebElement siparisTakibiButonGirisYapGiris;
+
+    @FindBy(xpath = "(//*[@id='txtUserName'])[1]")
+    public WebElement epostaAdresiTextBoxSiparisTakibiButonGirisYapGiris;
+
 
 
 
