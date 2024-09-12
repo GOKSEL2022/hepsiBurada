@@ -41,6 +41,6 @@ Feature: kullanici_sayfaya_giris_yapar
        And   kullanici giris yap alanina yonlendirildigini dogrular
        And   kullanici uye olmadan verdiginiz siparisleri buradan takip edebilirsiniz uyarisini goruntuler
        And   kullanici giris islemi yapmadan siparis takibi basligina tiklar
-       And  kullanici siparis icin girdigi eposta adresini girer
+       And   kullanici siparis icin girdigi eposta adresini girer
 
 
