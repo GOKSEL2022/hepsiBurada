@@ -64,4 +64,12 @@ public class TC03_GirisYapStepDefs {
     public void kullaniciSiparisIcinGirdigiEpostaAdresiniGirer() {
         allPages.girisPage().epostaAdresiTextBoxSiparisTakibiButonGirisYapGiris.sendKeys(ConfigReader.getProperty("kayitliEmail"));
     }
+
+    @And("kullanici EPosta adresinizi dogrulayin basligi goruntuler")
+    public void kullaniciEPostaAdresiniziDogrulayinBasligiGoruntuler() {
+    }
+
+    @And("kullanici EPosta adresinize gonderilen dogrulama baglantisina tiklayarak siparis takibi yapabilirsiniz uyarisini dogrular")
+    public void kullaniciEPostaAdresinizeGonderilenDogrulamaBaglantisinaTiklayarakSiparisTakibiYapabilirsinizUyarisiniDogrular() {
+    }
 }
