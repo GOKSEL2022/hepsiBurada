@@ -67,6 +67,7 @@ public class TC03_GirisYapStepDefs {
 
     @And("kullanici EPosta adresinizi dogrulayin basligi goruntuler")
     public void kullaniciEPostaAdresiniziDogrulayinBasligiGoruntuler() {
+        assert allPages.girisPage().eostaAdresiniziDogrulayinTextTitleGirisYapGiris.isDisplayed();
     }
 
     @And("kullanici EPosta adresinize gonderilen dogrulama baglantisina tiklayarak siparis takibi yapabilirsiniz uyarisini dogrular")
