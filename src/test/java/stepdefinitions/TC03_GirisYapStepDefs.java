@@ -72,5 +72,8 @@ public class TC03_GirisYapStepDefs {
 
     @And("kullanici EPosta adresinize gonderilen dogrulama baglantisina tiklayarak siparis takibi yapabilirsiniz uyarisini dogrular")
     public void kullaniciEPostaAdresinizeGonderilenDogrulamaBaglantisinaTiklayarakSiparisTakibiYapabilirsinizUyarisiniDogrular() {
+
+        allPages.girisPage().siparisTakibiButonGirisYapGiris.click();
+        assert allPages.girisPage().siparisTakibiButonGirisYapGiris.isDisplayed();
     }
 }
