@@ -46,4 +46,10 @@ Feature: kullanici_sayfaya_giris_yapar
        And   kullanici EPosta adresinize gonderilen dogrulama baglantisina tiklayarak siparis takibi yapabilirsiniz uyarisini dogrular
        And   kullanici sayfayi kapatir
 
+     Scenario:
+       Given kullanici url ye gider
+       When  kullanici giris_yapHome alanina gelir
+       And   kullanici dropdown menu basliklariini goruntuler
+       And   kullanici soru ve taleplerim secenegine tiklar
+
 
