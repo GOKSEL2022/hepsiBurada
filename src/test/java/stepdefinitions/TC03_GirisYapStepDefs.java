@@ -76,4 +76,8 @@ public class TC03_GirisYapStepDefs {
         allPages.girisPage().siparisTakibiButonGirisYapGiris.click();
         assert allPages.girisPage().siparisTakibiButonGirisYapGiris.isDisplayed();
     }
+
+    @And("kullanici soru ve taleplerim secenegine tiklar")
+    public void kullaniciSoruVeTaleplerimSecenegineTiklar() {
+    }
 }
