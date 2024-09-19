@@ -267,6 +267,9 @@ public class HomePage {
     @FindBy(xpath = "(//*[@href='https://www.hepsiburada.com/siparislerim'])[2]")
     public WebElement siparislerimLinkGirisYapDropdownHome;
 
+    @FindBy(xpath = "//*[@href='https://www.hepsiburada.com/muzik-c-2147483641']")
+    public WebElement soruVeTalepleriDropdownGirisYapHome;
+
 
 
 
