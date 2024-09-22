@@ -80,4 +80,16 @@ public class TC03_GirisYapStepDefs {
     public void kullaniciSoruVeTaleplerimSecenegineTiklar() {
         clickByJS(allPages.homePage().soruVeTalepleriDropdownGirisYapHome);
     }
+
+    @When("kullanici ePosta alanina kayitli email girer")
+    public void kullaniciEPostaAlaninaKayitliEmailGirer() {
+    }
+
+    @And("kullanici sifre alanina kayitli sifresini girer")
+    public void kullaniciSifreAlaninaKayitliSifresiniGirer() {
+    }
+
+    @And("kullanici dogrulama kodu sayfasina yonlendirilir")
+    public void kullaniciDogrulamaKoduSayfasinaYonlendirilir() {
+    }
 }
