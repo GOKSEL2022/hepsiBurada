@@ -47,16 +47,14 @@ Feature: kullanici_sayfaya_giris_yapar
        And   kullanici sayfayi kapatir
 
      Scenario:
-       Given kullanici url ye gider
+       Given kullanici girisYapButonOnaylamaGiris e tiklar
+       When  kullanici ePosta veya telefon alanina kayitli email girer ve enter a tiklar
+       And   kullanici sifre alanina kayitli sifresini girer ve enter a tiklar
+       When  kullanici kayitli hesap ile sayfaya giris yaptigini dogrular
        When  kullanici giris_yapHome alanina gelir
        And   kullanici dropdown menu basliklariini goruntuler
        And   kullanici soru ve taleplerim secenegine tiklar
-       And   kullanici giris yap alanina yonlendirildigini dogrular
-       When  kullanici ePosta alanina kayitli email girer
-       And   kullanici sifre alanina kayitli sifresini girer
-       When  kullanici girisYapButonOnaylamaGiris e tiklar
-       And   kullanici dogrulama kodu sayfasina yonlendirilir
-       #   kullanici sayfayi kapatir
+       #      kullanici sayfayi kapatir
        #And   kullanici Soru ve Taleplerim sayfasina geldigini dogrular
        #And   kullanici yeni soru ve talep butona tiklar
 
