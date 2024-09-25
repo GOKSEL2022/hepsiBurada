@@ -80,15 +80,6 @@ public class TC03_GirisYapStepDefs {
     public void kullaniciSoruVeTaleplerimSecenegineTiklar() {
         clickByJS(allPages.homePage().soruVeTalepleriDropdownGirisYapHome);
     }
-    @When("kullanici ePosta alanina kayitli email girer")
-    public void kullaniciEPostaAlaninaKayitliEmailGirer() {
-        allPages.girisPage().epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(ConfigReader.getProperty("kayitliEmail"));
-    }
-
-    @And("kullanici sifre alanina kayitli sifresini girer")
-    public void kullaniciSifreAlaninaKayitliSifresiniGirer() {
-        allPages.girisPage().epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(ConfigReader.getProperty("kayitliSifre"));
-    }
 
     @And("kullanici dogrulama kodu sayfasina yonlendirilir")
     public void kullaniciDogrulamaKoduSayfasinaYonlendirilir() {
