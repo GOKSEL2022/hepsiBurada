@@ -56,7 +56,7 @@ Feature: kullanici_sayfaya_giris_yapar
        And   kullanici sifre alanina kayitli sifresini girer
        When  kullanici girisYapButonOnaylamaGiris e tiklar
        And   kullanici dogrulama kodu sayfasina yonlendirilir
-       And   kullanici sayfayi kapatir
+       #   kullanici sayfayi kapatir
        #And   kullanici Soru ve Taleplerim sayfasina geldigini dogrular
        #And   kullanici yeni soru ve talep butona tiklar
 
