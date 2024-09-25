@@ -15,8 +15,10 @@ public class GirisPage {
     @FindBy(xpath = "(//*[text()='Giriş yap'])[2]")
     public WebElement girisYapButonOnaylamaGiris;
 
-    @FindBy(xpath = "//input[@name='username']")
+    @FindBy(xpath = "(//*[@name='username'])[1]")
     public WebElement epostaAdresiVeyaTelNoTextBoxGiris;
+
+    //(//*[@id='txtUserName'])[1]
 
 
     @FindBy(xpath = "//*[.='Son birkaç adım kaldı…']")
