@@ -54,5 +54,4 @@ Feature: kullanici_sayfaya_giris_yapar
        When  kullanici giris_yapHome alanina gelir
        And   kullanici dropdown menu basliklariini goruntuler
        And   kullanici soru ve taleplerim secenegine tiklar
-       And
 
