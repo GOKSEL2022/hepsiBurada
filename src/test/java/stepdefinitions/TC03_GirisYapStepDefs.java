@@ -19,11 +19,11 @@ public class TC03_GirisYapStepDefs {
     }
     @When("kullanici ePosta veya telefon alanina kayitli email girer ve enter a tiklar")
     public void kullaniciEPostaVeyaTelefonAlaninaKayitliEmailGirerVeEnterATiklar() {
-        allPages.girisPage().epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(ConfigReader.getProperty("kayitliEmail"), Keys.ENTER);
+        allPages.girisPage().epostaAdresiVeyaTelNoTextBoxGiris.sendKeys(ConfigReader.getProperty("kayitliEmail"));
     }
-    @And("kullanici sifre alanina kayitli sifresini girer ve enter a tiklar")
-    public void kullaniciSifreAlaninaKayitliSifresiniGirerVeEnterATiklar() {
-        allPages.girisPage().sifreAlaniTextBoxGirisYapGiris.sendKeys(ConfigReader.getProperty("kayitliSifre"),Keys.ENTER);
+    @And("kullanici sifre alanina kayitli sifresini girer")
+    public void kullaniciSifreAlaninaKayitliSifresiniGirer() {
+        allPages.girisPage().sifreAlaniTextBoxGirisYapGiris.sendKeys(ConfigReader.getProperty("kayitliSifre"));
     }
     @When("kullanici kayitli hesap ile sayfaya giris yaptigini dogrular")
     public void kullaniciKayitliHesapIleSayfayaGirisYaptiginiDogrular() {
@@ -84,4 +84,6 @@ public class TC03_GirisYapStepDefs {
     @And("kullanici dogrulama kodu sayfasina yonlendirilir")
     public void kullaniciDogrulamaKoduSayfasinaYonlendirilir() {
     }
+
+
 }
