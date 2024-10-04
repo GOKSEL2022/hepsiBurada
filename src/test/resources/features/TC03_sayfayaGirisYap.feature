@@ -9,7 +9,7 @@ Feature: kullanici_sayfaya_giris_yapar
     Scenario:sayfaya_kayitli_mail_ile_giris
       Given kullanici girisYapButonOnaylamaGiris e tiklar
       When  kullanici ePosta veya telefon alanina kayitli email girer ve enter a tiklar
-      And   kullanici sifre alanina kayitli sifresini girer ve enter a tiklar
+      And   kullanici sifre alanina kayitli sifresini girer
       When  kullanici kayitli hesap ile sayfaya giris yaptigini dogrular
       Then  kullanici sayfayi kapatir
 
@@ -47,10 +47,14 @@ Feature: kullanici_sayfaya_giris_yapar
        And   kullanici sayfayi kapatir
 
      Scenario:
-       Given kullanici girisYapButonOnaylamaGiris e tiklar
-       When  kullanici ePosta veya telefon alanina kayitli email girer ve enter a tiklar
-       And   kullanici sifre alanina kayitli sifresini girer ve enter a tiklar
+       #Given kullanici url ye gider
+       #When  kullanici anasayfanin acildigini dogrular
+       #And   kullanici giris_yapHome alanina gelir
+       #And   kullanici girisYapLinkGiris_yapHome linkini tiklar
+       When  kullanici ePosta veya telefon alanina kayitli email girer
+       And   kullanici sifre alanina kayitli sifresini girer
        When  kullanici kayitli hesap ile sayfaya giris yaptigini dogrular
+       And   kullanici girisYapButonOnaylamaGiris e tiklar
        When  kullanici giris_yapHome alanina gelir
        And   kullanici dropdown menu basliklariini goruntuler
        And   kullanici soru ve taleplerim secenegine tiklar

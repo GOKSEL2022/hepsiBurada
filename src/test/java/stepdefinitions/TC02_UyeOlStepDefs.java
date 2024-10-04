@@ -16,7 +16,7 @@ public class TC02_UyeOlStepDefs {
     String karakter = Faker.instance().lorem().characters(10,15);
 
     @And("kullanici giris_yapHome alanina gelir")
-    public void kullaniciGiris_yapHomeAlaninaGelir() throws InterruptedException {
+    public void kullaniciGiris_yapHomeAlaninaGelir() {
         actions.moveToElement(allPages.homePage().giris_yapHome).perform();
     }
     @And("kullanici uye ol linkini secer")
