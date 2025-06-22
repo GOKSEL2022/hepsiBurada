@@ -4,3 +4,5 @@ Feature: anasayfa
     Given kullanici url ye gider
     When  kullanici anasayfanin acildigini dogrular
     Then  kullanici sayfayi kapatir
+
+    Scenario: sayfada_urun_ekleme
